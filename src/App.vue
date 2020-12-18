@@ -27,11 +27,10 @@ export default {
     Sidebar
   },
   data: function() {
-
-  },
-  mounted: function() {
-    
-  }   
+    return {
+      
+    }
+  }  
 }
 </script>
 
