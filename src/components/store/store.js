@@ -5,15 +5,15 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    test: "test"
+    isNavOpen: false
   },
   mutations: {
-    setTest(state, data) {
-        state.test = data;
+    setNavOpen(state) {
+        state.isNavOpen = !state.isNavOpen;
     }
   },
   getters: {
-        test: state => state.test
+        isNavOpen: state => state.isNavOpen
   }
 });
 
