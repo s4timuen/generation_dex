@@ -1,7 +1,7 @@
 <template>
   <div id="app" calss="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-12 bg-secondary">
+      <div class="col-12 col-md-12 bg-secondary">
         <nav class="main-nav"> 
           <Burger/>
           <Sidebar/>
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-md-12 bg-light">
+      <div class="col-12 col-md-12 bg-light">
         <router-view></router-view>
       </div>
     </div>

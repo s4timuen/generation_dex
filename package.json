@@ -1,6 +1,6 @@
 {
   "name": "generation_dex",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,9 +9,10 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.21.1",
     "core-js": "^3.6.5",
     "pokeapi-js-wrapper": "^1.2.0",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-cli": "^2.9.6",
     "vue-cookies": "^1.7.4",
     "vue-i18n": "^8.22.2",
