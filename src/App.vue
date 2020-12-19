@@ -1,18 +1,12 @@
 <template>
   <div id="app" calss="container-fluid">
-    <div class="row">
-      <div class="col-12 col-md-12 bg-secondary">
-        <nav class="main-nav"> 
-          <Burger/>
-          <Sidebar/>
-        </nav>
+    <nav class="main-nav"> 
+      <div class="row">
+        <Burger class="col-1"/>
+        <Sidebar/> 
       </div>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-12 bg-light">
-        <router-view></router-view>
-      </div>
-    </div>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 

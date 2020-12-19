@@ -52,8 +52,9 @@ export default {
 
 .sidebar-backdrop {
     background-color: rgba(0,0,0,.5);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
     position: fixed;
     top: 0;
     left: 0;
@@ -66,10 +67,10 @@ export default {
     position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     z-index: 999;
     padding: 3rem 20px 2rem 20px;
-    width: 300px;
+    width: 25%;
 }
   
 ul.sidebar-panel-nav {
