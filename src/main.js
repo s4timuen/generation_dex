@@ -6,8 +6,9 @@ import store from '@/components/store/store.js';
 import i18n from '@/components/locales/i18n.js';
 
 import { BootstrapVue } from 'bootstrap-vue';
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 Vue.config.productionTip = false;
 

@@ -4,12 +4,7 @@ const Pokedex = require("pokeapi-js-wrapper");
 
 Vue.use(Vuex);
 
-const dexOptions = {
-  cache: true,
-  cacheImages: true
-}
-
-const pokedex = new Pokedex.Pokedex(dexOptions);
+const pokedex = new Pokedex.Pokedex();
 
 const store = new Vuex.Store({
   state: {
