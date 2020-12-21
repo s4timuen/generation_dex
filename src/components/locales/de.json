@@ -1,4 +1,8 @@
 {
     "link-home": "Home",
-    "link-about": "About"
+    "link-about": "About",
+
+    "sidebar-editions-red-blue": "Rot/Blau",
+    "sidebar-editions-yellow": "Gelb",
+    "sidebar-editions-gold": "Gold"
 }
