@@ -1,7 +1,14 @@
 # generation_dex
 
-Data Sources:
+## Project setup
+```
+npm install
+npm run serve
+```
+
+### Data from
 https://github.com/PokeAPI/pokeapi-js-wrapper
+
 https://github.com/PokeAPI/sprites
 
 Functions:
