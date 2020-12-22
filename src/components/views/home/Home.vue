@@ -26,6 +26,7 @@ export default {
     },
     methods: {
         getImgUrl: function(key) {
+            key += 1;
             return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + key + ".png";
         },
         openOverlay: function(name) {
