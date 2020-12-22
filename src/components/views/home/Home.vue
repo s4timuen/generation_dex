@@ -3,8 +3,8 @@
         <div class="row"> 
             <div class="col-4 col-md-3 col-lg-2 col-xl-1" v-for="(pokemon, key) in $store.getters.nationalDex" 
                     :key="key" @click.prevent="openOverlay(pokemon.pokemon_species.name)">
-                <div>{{ pokemon.pokemon_species.name }}</div>
                 <img class="img" :src="getImgUrl(key)" :alt="pokemon.pokemon_species.name"/>
+                <div>{{ capital(pokemon.pokemon_species.name) }}</div>
             </div>
         </div>
         <Overlay :pokemon="pokemon"/>
@@ -40,21 +40,19 @@ export default {
 
             // open overlay
             this.$store.commit('setOverlayOpen');
+        },
+        capital(name) {
+            return name.charAt(0).toUpperCase() + name.slice(1);
         }
     },
     mounted: function() {
 
-        // default national dex with newest data
-        // on sidebar klick load specific data but show still all pokemon 
-        // except for newer generations disable newer pokemon
-
         // get default pokemon
-        let dex = "national"; // default
+        let dex = "national"; 
         let nationalDex = [];
  
         this.$store.getters.pokedex.getPokedexByName(dex) 
         .then(function (response) {
-            console.log(response);
             for(let index = 0; index < response.pokemon_entries.length; index++){
                 nationalDex.push(Object.values(response.pokemon_entries)[index]);
             }

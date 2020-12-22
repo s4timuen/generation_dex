@@ -5,9 +5,9 @@
             <div v-if="isPanelOpen" class="sidebar-panel">
                 <ul class="sidebar-panel-nav">
                     <li><router-link to="/">{{ $t("link-home") }}</router-link></li>
-                    <li @click.prevent="changeData()">{{ $t("sidebar-editions-red-blue") }}</li>
-                    <li @click.prevent="changeData()">{{ $t("sidebar-editions-yellow") }}</li>
-                    <li @click.prevent="changeData()">{{ $t("sidebar-editions-gold") }}</li>
+                    <li @click.prevent="filterData()">{{ $t("sidebar-editions-red-blue") }}</li>
+                    <li @click.prevent="filterData()">{{ $t("sidebar-editions-yellow") }}</li>
+                    <li @click.prevent="filterData()">{{ $t("sidebar-editions-gold") }}</li>
                     <li>etc.</li>
                     <li><router-link to="/about">{{ $t("link-about") }}</router-link></li>
                 </ul>
@@ -36,9 +36,10 @@ export default {
         closeSidebarPanel() {
             this.$store.commit('setNavOpen');
         },
-        changeData() {
+        filterData() {
 
-            // get respective pokemon data 
+            // filter for respective pokemon
+            
         }
     }
 }
