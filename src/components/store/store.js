@@ -16,7 +16,7 @@ const store = new Vuex.Store({
     isNavOpen: false,
     isOverlayOpen: false,
     pokedex: pokedex,
-    currentData: {}
+    nationalDex: {}
   },
   mutations: {
     setNavOpen(state) {
@@ -25,8 +25,8 @@ const store = new Vuex.Store({
     setOverlayOpen(state) {
       state.isOverlayOpen = !state.isOverlayOpen;
     },
-    setCurrentData(state, data) {
-      state.currentData = data;
+    setNationalDex(state, data) {
+      state.nationalDex = data;
 
     },
   },
@@ -34,7 +34,7 @@ const store = new Vuex.Store({
         isNavOpen: state => state.isNavOpen,
         isOverlayOpen: state => state.isOverlayOpen,
         pokedex: state => state.pokedex,
-        currentData: state => state.currentData
+        nationalDex: state => state.nationalDex
   }
 });
 

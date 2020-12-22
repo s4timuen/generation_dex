@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <div class="row"> 
-            <div class="col-4 col-md-3 col-lg-2 col-xl-1" v-for="(pokemon, key) in $store.getters.currentData.data" 
+            <div class="col-4 col-md-3 col-lg-2 col-xl-1" v-for="(pokemon, key) in $store.getters.nationalDex" 
                     :key="key" @click.prevent="openOverlay(pokemon.pokemon_species.name)">
                 <div>{{ pokemon.pokemon_species.name }}</div>
                 <img class="img" :src="getImgUrl(pokemon.pokemon_species.name)" :alt="pokemon.pokemon_species.name"/>
@@ -27,33 +27,16 @@ export default {
     methods: {
         getImgUrl: function(name) {
 
-            const THIS = this;
             let number;
 
             this.$store.getters.pokedex.getPokemonByName(name).then(function(response) {
                 for(let index = 0; index < response.game_indices.length; index++) {
-                
-                    if(response.game_indices[index].version.name == THIS.$store.getters.currentData.version) {
                         
-                        number = response.game_indices[index].game_index; 
-                    }
-                    // dex version -> "red-blue" 
-                    // pokemon.game_indices[index].version.name -> "red" or "blue"
-                    // seems like this exception applies only to these two versions 
-                    if((response.game_indices[index].version.name == "red" || response.game_indices[index].version.name == "blue") 
-                        && THIS.$store.getters.currentData.version == "red-blue") {
+                    number = response.game_indices[index].game_index; 
 
-                        number = response.game_indices[index].game_index; 
-                    }
                 }
-                console.log("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/" 
-                    + (THIS.$store.getters.currentData).generation + "/" + THIS.$store.getters.currentData.version + "/" + number + ".png");
-                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/" 
-                    + (THIS.$store.getters.currentData).generation + "/" + THIS.$store.getters.currentData.version + "/" + number + ".png";   
-
-
-                // fix 
-                // urls loaded after images have been rendered 
+                console.log("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + number + ".png");
+                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/" + number + ".png";   
 
 
             });
@@ -73,29 +56,21 @@ export default {
     },
     mounted: function() {
 
+        // default national dex with newest data
+        // on sidebar klick load specific data but show still all pokemon 
+        // except for newer generations disable newer pokemon
+
         // get default pokemon
-        if(!this.$store.getters.currentData.data) { 
-
-            let currentData = {
-                data: [],
-                generation: "",
-                version: ""
-            };
-
-            let dex = "kanto"; // default
-            currentData.generation = "generation-i"; // default
-            currentData.version = "red-blue"; // default
-
+        let dex = "national"; // default
+        let nationalDex = [];
  
-            this.$store.getters.pokedex.getPokedexByName(dex) 
-            .then(function (response) {
-                for(let index = 0; index < response.pokemon_entries.length; index++){
-                    currentData.data.push(Object.values(response.pokemon_entries)[index]);
-                }
-            });
-
-            this.$store.commit("setCurrentData", currentData);
-        } 
+        this.$store.getters.pokedex.getPokedexByName(dex) 
+        .then(function (response) {
+            for(let index = 0; index < response.pokemon_entries.length; index++){
+                nationalDex.push(Object.values(response.pokemon_entries)[index]);
+            }
+        });
+        this.$store.commit("setNationalDex", nationalDex);
     }
 }
 </script>

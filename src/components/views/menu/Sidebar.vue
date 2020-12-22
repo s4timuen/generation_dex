@@ -5,9 +5,9 @@
             <div v-if="isPanelOpen" class="sidebar-panel">
                 <ul class="sidebar-panel-nav">
                     <li><router-link to="/">{{ $t("link-home") }}</router-link></li>
-                    <li @click.prevent="changeData('kanto', 'generation-i', 'red-blue')">{{ $t("sidebar-editions-red-blue") }}</li>
-                    <li @click.prevent="changeData('kanto', 'generation-i', 'yellow')">{{ $t("sidebar-editions-yellow") }}</li>
-                    <li @click.prevent="changeData('original-johto', 'generation-ii', 'gold')">{{ $t("sidebar-editions-gold") }}</li>
+                    <li @click.prevent="changeData()">{{ $t("sidebar-editions-red-blue") }}</li>
+                    <li @click.prevent="changeData()">{{ $t("sidebar-editions-yellow") }}</li>
+                    <li @click.prevent="changeData()">{{ $t("sidebar-editions-gold") }}</li>
                     <li>etc.</li>
                     <li><router-link to="/about">{{ $t("link-about") }}</router-link></li>
                 </ul>
@@ -36,22 +36,9 @@ export default {
         closeSidebarPanel() {
             this.$store.commit('setNavOpen');
         },
-        changeData(dex, generation, version) {
+        changeData() {
 
             // get respective pokemon data 
-            let currentData = {
-                data: [],
-                generation: generation,
-                version: version
-            };
-
-            this.$store.getters.pokedex.getPokedexByName(dex) 
-            .then(function (response) {
-                for(let index = 0; index < response.pokemon_entries.length; index++){
-                    currentData.data.push(Object.values(response.pokemon_entries)[index].pokemon_species.name);
-                }
-            });
-            this.$store.commit("setCurrentData", currentData);
         }
     }
 }
