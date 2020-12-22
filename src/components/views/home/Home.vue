@@ -4,7 +4,7 @@
             <div class="col-4 col-md-3 col-lg-2 col-xl-1" v-for="(pokemon, key) in $store.getters.nationalDex" 
                     :key="key" @click.prevent="openOverlay(pokemon.pokemon_species.name)">
                 <div>{{ pokemon.pokemon_species.name }}</div>
-                <img class="img" :src="getImgUrl(pokemon.pokemon_species.name)" :alt="pokemon.pokemon_species.name"/>
+                <img class="img" :src="getImgUrl(key)" :alt="pokemon.pokemon_species.name"/>
             </div>
         </div>
         <Overlay :pokemon="pokemon"/>
@@ -25,21 +25,8 @@ export default {
         }
     },
     methods: {
-        getImgUrl: function(name) {
-
-            let number;
-
-            this.$store.getters.pokedex.getPokemonByName(name).then(function(response) {
-                for(let index = 0; index < response.game_indices.length; index++) {
-                        
-                    number = response.game_indices[index].game_index; 
-
-                }
-                console.log("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + number + ".png");
-                return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/" + number + ".png";   
-
-
-            });
+        getImgUrl: function(key) {
+            return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + key + ".png";
         },
         openOverlay: function(name) {
 
@@ -66,6 +53,7 @@ export default {
  
         this.$store.getters.pokedex.getPokedexByName(dex) 
         .then(function (response) {
+            console.log(response);
             for(let index = 0; index < response.pokemon_entries.length; index++){
                 nationalDex.push(Object.values(response.pokemon_entries)[index]);
             }
