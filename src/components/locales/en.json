@@ -2,7 +2,8 @@
     "link-home": "Home",
     "link-about": "About",
 
-    "sidebar-editions-red-blue": "Red/Blue",
+    "sidebar-editions-national": "National",
+    "sidebar-editions-red": "Red",
     "sidebar-editions-yellow": "Yellow",
     "sidebar-editions-gold": "Gold"
 }

@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row"> 
             <div class="col-4 col-md-3 col-lg-2 col-xl-1" v-for="(pokemon, key) in $store.getters.nationalDex" 
-                    :key="key" @click.prevent="openOverlay(pokemon.pokemon_species.name)">
+                    :key="key" :id="pokemon.pokemon_species.name" @click.prevent="openOverlay(pokemon.pokemon_species.name)">
                 <img class="img" :src="getImgUrl(key)" :alt="pokemon.pokemon_species.name"/>
                 <div>{{ capital(pokemon.pokemon_species.name) }}</div>
             </div>
@@ -36,13 +36,47 @@ export default {
             // get pokemon
             this.$store.getters.pokedex.getPokemonByName(name).then(function (response) {
                 THIS.pokemon = response;
-            });
+                console.log(response)
+            }).catch(error => { throw error; });
 
             // open overlay
             this.$store.commit('setOverlayOpen');
         },
         capital(name) {
             return name.charAt(0).toUpperCase() + name.slice(1);
+        }
+    },
+    computed: {
+        dataFilter: function() {
+            return this.$store.getters.dataFilter;
+        }
+    },
+    watch: {
+        dataFilter: function(dataFilter) {
+
+            const THIS = this;
+
+            // filter for edition specific pokemon
+            for(let index = 0; index < Object.keys(this.$store.getters.nationalDex).length; index++) {
+ 
+                // different forms -> err -> allways displayed 
+                // super slow
+
+                this.$store.getters.pokedex.getPokemonByName(THIS.$store.getters.nationalDex[index].pokemon_species.name) 
+                    .then(function(pokemon) { 
+
+                        document.getElementById(pokemon.name).setAttribute("style", "display: none"); 
+
+                        for(let index_2 = 0; index_2 < pokemon.game_indices.length; index_2++) {
+       
+                            if(dataFilter == 'national' || pokemon.game_indices[index_2].version.name == dataFilter) {
+
+                                document.getElementById(pokemon.name).setAttribute("style", "display: block"); 
+
+                            }
+                        }
+                     }).catch(error => { throw error; });
+            }
         }
     },
     mounted: function() {
@@ -56,7 +90,7 @@ export default {
             for(let index = 0; index < response.pokemon_entries.length; index++){
                 nationalDex.push(Object.values(response.pokemon_entries)[index]);
             }
-        });
+        }).catch(error => { throw error; });
         this.$store.commit("setNationalDex", nationalDex);
     }
 }

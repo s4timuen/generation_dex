@@ -15,6 +15,5 @@ Functions:
 * 
 
 todo:
-* [ ] sidebar choos generation/edition 
 * [ ] pokemon overlay
 * [ ] more features
