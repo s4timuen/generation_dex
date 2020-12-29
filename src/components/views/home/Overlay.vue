@@ -4,8 +4,13 @@
         <div v-if="isOverlayOpen" class="overlay-panel">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6 offset-3">
+                    <div class="col-12">
                         {{ pokemon.name }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6" v-for="{type, key} in pokemon.types" :key="key">
+                        {{ type.name }}
                     </div>
                 </div>
             </div>
@@ -28,6 +33,11 @@ export default {
     computed: {
         isOverlayOpen() {
             return this.$store.getters.isOverlayOpen;
+        }
+    },
+    watch: {
+        pokemon: function(pokemon) {
+            console.log(pokemon)
         }
     },
     methods: {

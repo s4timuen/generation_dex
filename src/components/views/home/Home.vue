@@ -36,7 +36,6 @@ export default {
             // get pokemon
             this.$store.getters.pokedex.getPokemonByName(name).then(function (response) {
                 THIS.pokemon = response;
-                console.log(response)
             }).catch(error => { throw error; });
 
             // open overlay
@@ -44,6 +43,93 @@ export default {
         },
         capital(name) {
             return name.charAt(0).toUpperCase() + name.slice(1);
+        },
+        checkDiffForme(name) {
+
+            // for home default sprite
+            switch(name) {
+                case("deoxys"):
+                    name = "deoxys-normal";
+                    break;
+                case("wormadam"):
+                    name = "wormadam-plant";
+                    break;
+                case("shaymin"):
+                    name = "shaymin-land";
+                    break;
+                case("giratina"):
+                    name = "giratina-altered";
+                    break;
+                case("darmanitan"):
+                    name = "darmanitan-standard";
+                    break;
+                case("basculin"):
+                    name = "basculin-red-striped";
+                    break;
+                case("tornadus"):
+                    name = "tornadus-incarnate";
+                    break;
+                case("thundurus"):
+                    name = "thundurus-incarnate";
+                    break;
+                case("landorus"):
+                    name = "landorus-incarnate";
+                    break;
+                case("keldeo"):
+                    name = "keldeo-ordinary";
+                    break;
+                case("meloetta"):
+                    name = "meloetta-aria";
+                    break;
+                case("meowstic"):
+                    name = "meowstic-male";
+                    break;
+                case("aegislash"):
+                    name = "aegislash-shield";
+                    break;
+                case("pumpkaboo"):
+                    name = "pumpkaboo-average";
+                    break;
+                case("gourgeist"):
+                    name = "gourgeist-average";
+                    break;
+                case("oricorio"):
+                    name = "oricorio-baile";
+                    break;
+                case("lycanroc"):
+                    name = "	lycanroc-midday";
+                    break;
+                case("wishiwashi"):
+                    name = "wishiwashi-solo";
+                    break;
+                case("minior"):
+                    name = "minior-red-meteor";
+                    break;
+                case("mimikyu"):
+                    name = "mimikyu-disguised";
+                    break;
+                case("toxtricity"):
+                    name = "toxtricity-amped";
+                    break;
+                case("eiscue"):
+                    name = "eiscue-ice";
+                    break;
+                case("indeedee"):
+                    name = "indeedee-male";
+                    break;
+                case("zacian"):
+                    name = "zacian-hero";
+                    break;
+                case("zamazenta"):
+                    name = "zamazenta-hero";
+                    break;
+                case("urshifu"):
+                    name = "urshifu-single-strike";
+                    break;
+                default: 
+                    name;
+            }
+            return name;
         }
     },
     computed: {
@@ -59,19 +145,19 @@ export default {
             // filter for edition specific pokemon
             for(let index = 0; index < Object.keys(this.$store.getters.nationalDex).length; index++) {
  
-                // different forms -> err -> allways displayed 
-                // super slow
+                let speciesName = THIS.$store.getters.nationalDex[index].pokemon_species.name; // div id is from here
+                let pokemonName = this.checkDiffForme(speciesName); // mapping for .getPokemonByName()
 
-                this.$store.getters.pokedex.getPokemonByName(THIS.$store.getters.nationalDex[index].pokemon_species.name) 
+                this.$store.getters.pokedex.getPokemonByName(pokemonName) 
                     .then(function(pokemon) { 
 
-                        document.getElementById(pokemon.name).setAttribute("style", "display: none"); 
+                        document.getElementById(speciesName).setAttribute("style", "display: none"); 
 
                         for(let index_2 = 0; index_2 < pokemon.game_indices.length; index_2++) {
        
                             if(dataFilter == 'national' || pokemon.game_indices[index_2].version.name == dataFilter) {
 
-                                document.getElementById(pokemon.name).setAttribute("style", "display: block"); 
+                                document.getElementById(speciesName).setAttribute("style", "display: block"); 
 
                             }
                         }
