@@ -5,11 +5,15 @@
             <div v-if="isPanelOpen" class="sidebar-panel">
                 <ul class="sidebar-panel-nav">
                     <li><router-link to="/">{{ $t("link-home") }}</router-link></li>
-                    <li @click.prevent="setDataFilter('national')">{{ $t("sidebar-editions-national") }}</li>
-                    <li @click.prevent="setDataFilter('red')">{{ $t("sidebar-editions-red") }}</li>
-                    <li @click.prevent="setDataFilter('yellow')">{{ $t("sidebar-editions-yellow") }}</li>
-                    <li @click.prevent="setDataFilter('gold')">{{ $t("sidebar-editions-gold") }}</li>
-                    <li>etc.</li>
+                    <li @click.prevent="setDataFilter('national')">{{ $t("sidebar-generation-national") }}</li>
+                    <li @click.prevent="setDataFilter('kanto')">{{ $t("sidebar-generation-kanto") }}</li>
+                    <li @click.prevent="setDataFilter('johto')">{{ $t("sidebar-generation-johto") }}</li>
+                    <li @click.prevent="setDataFilter('hoen')">{{ $t("sidebar-generation-hoen") }}</li>
+                    <li @click.prevent="setDataFilter('sinnoh')">{{ $t("sidebar-generation-sinnoh") }}</li>
+                    <li @click.prevent="setDataFilter('unova')">{{ $t("sidebar-generation-unova") }}</li>
+                    <li @click.prevent="setDataFilter('kalos')">{{ $t("sidebar-generation-kalos") }}</li>
+                    <li @click.prevent="setDataFilter('alola')">{{ $t("sidebar-generation-alola") }}</li>
+                    <li @click.prevent="setDataFilter('galar')">{{ $t("sidebar-generation-galar") }}</li>
                     <li><router-link to="/about">{{ $t("link-about") }}</router-link></li>
                 </ul>
             </div>

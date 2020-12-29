@@ -2,8 +2,13 @@
     "link-home": "Home",
     "link-about": "About",
 
-    "sidebar-editions-national": "National",
-    "sidebar-editions-red": "Rot",
-    "sidebar-editions-yellow": "Gelb",
-    "sidebar-editions-gold": "Gold"
+    "sidebar-generation-national": "National",
+    "sidebar-generation-kanto": "Kanto",
+    "sidebar-generation-johto": "Johto",
+    "sidebar-generation-hoen": "Hoen",
+    "sidebar-generation-sinnoh": "Sinnoh",
+    "sidebar-generation-unova": "Unova",
+    "sidebar-generation-alola": "Alola",
+    "sidebar-generation-kalos": "Kalos",
+    "sidebar-generation-galar": "Galar"
 }

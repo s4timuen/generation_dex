@@ -1,10 +1,14 @@
 <template>
     <div class="container-fluid">
-        <div class="row"> 
-            <div class="col-4 col-md-3 col-lg-2 col-xl-1" v-for="(pokemon, key) in $store.getters.nationalDex" 
-                    :key="key" :id="pokemon.pokemon_species.name" @click.prevent="openOverlay(pokemon.pokemon_species.name)">
-                <img class="img" :src="getImgUrl(key)" :alt="pokemon.pokemon_species.name"/>
-                <div>{{ capital(pokemon.pokemon_species.name) }}</div>
+        <div class="row">
+            <div v-for="(generation, key) in $store.getters.nationalDex" :key="key" :id="key">
+                <div class="row">
+                    <div class="col-4 col-md-3 col-lg-2 col-xl-1" v-for="(pokemon, key) in generation" 
+                        :key="key" :id="pokemon.pokemon_species.name" @click.prevent="openOverlay(pokemon.pokemon_species.name, $store.getters.dataFilter)">
+                        <img class="img" :src="getImgUrl(pokemon.entry_number)" :alt="pokemon.pokemon_species.name"/>
+                        <div>{{ capital(pokemon.pokemon_species.name) }}</div>
+                    </div>
+                </div>
             </div>
         </div>
         <Overlay :pokemon="pokemon"/>
@@ -21,24 +25,15 @@ export default {
     },
     data: function() {
         return {
-            pokemon: {}
+            pokemon: ""
         }
     },
     methods: {
         getImgUrl: function(key) {
-            key += 1;
             return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + key + ".png";
         },
         openOverlay: function(name) {
-
-            let THIS = this;
-
-            // get pokemon
-            this.$store.getters.pokedex.getPokemonByName(name).then(function (response) {
-                THIS.pokemon = response;
-            }).catch(error => { throw error; });
-
-            // open overlay
+            this.pokemon = this.checkDiffForme(name);
             this.$store.commit('setOverlayOpen');
         },
         capital(name) {
@@ -130,6 +125,12 @@ export default {
                     name;
             }
             return name;
+        },
+        showDiv(id) {
+            document.getElementById(id).setAttribute("style", "display: block");
+        },
+        hideDiv(id) {
+            document.getElementById(id).setAttribute("style", "display: none");
         }
     },
     computed: {
@@ -140,28 +141,107 @@ export default {
     watch: {
         dataFilter: function(dataFilter) {
 
-            const THIS = this;
-
-            // filter for edition specific pokemon
-            for(let index = 0; index < Object.keys(this.$store.getters.nationalDex).length; index++) {
- 
-                let speciesName = THIS.$store.getters.nationalDex[index].pokemon_species.name; // div id is from here
-                let pokemonName = this.checkDiffForme(speciesName); // mapping for .getPokemonByName()
-
-                this.$store.getters.pokedex.getPokemonByName(pokemonName) 
-                    .then(function(pokemon) { 
-
-                        document.getElementById(speciesName).setAttribute("style", "display: none"); 
-
-                        for(let index_2 = 0; index_2 < pokemon.game_indices.length; index_2++) {
-       
-                            if(dataFilter == 'national' || pokemon.game_indices[index_2].version.name == dataFilter) {
-
-                                document.getElementById(speciesName).setAttribute("style", "display: block"); 
-
-                            }
-                        }
-                     }).catch(error => { throw error; });
+            // filter for generations to display
+            switch(dataFilter) {
+                case("national"):
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.showDiv("hoen");                    
+                    this.showDiv("sinnoh");                    
+                    this.showDiv("unova");                    
+                    this.showDiv("kalos");                    
+                    this.showDiv("alola");                    
+                    this.showDiv("galar");
+                    break;
+                case("kanto"):
+                    this.showDiv("kanto");
+                    this.hideDiv("johto");                    
+                    this.hideDiv("hoen");                    
+                    this.hideDiv("sinnoh");                    
+                    this.hideDiv("unova");                    
+                    this.hideDiv("kalos");                    
+                    this.hideDiv("alola");                    
+                    this.hideDiv("galar");
+                    break;
+                 case("johto"):
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.hideDiv("hoen");                    
+                    this.hideDiv("sinnoh");                    
+                    this.hideDiv("unova");                    
+                    this.hideDiv("kalos");                    
+                    this.hideDiv("alola");                    
+                    this.hideDiv("galar");
+                    break;
+                case("hoen"):
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.showDiv("hoen");                    
+                    this.hideDiv("sinnoh");                    
+                    this.hideDiv("unova");                    
+                    this.hideDiv("kalos");                    
+                    this.hideDiv("alola");                    
+                    this.hideDiv("galar");
+                    break;
+                case("sinnoh"):
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.showDiv("hoen");                    
+                    this.showDiv("sinnoh");                    
+                    this.hideDiv("unova");                    
+                    this.hideDiv("kalos");                    
+                    this.hideDiv("alola");                    
+                    this.hideDiv("galar");
+                    break;
+                case("unova"):
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.showDiv("hoen");                    
+                    this.showDiv("sinnoh");                    
+                    this.showDiv("unova");                    
+                    this.hideDiv("kalos");                    
+                    this.hideDiv("alola");                    
+                    this.hideDiv("galar");
+                    break;
+                case("kalos"):
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.showDiv("hoen");                    
+                    this.showDiv("sinnoh");                    
+                    this.showDiv("unova");                    
+                    this.showDiv("kalos");                    
+                    this.hideDiv("alola");                    
+                    this.hideDiv("galar");
+                    break;
+                case("alola"):
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.showDiv("hoen");                    
+                    this.showDiv("sinnoh");                    
+                    this.showDiv("unova");                    
+                    this.showDiv("kalos");                    
+                    this.showDiv("alola");                    
+                    this.hideDiv("galar");
+                    break;
+                case("galar"):
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.showDiv("hoen");                    
+                    this.showDiv("sinnoh");                    
+                    this.showDiv("unova");                    
+                    this.showDiv("kalos");                    
+                    this.showDiv("alola");                    
+                    this.showDiv("galar");
+                    break;
+                default:
+                    this.showDiv("kanto");
+                    this.showDiv("johto");                    
+                    this.showDiv("hoen");                    
+                    this.showDiv("sinnoh");                    
+                    this.showDiv("unova");                    
+                    this.showDiv("kalos");                    
+                    this.showDiv("alola");                    
+                    this.showDiv("galar");
             }
         }
     },
@@ -169,14 +249,50 @@ export default {
 
         // get default pokemon
         let dex = "national"; 
-        let nationalDex = [];
+        let nationalDex = {
+            kanto: [],
+            johto: [],
+            hoen: [],
+            sinnoh: [],
+            unova: [],
+            kalos: [],
+            alola: [],
+            galar: []
+        };
  
         this.$store.getters.pokedex.getPokedexByName(dex) 
         .then(function (response) {
+
             for(let index = 0; index < response.pokemon_entries.length; index++){
-                nationalDex.push(Object.values(response.pokemon_entries)[index]);
+
+                // categorize pokemon in generations
+                if(index >= 0 && index < 151) {
+                    nationalDex.kanto.push(Object.values(response.pokemon_entries)[index]);
+                }
+                if(index >= 151 && index < 251) {
+                    nationalDex.johto.push(Object.values(response.pokemon_entries)[index]);
+                }
+                if(index >= 251 && index < 386) {
+                    nationalDex.hoen.push(Object.values(response.pokemon_entries)[index]);
+                }
+                if(index >= 386 && index < 493) {
+                    nationalDex.sinnoh.push(Object.values(response.pokemon_entries)[index]);
+                }
+                if(index >= 493 && index < 649) {
+                    nationalDex.unova.push(Object.values(response.pokemon_entries)[index]);
+                }
+                if(index >= 649 && index < 721) {
+                    nationalDex.kalos.push(Object.values(response.pokemon_entries)[index]);
+                }
+                if(index >= 721 && index < 809) {
+                    nationalDex.alola.push(Object.values(response.pokemon_entries)[index]);
+                }
+                if(index >= 809 && index < 897) {
+                    nationalDex.galar.push(Object.values(response.pokemon_entries)[index]);
+                }
             }
         }).catch(error => { throw error; });
+
         this.$store.commit("setNationalDex", nationalDex);
     }
 }

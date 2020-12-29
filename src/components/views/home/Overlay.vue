@@ -5,12 +5,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        {{ pokemon.name }}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6" v-for="{type, key} in pokemon.types" :key="key">
-                        {{ type.name }}
+                        {{ capital(pokemon) }}
                     </div>
                 </div>
             </div>
@@ -26,8 +21,8 @@ export default {
     },
     props: {
         pokemon: {
-            type: Object,
-            required: false
+            type: String,
+            required: true
         }
     },
     computed: {
@@ -35,15 +30,13 @@ export default {
             return this.$store.getters.isOverlayOpen;
         }
     },
-    watch: {
-        pokemon: function(pokemon) {
-            console.log(pokemon)
-        }
-    },
     methods: {
         closeOverlayPanel() {
             this.$store.commit('setOverlayOpen');
-        }
+        },
+        capital(name) {
+            return name.charAt(0).toUpperCase() + name.slice(1);
+        },
     }
 }
 </script>
