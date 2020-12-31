@@ -16,6 +16,9 @@
 </template>
 
 <script>
+import { showHideGenerationDivs } from "@/components/helpers/genDivsVisibility.js";
+import { checkDiffForme } from "@/components/helpers/checkDiffFormes.js"
+
 import Overlay from "@/components/views/home/Overlay.vue";
 
 export default {
@@ -33,104 +36,11 @@ export default {
             return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + key + ".png";
         },
         openOverlay: function(name) {
-            this.pokemon = this.checkDiffForme(name);
+            this.pokemon = checkDiffForme(name);
             this.$store.commit('setOverlayOpen');
         },
         capital(name) {
             return name.charAt(0).toUpperCase() + name.slice(1);
-        },
-        checkDiffForme(name) {
-
-            // for home default sprite
-            switch(name) {
-                case("deoxys"):
-                    name = "deoxys-normal";
-                    break;
-                case("wormadam"):
-                    name = "wormadam-plant";
-                    break;
-                case("shaymin"):
-                    name = "shaymin-land";
-                    break;
-                case("giratina"):
-                    name = "giratina-altered";
-                    break;
-                case("darmanitan"):
-                    name = "darmanitan-standard";
-                    break;
-                case("basculin"):
-                    name = "basculin-red-striped";
-                    break;
-                case("tornadus"):
-                    name = "tornadus-incarnate";
-                    break;
-                case("thundurus"):
-                    name = "thundurus-incarnate";
-                    break;
-                case("landorus"):
-                    name = "landorus-incarnate";
-                    break;
-                case("keldeo"):
-                    name = "keldeo-ordinary";
-                    break;
-                case("meloetta"):
-                    name = "meloetta-aria";
-                    break;
-                case("meowstic"):
-                    name = "meowstic-male";
-                    break;
-                case("aegislash"):
-                    name = "aegislash-shield";
-                    break;
-                case("pumpkaboo"):
-                    name = "pumpkaboo-average";
-                    break;
-                case("gourgeist"):
-                    name = "gourgeist-average";
-                    break;
-                case("oricorio"):
-                    name = "oricorio-baile";
-                    break;
-                case("lycanroc"):
-                    name = "	lycanroc-midday";
-                    break;
-                case("wishiwashi"):
-                    name = "wishiwashi-solo";
-                    break;
-                case("minior"):
-                    name = "minior-red-meteor";
-                    break;
-                case("mimikyu"):
-                    name = "mimikyu-disguised";
-                    break;
-                case("toxtricity"):
-                    name = "toxtricity-amped";
-                    break;
-                case("eiscue"):
-                    name = "eiscue-ice";
-                    break;
-                case("indeedee"):
-                    name = "indeedee-male";
-                    break;
-                case("zacian"):
-                    name = "zacian-hero";
-                    break;
-                case("zamazenta"):
-                    name = "zamazenta-hero";
-                    break;
-                case("urshifu"):
-                    name = "urshifu-single-strike";
-                    break;
-                default: 
-                    name;
-            }
-            return name;
-        },
-        showDiv(id) {
-            document.getElementById(id).setAttribute("style", "display: block");
-        },
-        hideDiv(id) {
-            document.getElementById(id).setAttribute("style", "display: none");
         }
     },
     computed: {
@@ -141,108 +51,7 @@ export default {
     watch: {
         dataFilter: function(dataFilter) {
 
-            // filter for generations to display
-            switch(dataFilter) {
-                case("national"):
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.showDiv("hoen");                    
-                    this.showDiv("sinnoh");                    
-                    this.showDiv("unova");                    
-                    this.showDiv("kalos");                    
-                    this.showDiv("alola");                    
-                    this.showDiv("galar");
-                    break;
-                case("kanto"):
-                    this.showDiv("kanto");
-                    this.hideDiv("johto");                    
-                    this.hideDiv("hoen");                    
-                    this.hideDiv("sinnoh");                    
-                    this.hideDiv("unova");                    
-                    this.hideDiv("kalos");                    
-                    this.hideDiv("alola");                    
-                    this.hideDiv("galar");
-                    break;
-                 case("johto"):
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.hideDiv("hoen");                    
-                    this.hideDiv("sinnoh");                    
-                    this.hideDiv("unova");                    
-                    this.hideDiv("kalos");                    
-                    this.hideDiv("alola");                    
-                    this.hideDiv("galar");
-                    break;
-                case("hoen"):
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.showDiv("hoen");                    
-                    this.hideDiv("sinnoh");                    
-                    this.hideDiv("unova");                    
-                    this.hideDiv("kalos");                    
-                    this.hideDiv("alola");                    
-                    this.hideDiv("galar");
-                    break;
-                case("sinnoh"):
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.showDiv("hoen");                    
-                    this.showDiv("sinnoh");                    
-                    this.hideDiv("unova");                    
-                    this.hideDiv("kalos");                    
-                    this.hideDiv("alola");                    
-                    this.hideDiv("galar");
-                    break;
-                case("unova"):
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.showDiv("hoen");                    
-                    this.showDiv("sinnoh");                    
-                    this.showDiv("unova");                    
-                    this.hideDiv("kalos");                    
-                    this.hideDiv("alola");                    
-                    this.hideDiv("galar");
-                    break;
-                case("kalos"):
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.showDiv("hoen");                    
-                    this.showDiv("sinnoh");                    
-                    this.showDiv("unova");                    
-                    this.showDiv("kalos");                    
-                    this.hideDiv("alola");                    
-                    this.hideDiv("galar");
-                    break;
-                case("alola"):
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.showDiv("hoen");                    
-                    this.showDiv("sinnoh");                    
-                    this.showDiv("unova");                    
-                    this.showDiv("kalos");                    
-                    this.showDiv("alola");                    
-                    this.hideDiv("galar");
-                    break;
-                case("galar"):
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.showDiv("hoen");                    
-                    this.showDiv("sinnoh");                    
-                    this.showDiv("unova");                    
-                    this.showDiv("kalos");                    
-                    this.showDiv("alola");                    
-                    this.showDiv("galar");
-                    break;
-                default:
-                    this.showDiv("kanto");
-                    this.showDiv("johto");                    
-                    this.showDiv("hoen");                    
-                    this.showDiv("sinnoh");                    
-                    this.showDiv("unova");                    
-                    this.showDiv("kalos");                    
-                    this.showDiv("alola");                    
-                    this.showDiv("galar");
-            }
+            showHideGenerationDivs(dataFilter);
         }
     },
     mounted: function() {

@@ -15,5 +15,6 @@ Functions:
 * 
 
 todo:
+* [ ] typeEfficiencies.js
 * [ ] pokemon overlay
 * [ ] more features
