@@ -120,7 +120,7 @@ function getBaseEfficiencies(context, typesObject, generation) {
 
             for(let index = 1; index < 19; index++) { 
 
-                let type = Object.value(response.results[index]);
+                let type = Object.values(response.results[index]);
 
                 // as attacker
                 let finalMultiplierAttack = getFinalBaseMultiplier("attack", type, typesObject.typeOneData.damage_relations, typesObject.typeTwoData.damage_relations);
@@ -187,8 +187,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
 
             for(const value of entry) {
 
-                if(key.contains("damage_to") && value.name == type) {
-
+                if(key.includes("damage_to") && value.name == type) { 
                     switch(key) {
                         case "no_demage_to":
                             multiplierOne = 0;
@@ -212,7 +211,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
 
             for(const value of entry) {
 
-                if(key.contains("damage_to") && value.name == type) {
+                if(key.includes("damage_to") && value.name == type) {
 
                     switch(key) {
                         case "no_demage_to":
@@ -240,7 +239,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
 
             for(const value of entry) {
 
-                if(key.contains("damage_from") && value.name == type) {
+                if(key.includes("damage_from") && value.name == type) {
 
                     switch(key) {
                         case "no_demage_from":
@@ -265,7 +264,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
 
             for(const value of entry) {
 
-                if(key.contains("damage_from") && value.name == type) {
+                if(key.includes("damage_from") && value.name == type) {
 
                     switch(key) {
                         case "no_demage_from":
@@ -316,7 +315,7 @@ function changeEfficiency(context, typesObject, attackType, defenceType, newValu
         for(const [key, subEntry] of Object.entries(entry.damage_relations)) { // value -> double_damage_to
 
             // as attacker
-            if(key.contains("damage_to")) {
+            if(key.includes("damage_to")) {
 
                 for(const [key, value] of Object.entries(subEntry)) {  
 
@@ -346,7 +345,7 @@ function changeEfficiency(context, typesObject, attackType, defenceType, newValu
             }
 
             // as defender
-            if(key.contains("damage_from")) {
+            if(key.includes("damage_from")) {
 
                 for(const [key, value] of Object.entries(subEntry)) {  
 
