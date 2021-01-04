@@ -8,12 +8,32 @@
                         {{ capital(pokemon) }}
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p> Attack </p>
+                        <div v-for="( efficiencie, key ) in efficiencies.attack" :key="key">
+                            <ul v-for="( type, key ) in efficiencie" :key="key">
+                                <li> {{ type }} </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p> Defence </p>
+                        <div v-for="( efficiencie, key ) in efficiencies.defence" :key="key">
+                            <ul v-for="( type, key ) in efficiencie" :key="key">
+                                <li> {{ type }} </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { typeEfficiencies } from "@/components/helpers/typeEfficiencies.js"
+
 export default {
     name: 'Overlay',
     components: {
@@ -25,9 +45,44 @@ export default {
             required: true
         }
     },
+    data () {
+        return {
+            efficiencies: {
+                "attack": {
+                    "zero": [],
+                    "quarter": [],
+                    "half": [],
+                    "one": [],
+                    "two": [],
+                    "four": []
+                },
+                "defence": {
+                    "zero": [],
+                    "quarter": [],
+                    "half": [],
+                    "one": [],
+                    "two": [],
+                    "four": []
+                }
+            }
+        }
+    },
     computed: {
         isOverlayOpen() {
             return this.$store.getters.isOverlayOpen;
+        }
+    },
+    watch: {
+        // get pokemon data 
+        isOverlayOpen(isOverlayOpen) {
+
+            if(isOverlayOpen) {
+
+                // type efficiencies 
+                this.efficiencies = typeEfficiencies(this, "bug", "flying", ["compound eye", "none", "tinted eye"], "national");  // test butterfree
+
+                // todo: more
+            }
         }
     },
     methods: {
