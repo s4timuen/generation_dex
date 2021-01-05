@@ -19,7 +19,7 @@
 import { showHideGenerationDivs } from "@/components/helpers/genDivsVisibility.js";
 import { checkDiffForme } from "@/components/helpers/checkDiffFormes.js"
 
-import Overlay from "@/components/views/home/Overlay.vue";
+import Overlay from "@/components/views/home/overlay/Overlay.vue";
 
 export default {
     name: 'Home',

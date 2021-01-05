@@ -1,5 +1,5 @@
 // calculate type efficiencies
-function typeEfficiencies(context, typeOne, typeTwo, abilitiyOne, abilityTwo, hiddenAbillity, generation) {
+function typeEfficiencies(context, typeOne, typeTwo, generation) {
 
     // get type one object
     context.$store.getters.pokedex.getTypeByName(typeOne)
@@ -22,13 +22,7 @@ function typeEfficiencies(context, typeOne, typeTwo, abilitiyOne, abilityTwo, hi
         // calculate base efficiencies
         return getBaseEfficiencies(context, response, generation);
         
-    })
-    .then(function(response) { 
-
-        // calculate final efficiencies after ability interference
-        return getAbilityEfficiencies(context, response, abilitiyOne, abilityTwo, hiddenAbillity);
-    })
-    .catch(error => { throw error; });
+    }).catch(error => { throw error; });
 }
 
 // calculate base efficiencies
@@ -388,21 +382,6 @@ function getTypeUrl(context, type) {
 
         return "https://pokeapi.co/api/v2/type/" + number+ "/"; 
     }).catch(error => { throw error; });
-}
-
-function getAbilityEfficiencies(context, baseEfficiencies, abilitiyOne, abilityTwo, hiddenAbillity) { 
-
-        let finalEfficiencies;
-
-        if(abilitiyOne != "none" || abilityTwo != "none" || hiddenAbillity != "none") {
-
-            // todo
-
-            // calculate final efficiencies with abilities
-            // conflicts? do abilities always override calculated efficiencies? -> yes
-        }
-
-        return finalEfficiencies;
 }
 
 export { typeEfficiencies }
