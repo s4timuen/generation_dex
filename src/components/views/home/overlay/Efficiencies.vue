@@ -3,16 +3,16 @@
         <div class="row">
             <div class="col-6">
                 <p> Attack </p>
-                <div v-for="( efficiencie, key ) in efficiencies.attack" :key="key">
-                    <ul v-for="( type, key ) in efficiencie" :key="key">
+                <div v-for="( efficiency, key ) in efficiencies.attack" :key="key">
+                    <ul v-for="( type, key ) in efficiency" :key="key">
                         <li> {{ type }} </li>
                     </ul>
                 </div>
             </div>
             <div class="col-6">
                 <p> Defence </p>
-                 <div v-for="( efficiencie, key ) in efficiencies.defence" :key="key">
-                    <ul v-for="( type, key ) in efficiencie" :key="key">
+                 <div v-for="( efficiency, key ) in efficiencies.defence" :key="key">
+                    <ul v-for="( type, key ) in efficiency" :key="key">
                         <li> {{ type }} </li>
                     </ul>
                 </div>
@@ -43,13 +43,12 @@ export default {
     },
     computed: {
         data: function() {
+            console.log(this.pokemonData)
             return this.pokemonData;
         }
     },
     watch: {
         data: function(data) {  
-
-            const THIS = this;
 
             if(Object.keys(data).length != 0) { 
 
@@ -61,7 +60,7 @@ export default {
                     typeTwo = data.types[1].type.name;
                 }
 
-            this.efficiencies = typeEfficiencies(THIS, typeOne, typeTwo, this.$stire.getters.dataFilter);
+            this.efficiencies = typeEfficiencies(this, typeOne, typeTwo, this.$stire.getters.dataFilter);
             }
         }
     },

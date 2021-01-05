@@ -49,6 +49,7 @@ export default {
             return name.charAt(0).toUpperCase() + name.slice(1);
         },
         getPokemonData(name) {
+            
             this.$store.getters.pokedex.getPokemonByName(name)
                 .then(function(response) { return response; });
         }
