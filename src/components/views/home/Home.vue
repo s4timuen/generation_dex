@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <Overlay :pokemon="pokemon"/>
+        <Overlay/>
     </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
     },
     data: function() {
         return {
-            pokemon: ""
+         
         }
     },
     methods: {
@@ -36,11 +36,19 @@ export default {
             return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + key + ".png";
         },
         openOverlay: function(name) {
-            this.pokemon = checkDiffForme(name);
+
+            let pokemon = checkDiffForme(name);
             this.$store.commit('setOverlayOpen');
+            this.$store.commit("setPokemonData", this.getPokemonData(pokemon));
+            console.log(this.$store.getters.pokemonData)
         },
         capital(name) {
             return name.charAt(0).toUpperCase() + name.slice(1);
+        },
+        getPokemonData(name) {
+            return this.$store.getters.pokedex.getPokemonByName(name)
+                .then(function(response) { return response; })
+                .catch(error => { throw error; })
         }
     },
     computed: {

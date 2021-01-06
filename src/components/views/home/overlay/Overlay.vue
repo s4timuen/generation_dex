@@ -5,9 +5,14 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        {{ capital(pokemon) }}
+                        {{ capital(pokemonName) }}
                     </div>
-                    <Efficiencies :pokemonData="pokemonData"/>
+                    <Efficiencies/>
+                    <Evolutions/>
+                    <Moves/>
+                    <Abilities/>
+                    <Stats/>
+                    <GeneralProperties/>
                 </div>
             </div>
         </div>
@@ -16,17 +21,21 @@
 
 <script>
 import Efficiencies from "@/components/views/home/overlay/Efficiencies.vue";
+import Abilities from "@/components/views/home/overlay/Abilities.vue";
+import Evolutions from "@/components/views/home/overlay/Evolutions.vue";
+import Moves from "@/components/views/home/overlay/Moves.vue";
+import Stats from "@/components/views/home/overlay/Stats.vue";
+import GeneralProperties from "@/components/views/home/overlay/GeneralProperties.vue";
 
 export default {
     name: 'Overlay',
     components: {
-        Efficiencies
-    },
-    props: {
-        pokemon: {
-            type: String,
-            required: true
-        }
+        Efficiencies,
+        Abilities,
+        Evolutions,
+        Moves,
+        Stats,
+        GeneralProperties
     },
     data () {
         return {
@@ -37,8 +46,16 @@ export default {
         isOverlayOpen() {
             return this.$store.getters.isOverlayOpen;
         },
-        pokemonData() {
-            return this.getPokemonData(this.pokemon);
+        pokemonName() { 
+
+            let name = "";
+
+            if(Object.keys(this.$store.getters.pokemonData).length != 0) {
+                
+                name = this.$store.getters.pokemonData.name;
+            }
+
+            return name; 
         }
     },
     methods: {
@@ -47,11 +64,6 @@ export default {
         },
         capital(name) {
             return name.charAt(0).toUpperCase() + name.slice(1);
-        },
-        getPokemonData(name) {
-            
-            this.$store.getters.pokedex.getPokemonByName(name)
-                .then(function(response) { return response; });
         }
     }
 }

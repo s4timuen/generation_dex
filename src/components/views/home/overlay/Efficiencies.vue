@@ -29,13 +29,6 @@ export default {
     components: {
 
     },
-    props: {
-        pokemonData: {
-            type: Object,
-            required: true,
-            default: () => ({})
-        }
-    },
     data() {
         return {
             efficiencies: {}
@@ -43,8 +36,7 @@ export default {
     },
     computed: {
         data: function() {
-            console.log(this.pokemonData)
-            return this.pokemonData;
+            return this.$store.getters.pokemonData;
         }
     },
     watch: {
@@ -60,7 +52,7 @@ export default {
                     typeTwo = data.types[1].type.name;
                 }
 
-            this.efficiencies = typeEfficiencies(this, typeOne, typeTwo, this.$stire.getters.dataFilter);
+            this.efficiencies = typeEfficiencies(this, typeOne, typeTwo, this.$store.getters.dataFilter);
             }
         }
     },

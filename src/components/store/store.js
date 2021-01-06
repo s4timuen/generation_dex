@@ -17,7 +17,8 @@ const store = new Vuex.Store({
     isOverlayOpen: false,
     pokedex: pokedex,
     nationalDex: {},
-    dataFilter: ""
+    dataFilter: "", 
+    pokemonData: {}
   },
   mutations: {
     setNavOpen(state) {
@@ -32,6 +33,9 @@ const store = new Vuex.Store({
     },
     setDataFilter(state, edition) {
       state.dataFilter = edition;
+    },
+    setPokemonData(state, data) {
+      state.pokemonData = data;
     }
   },
   getters: {
@@ -39,7 +43,8 @@ const store = new Vuex.Store({
         isOverlayOpen: state => state.isOverlayOpen,
         pokedex: state => state.pokedex,
         nationalDex: state => state.nationalDex,
-        dataFilter: state => state.dataFilter
+        dataFilter: state => state.dataFilter,
+        pokemonData: state => state.pokemonData
   }
 });
 
