@@ -37,18 +37,17 @@ export default {
         },
         openOverlay: function(name) {
 
-            let pokemon = checkDiffForme(name);
+            const THIS = this;
+            let pokemonName = checkDiffForme(name);
+
+            this.$store.getters.pokedex.getPokemonByName(pokemonName)
+            .then(function(response) { THIS.$store.commit('setPokemonData', response); })
+            .catch(error => { throw error; })
+
             this.$store.commit('setOverlayOpen');
-            this.$store.commit("setPokemonData", this.getPokemonData(pokemon));
-            console.log(this.$store.getters.pokemonData)
         },
         capital(name) {
             return name.charAt(0).toUpperCase() + name.slice(1);
-        },
-        getPokemonData(name) {
-            return this.$store.getters.pokedex.getPokemonByName(name)
-                .then(function(response) { return response; })
-                .catch(error => { throw error; })
         }
     },
     computed: {

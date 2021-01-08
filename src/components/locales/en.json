@@ -10,5 +10,14 @@
     "sidebar-generation-unova": "Unova",
     "sidebar-generation-alola": "Alola",
     "sidebar-generation-kalos": "Kalos",
-    "sidebar-generation-galar": "Galar"
+    "sidebar-generation-galar": "Galar",
+
+    "efficiencies-attack": "Attacker",
+    "efficiencies-defence": "Defender",
+    "efficioncies-multiplier-zero": "x0",
+    "efficioncies-multiplier-quarter": "x0.25",
+    "efficioncies-multiplier-half": "x0.5",
+    "efficioncies-multiplier-one": "x1",
+    "efficioncies-multiplier-double": "x2",
+    "efficioncies-multiplier-four": "x4"
 }

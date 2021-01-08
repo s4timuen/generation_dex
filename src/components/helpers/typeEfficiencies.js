@@ -2,7 +2,7 @@
 function typeEfficiencies(context, typeOne, typeTwo, generation) {
 
     // get type one object
-    context.$store.getters.pokedex.getTypeByName(typeOne)
+    return context.$store.getters.pokedex.getTypeByName(typeOne)
     .then(async function(response) {
 
         // get type two object
@@ -18,15 +18,15 @@ function typeEfficiencies(context, typeOne, typeTwo, generation) {
         return { typeOneData, typeTwoData } 
     })
     .then(function(response) { 
-        
+
         // calculate base efficiencies
-        return getBaseEfficiencies(context, response, generation);
+        return getBaseEfficiencies(context, response, generation); 
         
     }).catch(error => { throw error; });
 }
 
 // calculate base efficiencies
-function getBaseEfficiencies(context, typesObject, generation) {
+function getBaseEfficiencies(context, typesObject, generation) { 
 
     let efficiencies = {
         "attack": {
@@ -44,8 +44,6 @@ function getBaseEfficiencies(context, typesObject, generation) {
             "four": []
         }
     }  
-
-    console.log(typesObject)
 
     // generation specific changes to efficiencies
     switch(generation) {
@@ -67,7 +65,7 @@ function getBaseEfficiencies(context, typesObject, generation) {
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
             break;
-        case "hoen":
+        case "hoenn":
             typesObject = deleteType(typesObject, "fairy");
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
@@ -96,14 +94,26 @@ function getBaseEfficiencies(context, typesObject, generation) {
     if(typesObject.typeOneData != null && typesObject.typeTwoData == null) {
 
         // as attacker
-        efficiencies.attack.zero = typesObject.typeOneData.damage_relations.no_damage_to;
-        efficiencies.attack.half = typesObject.typeOneData.damage_relations.half_damage_to;
-        efficiencies.attack.double = typesObject.typeOneData.damage_relations.double_damage_to;
+        for(const entry of typesObject.typeOneData.damage_relations.no_damage_to) {
+            efficiencies.attack.zero.push(entry.name); 
+        }
+        for(const entry of typesObject.typeOneData.damage_relations.half_damage_to) {
+            efficiencies.attack.half.push(entry.name); 
+        }
+        for(const entry of typesObject.typeOneData.damage_relations.double_damage_to) {
+            efficiencies.attack.double.push(entry.name); 
+        }
 
         // as defender
-        efficiencies.defence.zero = typesObject.typeOneData.damage_relations.no_damage_from;
-        efficiencies.defence.half = typesObject.typeOneData.damage_relations.half_damage_from;
-        efficiencies.defence.double = typesObject.typeOneData.damage_relations.double_damage_from;
+        for(const entry of typesObject.typeOneData.damage_relations.no_damage_from) {
+            efficiencies.defence.zero.push(entry.name); 
+        }
+        for(const entry of typesObject.typeOneData.damage_relations.half_damage_from) {
+            efficiencies.defence.half.push(entry.name); 
+        }
+        for(const entry of typesObject.typeOneData.damage_relations.double_damage_from) {
+            efficiencies.defence.double.push(entry.name); 
+        }
     }
 
     // base efficiencies for dual type
@@ -114,11 +124,11 @@ function getBaseEfficiencies(context, typesObject, generation) {
 
             for(let index = 1; index < 19; index++) { 
 
-                let type = Object.values(response.results[index]);
+                let type = Object.values(response.results)[index].name; 
 
                 // as attacker
-                let finalMultiplierAttack = getFinalBaseMultiplier("attack", type, typesObject.typeOneData.damage_relations, typesObject.typeTwoData.damage_relations);
-                    
+                let finalMultiplierAttack = getFinalBaseMultiplier("attack", type, typesObject.typeOneData.damage_relations, typesObject.typeTwoData.damage_relations);   
+
                 switch(finalMultiplierAttack) {
                     case 0:
                         efficiencies.attack.zero.push(type);
@@ -170,8 +180,8 @@ function getBaseEfficiencies(context, typesObject, generation) {
 
 function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsTwo) { 
 
-    let multiplierOne = 1;
-    let multiplierTwo = 1;
+    let multiplierOne = 1; 
+    let multiplierTwo = 1; 
 
     // as attacker
     if(role == "attack") {
@@ -180,7 +190,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
         for(const [key, entry] of Object.entries(damageRelationsOne)) { 
 
             for(const value of entry) {
-
+  
                 if(key.includes("damage_to") && value.name == type) { 
                     switch(key) {
                         case "no_demage_to":
@@ -304,9 +314,9 @@ function deleteType(typesObject, type) {
 function changeEfficiency(context, typesObject, attackType, defenceType, newValue) {
 
     // change efficiency values
-    for(const entry of Object.entries(typesObject)) { // entry -> typeOneData
+    for(const entry of Object.entries(typesObject)) { // entry -> e.g. typeOneData
 
-        for(const [key, subEntry] of Object.entries(entry.damage_relations)) { // value -> double_damage_to
+        for(const [key, subEntry] of Object.entries(entry.damage_relations)) { // value -> e.g. double_damage_to
 
             // as attacker
             if(key.includes("damage_to")) {
@@ -376,7 +386,7 @@ function changeEfficiency(context, typesObject, attackType, defenceType, newValu
 function getTypeUrl(context, type) {
 
     context.$store.getters.pokedex.getTypeByName(type)
-        .then(function(response) {
+    .then(function(response) {
 
         let number = response.id;
 

@@ -39,12 +39,12 @@ const store = new Vuex.Store({
     }
   },
   getters: {
-        isNavOpen: state => state.isNavOpen,
-        isOverlayOpen: state => state.isOverlayOpen,
-        pokedex: state => state.pokedex,
-        nationalDex: state => state.nationalDex,
-        dataFilter: state => state.dataFilter,
-        pokemonData: state => state.pokemonData
+      isNavOpen: state => state.isNavOpen,
+      isOverlayOpen: state => state.isOverlayOpen,
+      pokedex: state => state.pokedex,
+      nationalDex: state => state.nationalDex,
+      dataFilter: state => state.dataFilter,
+      pokemonData: state => state.pokemonData
   }
 });
 

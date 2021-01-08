@@ -2,19 +2,31 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
-                <p> Attack </p>
+                <p>{{ $t("efficiencies-attack") }}</p>
                 <div v-for="( efficiency, key ) in efficiencies.attack" :key="key">
-                    <ul v-for="( type, key ) in efficiency" :key="key">
-                        <li> {{ type }} </li>
-                    </ul>
+                    <p v-if="key=='zero'">{{ $t("efficioncies-multiplier-zero") }}</p>
+                    <p v-if="key=='quarter'">{{ $t("efficioncies-multiplier-quarter") }}</p>
+                    <p v-if="key=='half'">{{ $t("efficioncies-multiplier-half") }}</p>
+                    <p v-if="key=='one'">{{ $t("efficioncies-multiplier-one") }}</p>
+                    <p v-if="key=='double'">{{ $t("efficioncies-multiplier-double") }}</p>
+                    <p v-if="key=='four'">{{ $t("efficioncies-multiplier-four") }}</p>
+                    <div v-for="( type, key ) in efficiency" :key="key">
+                        <p> {{ type }} </p>
+                    </div>
                 </div>
             </div>
             <div class="col-6">
-                <p> Defence </p>
+                <p> {{ $t("efficiencies-defence") }} </p>
                  <div v-for="( efficiency, key ) in efficiencies.defence" :key="key">
-                    <ul v-for="( type, key ) in efficiency" :key="key">
-                        <li> {{ type }} </li>
-                    </ul>
+                    <p v-if="key=='zero'">{{ $t("efficioncies-multiplier-zero") }}</p>
+                    <p v-if="key=='quarter'">{{ $t("efficioncies-multiplier-quarter") }}</p>
+                    <p v-if="key=='half'">{{ $t("efficioncies-multiplier-half") }}</p>
+                    <p v-if="key=='one'">{{ $t("efficioncies-multiplier-one") }}</p>
+                    <p v-if="key=='double'">{{ $t("efficioncies-multiplier-double") }}</p>
+                    <p v-if="key=='four'">{{ $t("efficioncies-multiplier-four") }}</p>
+                    <div v-for="( type, key ) in efficiency" :key="key">
+                        <p> {{ type }} </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,7 +43,22 @@ export default {
     },
     data() {
         return {
-            efficiencies: {}
+            efficiencies: {
+                "attack": {
+                    "zero": [""],
+                    "quarter": [""],
+                    "half": [""],
+                    "double": [""],
+                    "four": [""]
+                },
+                "defence": {
+                    "zero": [""],
+                    "quarter": [""],
+                    "half": [""],
+                    "double": [""],
+                    "four": [""]
+                }
+            }  
         }
     },
     computed: {
@@ -41,6 +68,8 @@ export default {
     },
     watch: {
         data: function(data) {  
+
+            const THIS = this;
 
             if(Object.keys(data).length != 0) { 
 
@@ -52,7 +81,8 @@ export default {
                     typeTwo = data.types[1].type.name;
                 }
 
-            this.efficiencies = typeEfficiencies(this, typeOne, typeTwo, this.$store.getters.dataFilter);
+            typeEfficiencies(this, typeOne, typeTwo, this.$store.getters.dataFilter)
+            .then(function(response) { THIS.efficiencies = response });
             }
         }
     },
