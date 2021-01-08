@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { capital } from "@/components/helpers/utilities.js"
 import { showHideGenerationDivs } from "@/components/helpers/genDivsVisibility.js";
 import { checkDiffForme } from "@/components/helpers/checkDiffFormes.js"
 
@@ -46,9 +47,7 @@ export default {
 
             this.$store.commit('setOverlayOpen');
         },
-        capital(name) {
-            return name.charAt(0).toUpperCase() + name.slice(1);
-        }
+        capital
     },
     computed: {
         dataFilter: function() {

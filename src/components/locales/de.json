@@ -19,5 +19,9 @@
     "efficioncies-multiplier-half": "x0,5",
     "efficioncies-multiplier-one": "x1",
     "efficioncies-multiplier-double": "x2",
-    "efficioncies-multiplier-four": "x4"
+    "efficioncies-multiplier-four": "x4",
+
+    "abilities-one": "Fähigkeit 1: ",
+    "abilities-two": "Fähigkeit 2: ",
+    "abilities-hidden": "Versteckte Fähigkeit: "
 }

@@ -11,7 +11,7 @@
                     <p v-if="key=='double'">{{ $t("efficioncies-multiplier-double") }}</p>
                     <p v-if="key=='four'">{{ $t("efficioncies-multiplier-four") }}</p>
                     <div v-for="( type, key ) in efficiency" :key="key">
-                        <p> {{ type }} </p>
+                        <p> {{ capital(type) }} </p>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <p v-if="key=='double'">{{ $t("efficioncies-multiplier-double") }}</p>
                     <p v-if="key=='four'">{{ $t("efficioncies-multiplier-four") }}</p>
                     <div v-for="( type, key ) in efficiency" :key="key">
-                        <p> {{ type }} </p>
+                        <p> {{ capital(type) }} </p>
                     </div>
                 </div>
             </div>
@@ -34,6 +34,8 @@
 </template>
 
 <script>
+// 1 or 2 types per pokemon
+import { capital } from "@/components/helpers/utilities.js"
 import { typeEfficiencies } from "@/components/helpers/typeEfficiencies.js"
 
 export default {
@@ -87,9 +89,7 @@ export default {
         }
     },
     methods: {
-        capital(name) {
-            return name.charAt(0).toUpperCase() + name.slice(1);
-        },
+        capital
     }
 }
 </script>
