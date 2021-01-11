@@ -58,27 +58,27 @@ function getBaseEfficiencies(context, typesObject, generation) {
             typesObject = changeEfficiency(context, typesObject, "ghost", "psychic", 0);
             typesObject = changeEfficiency(context, typesObject, "ice", "fire", 1);
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
-            typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
+            typesObject = changeEfficiency(context, typesObject, "dark", "steel", 0.5);
             break;
         case "johto":
             typesObject = deleteType(typesObject, "fairy");
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
-            typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
+            typesObject = changeEfficiency(context, typesObject, "dark", "steel", 0.5);
             break;
         case "hoenn":
             typesObject = deleteType(typesObject, "fairy");
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
-            typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
+            typesObject = changeEfficiency(context, typesObject, "dark", "steel", 0.5);
             break;
         case "sinnoh":
             typesObject = deleteType(typesObject, "fairy");
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
-            typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
+            typesObject = changeEfficiency(context, typesObject, "dark", "steel", 0.5);
             break;
         case "unova":
             typesObject = deleteType(typesObject, "fairy");
             typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
-            typesObject = changeEfficiency(context, typesObject, "ghost", "steel", 0.5);
+            typesObject = changeEfficiency(context, typesObject, "dark", "steel", 0.5);
             break;
         case "kalos":
             break;
@@ -291,7 +291,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
     return multiplierOne * multiplierTwo;
 }
 
-function deleteType(typesObject, type) {
+function deleteType(typesObject, type) { // todo: fix
 
     // delete none existing type from type objects
     for(const entry of Object.entries(typesObject)) {
@@ -311,7 +311,7 @@ function deleteType(typesObject, type) {
     return typesObject;
 }
 
-function changeEfficiency(context, typesObject, attackType, defenceType, newValue) {
+function changeEfficiency(context, typesObject, attackType, defenceType, newValue) { // todo: fix
 
     // change efficiency values
     for(const entry of Object.entries(typesObject)) { // entry -> e.g. typeOneData

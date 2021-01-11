@@ -7,12 +7,19 @@
                     <div class="col-12">
                         {{ capital(pokemonName) }}
                     </div>
-                    <Efficiencies/>
-                    <Evolutions/>
-                    <Moves/>
-                    <Abilities/>
-                    <Stats/>
-                    <GeneralProperties/>
+                    <Sprite class="col-12"/>
+                </div>
+                <div class="row">
+                    <Efficiencies class="col-12 col-md-6"/>
+                    <Abilities class="col-12 col-md-6"/>
+                </div>
+                <div class="row">
+                    <Evolutions class="col-12"/>
+                    <Moves class="col-12"/>
+                    <Stats class="col-12"/>
+                </div>
+                <div calss="row">
+                    <GeneralProperties class="col-12"/>
                 </div>
             </div>
         </div>
@@ -20,6 +27,7 @@
 </template>
 
 <script>
+import Sprite from "@/components/views/home/overlay/Sprite.vue"
 import Efficiencies from "@/components/views/home/overlay/Efficiencies.vue";
 import Abilities from "@/components/views/home/overlay/Abilities.vue";
 import Evolutions from "@/components/views/home/overlay/Evolutions.vue";
@@ -30,6 +38,7 @@ import GeneralProperties from "@/components/views/home/overlay/GeneralProperties
 export default {
     name: 'Overlay',
     components: {
+        Sprite,
         Efficiencies,
         Abilities,
         Evolutions,
@@ -51,7 +60,7 @@ export default {
             let name = "";
 
             if(Object.keys(this.$store.getters.pokemonData).length != 0) {
-                
+
                 name = this.$store.getters.pokemonData.name;
             }
 

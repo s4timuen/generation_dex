@@ -1,10 +1,10 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-6">
-                <div class="col-12">{{ $t("abilities-one") + capital(abilities.abilityOne) }}</div>
-                <div class="col-12">{{ $t("abilities-two") + capital(abilities.abilityTwo) }}</div>
-                <div class="col-12">{{ $t("abilities-hidden") + capital(abilities.hiddenAbility) }}</div>
+            <div class="col-12">
+                <div class="col-12 col-ms-6">{{ $t("abilities-one") + capital(abilities.abilityOne) }}</div>
+                <div class="col-12 col-ms-6">{{ $t("abilities-two") + capital(abilities.abilityTwo) }}</div>
+                <div class="col-12 col-ms-6">{{ $t("abilities-hidden") + capital(abilities.hiddenAbility) }}</div>
             </div>
         </div>
     </div>
@@ -37,22 +37,27 @@ export default {
     watch: {
         data: function(data) {  
 
-            // get abilities
-            if(Object.keys(data).length != 0) { 
+            // no abilities in gen 1 and 2
+            if(this.$store.getters.dataFilter != "kanto"
+            && this.$store.getters.dataFilter != "johto") {
 
-                this.abilities.abilityOne = data.abilities[0].ability.name;
+                // get abilities
+                if(Object.keys(data).length != 0) { 
 
-                // only one ability
-                if(Object.keys(data.abilities).length == 2 && data.abilities[1].is_hidden == true) {
-                    
-                    this.abilities.hiddenAbility = data.abilities[1].ability.name;
+                    this.abilities.abilityOne = data.abilities[0].ability.name;
+
+                    // only one ability
+                    if(Object.keys(data.abilities).length == 2 && data.abilities[1].is_hidden == true) {
+                        
+                        this.abilities.hiddenAbility = data.abilities[1].ability.name;
+                    }
+                    // with two abilities
+                    if(Object.keys(data.abilities).length == 3 && data.abilities[2].is_hidden == true) {
+                        
+                        this.abilities.abilityTwo = data.abilities[1].ability.name;
+                        this.abilities.hiddenAbility = data.abilities[2].ability.name;
+                    }               
                 }
-                // with two abilities
-                if(Object.keys(data.abilities).length == 3 && data.abilities[2].is_hidden == true) {
-                    
-                    this.abilities.abilityTwo = data.abilities[1].ability.name;
-                    this.abilities.hiddenAbility = data.abilities[2].ability.name;
-                }               
             }
         }
     },
