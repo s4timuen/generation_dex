@@ -43,7 +43,7 @@ export default {
 
             this.$store.getters.pokedex.getPokemonByName(pokemonName)
             .then(function(response) { THIS.$store.commit('setPokemonData', response); })
-            .catch(error => { throw error; })
+            .catch(error => { throw error; });
 
             this.$store.commit('setOverlayOpen');
         },

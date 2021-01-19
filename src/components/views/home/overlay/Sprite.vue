@@ -36,26 +36,28 @@ export default {
     methods: {
         getSprite(data, option) {
 
-            let url;
+            if(Object.keys(this.$store.getters.pokemonData).length != 0) {
+                let url;
 
-            switch(option) {
-                case "front_default":
-                    url = data.sprites.front_default;
-                    break;
-                case "back_default":
-                    url = data.sprites.back_default;
-                    break;
-                case "front_shiny":
-                    url = data.sprites.front_shiny;
-                    break;
-                case "back_shiny":
-                    url = data.sprites.back_shiny;
-                    break;
-                default:
-                    url = data.sprites.front_default;
+                switch(option) {
+                    case "front_default":
+                        url = data.sprites.front_default;
+                        break;
+                    case "back_default":
+                        url = data.sprites.back_default;
+                        break;
+                    case "front_shiny":
+                        url = data.sprites.front_shiny;
+                        break;
+                    case "back_shiny":
+                        url = data.sprites.back_shiny;
+                        break;
+                    default:
+                        url = data.sprites.front_default;
+                }
+
+                return url;
             }
-
-            return url;
         }
     }
 }

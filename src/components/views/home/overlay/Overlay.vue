@@ -8,13 +8,13 @@
                         {{ capital(pokemonName) }}
                     </div>
                     <Sprite class="col-12"/>
+                    <Evolutions class="col-12"/>
                 </div>
                 <div class="row">
                     <Efficiencies class="col-12 col-md-6"/>
                     <Abilities class="col-12 col-md-6"/>
                 </div>
                 <div class="row">
-                    <Evolutions class="col-12"/>
                     <Moves class="col-12"/>
                     <Stats class="col-12"/>
                 </div>

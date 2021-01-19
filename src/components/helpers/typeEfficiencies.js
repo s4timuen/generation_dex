@@ -291,18 +291,18 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
     return multiplierOne * multiplierTwo;
 }
 
-function deleteType(typesObject, type) { // todo: fix
+function deleteType(typesObject, type) { 
 
     // delete none existing type from type objects
     for(const entry of Object.entries(typesObject)) {
 
-        for(const subEntry of Object.entries(entry.demage_relations)) {
+        for(const subEntry of Object.entries(entry[1].damage_relations)) { 
 
-            for(const [key, value] of Object.entries(subEntry)) {
-        
+            for(const value of subEntry[1]) {
+
                 if(value.name == type) {
-        
-                    delete [key, value];
+
+                    subEntry[1].splice(subEntry[1].indexOf(value), 1);
                 }
             }
         }
@@ -311,35 +311,38 @@ function deleteType(typesObject, type) { // todo: fix
     return typesObject;
 }
 
-function changeEfficiency(context, typesObject, attackType, defenceType, newValue) { // todo: fix
+function changeEfficiency(context, typesObject, attackType, defenceType, newValue) { 
 
     // change efficiency values
-    for(const entry of Object.entries(typesObject)) { // entry -> e.g. typeOneData
+    for(const entry of Object.entries(typesObject)) { 
 
-        for(const [key, subEntry] of Object.entries(entry.damage_relations)) { // value -> e.g. double_damage_to
+        for(const [key, subEntry] of Object.entries(entry[1].damage_relations)) { 
 
             // as attacker
             if(key.includes("damage_to")) {
 
-                for(const [key, value] of Object.entries(subEntry)) {  
+                for(const value of subEntry) {  
 
                     if(value.name == attackType) { 
         
-                        delete value[key];
+                        subEntry.splice(subEntry.indexOf(value), 1);
         
-                        let pushObject;
+                        let pushObject = {
+                            name: "",
+                            url: ""
+                        };
                         pushObject.name = defenceType;
                         pushObject.url = getTypeUrl(context, defenceType);
         
                         switch(newValue) {
                             case 0:
-                                entry.damage_relations.no_damage_to.push(pushObject);
+                                entry[1].damage_relations.no_damage_to.push(pushObject);
                                 break;
                             case 0.5:
-                                entry.damage_relations.half_damage_to.push(pushObject);
+                                entry[1].damage_relations.half_damage_to.push(pushObject);
                                 break;
                             case 2:
-                                entry.damage_relations.double_damage_to.push(pushObject);
+                                entry[1].damage_relations.double_damage_to.push(pushObject);
                                 break;
                             default:
                                 break;
@@ -347,29 +350,32 @@ function changeEfficiency(context, typesObject, attackType, defenceType, newValu
                     }
                 }
             }
-
+            
             // as defender
-            if(key.includes("damage_from")) {
+            if(key.includes("damage_from")) { 
 
-                for(const [key, value] of Object.entries(subEntry)) {  
+                for(const value of subEntry) {  
 
                     if(value.name == defenceType) { 
         
-                        delete value[key];
+                        subEntry.splice(subEntry.indexOf(value), 1);
         
-                        let pushObject;
+                        let pushObject = {
+                            name: "",
+                            url: ""
+                        };
                         pushObject.name = attackType;
                         pushObject.url = getTypeUrl(context, attackType);
         
                         switch(newValue) {
                             case 0:
-                                entry.damage_relations.no_damage_from.push(pushObject);
+                                entry[1].damage_relations.no_damage_from.push(pushObject);
                                 break;
                             case 0.5:
-                                entry.damage_relations.half_damage_from.push(pushObject);
+                                entry[1].damage_relations.half_damage_from.push(pushObject);
                                 break;
                             case 2:
-                                entry.damage_relations.double_damage_from.push(pushObject);
+                                entry[1].damage_relations.double_damage_from.push(pushObject);
                                 break;
                             default:
                                 break;
