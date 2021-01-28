@@ -1,5 +1,6 @@
-# Same as .gitignore right now
+package-lock.json
 
+# Same as .gitignore from here on
 .DS_Store
 node_modules
 /dist
