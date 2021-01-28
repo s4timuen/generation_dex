@@ -2,48 +2,44 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-4">
-                <div v-for="( evolition, key ) in evolutionChain" :key="key">
-                    {{ evolution.name }} -> 
-                </div> 
+                <div v-for="(evolition, key) in evolutionChain" :key="key">{{ evolution.name }} -></div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { getEvolutionChain } from "@/components/helpers/evolutions.js"
+import { getEvolutionChain } from '@/components/helpers/evolutions.js'
 
 export default {
     name: 'Evolutions',
-    components: {
-        
-    },
+    components: {},
     data() {
         return {
-            evolutionChain: {} 
+            evolutionChain: {},
         }
     },
     computed: {
         data: function() {
-            return this.$store.getters.pokemonData;
-        }
+            return this.$store.getters.pokemonData
+        },
     },
     watch: {
-        data: function(data) {  
+        data: function(data) {
+            const THIS = this
 
-            const THIS = this;
-
-            if(Object.keys(data).length != 0) { 
-
+            if (Object.keys(data).length != 0) {
                 getEvolutionChain(this, this.$store.getters.dataFilter)
-                .then(function(response) { THIS.evolutionChain = response })
-                .catch(error => { throw error; });
+                    .then(function(response) {
+                        THIS.evolutionChain = response
+                    })
+                    .catch(error => {
+                        throw error
+                    })
             }
-        }
-    }
+        },
+    },
 }
 </script>
 
-<style lang="css">
-
-</style>
+<style lang="css"></style>

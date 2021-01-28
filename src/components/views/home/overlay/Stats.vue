@@ -5,12 +5,8 @@
 <script>
 export default {
     name: 'Stats',
-    components: {
-        
-    }
+    components: {},
 }
 </script>
 
-<style lang="css">
-
-</style>
+<style lang="css"></style>

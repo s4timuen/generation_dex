@@ -7,19 +7,19 @@
                     <div class="col-12">
                         {{ capital(pokemonName) }}
                     </div>
-                    <Sprite class="col-12"/>
-                    <Evolutions class="col-12"/>
+                    <Sprite class="col-12" />
+                    <Evolutions class="col-12" />
                 </div>
                 <div class="row">
-                    <Efficiencies class="col-12 col-md-6"/>
-                    <Abilities class="col-12 col-md-6"/>
+                    <Efficiencies class="col-12 col-md-6" />
+                    <Abilities class="col-12 col-md-6" />
                 </div>
                 <div class="row">
-                    <Moves class="col-12"/>
-                    <Stats class="col-12"/>
+                    <Moves class="col-12" />
+                    <Stats class="col-12" />
                 </div>
                 <div calss="row">
-                    <GeneralProperties class="col-12"/>
+                    <GeneralProperties class="col-12" />
                 </div>
             </div>
         </div>
@@ -27,13 +27,13 @@
 </template>
 
 <script>
-import Sprite from "@/components/views/home/overlay/Sprite.vue"
-import Efficiencies from "@/components/views/home/overlay/Efficiencies.vue";
-import Abilities from "@/components/views/home/overlay/Abilities.vue";
-import Evolutions from "@/components/views/home/overlay/Evolutions.vue";
-import Moves from "@/components/views/home/overlay/Moves.vue";
-import Stats from "@/components/views/home/overlay/Stats.vue";
-import GeneralProperties from "@/components/views/home/overlay/GeneralProperties.vue";
+import Sprite from '@/components/views/home/overlay/Sprite.vue'
+import Efficiencies from '@/components/views/home/overlay/Efficiencies.vue'
+import Abilities from '@/components/views/home/overlay/Abilities.vue'
+import Evolutions from '@/components/views/home/overlay/Evolutions.vue'
+import Moves from '@/components/views/home/overlay/Moves.vue'
+import Stats from '@/components/views/home/overlay/Stats.vue'
+import GeneralProperties from '@/components/views/home/overlay/GeneralProperties.vue'
 
 export default {
     name: 'Overlay',
@@ -44,44 +44,39 @@ export default {
         Evolutions,
         Moves,
         Stats,
-        GeneralProperties
+        GeneralProperties,
     },
-    data () {
-        return {
-
-        }
+    data() {
+        return {}
     },
     computed: {
         isOverlayOpen() {
-            return this.$store.getters.isOverlayOpen;
+            return this.$store.getters.isOverlayOpen
         },
-        pokemonName() { 
+        pokemonName() {
+            let name = ''
 
-            let name = "";
-
-            if(Object.keys(this.$store.getters.pokemonData).length != 0) {
-
-                name = this.$store.getters.pokemonData.name;
+            if (Object.keys(this.$store.getters.pokemonData).length != 0) {
+                name = this.$store.getters.pokemonData.name
             }
 
-            return name; 
-        }
+            return name
+        },
     },
     methods: {
         closeOverlayPanel() {
-            this.$store.commit('setOverlayOpen');
+            this.$store.commit('setOverlayOpen')
         },
         capital(name) {
-            return name.charAt(0).toUpperCase() + name.slice(1);
-        }
-    }
+            return name.charAt(0).toUpperCase() + name.slice(1)
+        },
+    },
 }
 </script>
 
 <style lang="css">
-
 .overlay-backdrop {
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     position: fixed;

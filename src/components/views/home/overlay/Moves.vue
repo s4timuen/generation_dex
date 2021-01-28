@@ -5,12 +5,8 @@
 <script>
 export default {
     name: 'Moves',
-    components: {
-        
-    }
+    components: {},
 }
 </script>
 
-<style lang="css">
-
-</style>
+<style lang="css"></style>

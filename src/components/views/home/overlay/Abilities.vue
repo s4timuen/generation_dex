@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="col-12 col-ms-6">{{ $t("abilities-one") + capital(abilities.abilityOne) }}</div>
-                <div class="col-12 col-ms-6">{{ $t("abilities-two") + capital(abilities.abilityTwo) }}</div>
-                <div class="col-12 col-ms-6">{{ $t("abilities-hidden") + capital(abilities.hiddenAbility) }}</div>
+                <div class="col-12 col-ms-6">{{ $t('abilities-one') + capital(abilities.abilityOne) }}</div>
+                <div class="col-12 col-ms-6">{{ $t('abilities-two') + capital(abilities.abilityTwo) }}</div>
+                <div class="col-12 col-ms-6">{{ $t('abilities-hidden') + capital(abilities.hiddenAbility) }}</div>
             </div>
         </div>
     </div>
@@ -12,61 +12,51 @@
 
 <script>
 // 1 or 2 abilities per pokemon
-// hidden ability for every pokemon 
-import { capital } from "@/components/helpers/utilities.js"
+// hidden ability for every pokemon
+import { capital } from '@/components/helpers/utilities.js'
 
 export default {
     name: 'Abilities',
-    components: {
-        
-    },
+    components: {},
     data: function() {
         return {
             abilities: {
-                abilityOne: "",
-                abilityTwo: "",
-                hiddenAbility: ""
-            }
+                abilityOne: '',
+                abilityTwo: '',
+                hiddenAbility: '',
+            },
         }
     },
     computed: {
         data: function() {
-            return this.$store.getters.pokemonData;
-        }
+            return this.$store.getters.pokemonData
+        },
     },
     watch: {
-        data: function(data) {  
-
+        data: function(data) {
             // no abilities in gen 1 and 2
-            if(this.$store.getters.dataFilter != "kanto"
-            && this.$store.getters.dataFilter != "johto") {
-
+            if (this.$store.getters.dataFilter != 'kanto' && this.$store.getters.dataFilter != 'johto') {
                 // get abilities
-                if(Object.keys(data).length != 0) { 
-
-                    this.abilities.abilityOne = data.abilities[0].ability.name;
+                if (Object.keys(data).length != 0) {
+                    this.abilities.abilityOne = data.abilities[0].ability.name
 
                     // only one ability
-                    if(Object.keys(data.abilities).length == 2 && data.abilities[1].is_hidden == true) {
-                        
-                        this.abilities.hiddenAbility = data.abilities[1].ability.name;
+                    if (Object.keys(data.abilities).length == 2 && data.abilities[1].is_hidden == true) {
+                        this.abilities.hiddenAbility = data.abilities[1].ability.name
                     }
                     // with two abilities
-                    if(Object.keys(data.abilities).length == 3 && data.abilities[2].is_hidden == true) {
-                        
-                        this.abilities.abilityTwo = data.abilities[1].ability.name;
-                        this.abilities.hiddenAbility = data.abilities[2].ability.name;
-                    }               
+                    if (Object.keys(data.abilities).length == 3 && data.abilities[2].is_hidden == true) {
+                        this.abilities.abilityTwo = data.abilities[1].ability.name
+                        this.abilities.hiddenAbility = data.abilities[2].ability.name
+                    }
                 }
             }
-        }
+        },
     },
     methods: {
-        capital
-    }
+        capital,
+    },
 }
 </script>
 
-<style lang="css">
-
-</style>
+<style lang="css"></style>
