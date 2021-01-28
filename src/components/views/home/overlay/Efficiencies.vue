@@ -83,9 +83,9 @@ export default {
                     typeTwo = data.types[1].type.name;
                 }
 
-            typeEfficiencies(this, typeOne, typeTwo, this.$store.getters.dataFilter)
-            .then(function(response) { THIS.efficiencies = response })
-            .catch(error => { throw error; });
+                typeEfficiencies(this, typeOne, typeTwo, this.$store.getters.dataFilter)
+                .then(function(response) { THIS.efficiencies = response })
+                .catch(error => { throw error; });
             }
         }
     },

@@ -12,7 +12,8 @@ function typeEfficiencies(context, typeOne, typeTwo, generation) {
         if(typeTwo != "none") {
 
             await context.$store.getters.pokedex.getTypeByName(typeTwo)
-            .then(function(response) { typeTwoData = response; }); 
+            .then(function(response) { typeTwoData = response; })
+            .catch(error => { throw error; }); 
         }
 
         return { typeOneData, typeTwoData } 
