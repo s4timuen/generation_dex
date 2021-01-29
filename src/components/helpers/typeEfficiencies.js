@@ -198,7 +198,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
             for (const value of entry) {
                 if (key.includes('damage_to') && value.name == type) {
                     switch (key) {
-                        case 'no_demage_to':
+                        case 'no_damage_to':
                             multiplierOne = 0
                             break
                         case 'half_damage_to':
@@ -219,7 +219,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
             for (const value of entry) {
                 if (key.includes('damage_to') && value.name == type) {
                     switch (key) {
-                        case 'no_demage_to':
+                        case 'no_damage_to':
                             multiplierTwo = 0
                             break
                         case 'half_damage_to':
@@ -243,7 +243,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
             for (const value of entry) {
                 if (key.includes('damage_from') && value.name == type) {
                     switch (key) {
-                        case 'no_demage_from':
+                        case 'no_damage_from':
                             multiplierOne = 0
                             break
                         case 'half_damage_from':
@@ -264,7 +264,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
             for (const value of entry) {
                 if (key.includes('damage_from') && value.name == type) {
                     switch (key) {
-                        case 'no_demage_from':
+                        case 'no_damage_from':
                             multiplierTwo = 0
                             break
                         case 'half_damage_from':
