@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import { capital } from '@/components/helpers/utilities.js'
-import { showHideGenerationDivs } from '@/components/helpers/genDivsVisibility.js'
-import { checkDiffForme } from '@/components/helpers/checkDiffFormes.js'
+import { capital } from '@/components/helpers/utilities.js';
+import { showHideGenerationDivs } from '@/components/helpers/genDivsVisibility.js';
+import { checkDiffForme } from '@/components/helpers/checkDiffFormes.js';
 
-import Overlay from '@/components/views/home/overlay/Overlay.vue'
+import Overlay from '@/components/views/home/overlay/Overlay.vue';
 
 export default {
     name: 'Home',
@@ -33,42 +33,42 @@ export default {
         Overlay,
     },
     data: function() {
-        return {}
+        return {};
     },
     methods: {
         getImgUrl: function(key) {
-            return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/' + key + '.png'
+            return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/' + key + '.png';
         },
         openOverlay: function(name) {
-            const THIS = this
-            let pokemonName = checkDiffForme(name)
+            const THIS = this;
+            let pokemonName = checkDiffForme(name);
 
             this.$store.getters.pokeApiWrapper
                 .getPokemonByName(pokemonName)
                 .then(function(response) {
-                    THIS.$store.commit('setSelectedPokemonData', response)
+                    THIS.$store.commit('setSelectedPokemonData', response);
                 })
                 .catch(error => {
-                    throw error
-                })
+                    throw error;
+                });
 
-            this.$store.commit('setOverlayOpen')
+            this.$store.commit('setOverlayOpen');
         },
         capital,
     },
     computed: {
         dataFilter: function() {
-            return this.$store.getters.dataFilter
+            return this.$store.getters.dataFilter;
         },
     },
     watch: {
         dataFilter: function(dataFilter) {
-            showHideGenerationDivs(dataFilter)
+            showHideGenerationDivs(dataFilter);
         },
     },
     mounted: function() {
         // get default pokemon
-        let dex = 'national'
+        let dex = 'national';
         let nationalDex = {
             kanto: [],
             johto: [],
@@ -78,7 +78,7 @@ export default {
             kalos: [],
             alola: [],
             galar: [],
-        }
+        };
 
         this.$store.getters.pokeApiWrapper
             .getPokedexByName(dex)
@@ -86,38 +86,38 @@ export default {
                 for (let index = 0; index < response.pokemon_entries.length; index++) {
                     // categorize pokemon in generations
                     if (index >= 0 && index < 151) {
-                        nationalDex.kanto.push(Object.values(response.pokemon_entries)[index])
+                        nationalDex.kanto.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 151 && index < 251) {
-                        nationalDex.johto.push(Object.values(response.pokemon_entries)[index])
+                        nationalDex.johto.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 251 && index < 386) {
-                        nationalDex.hoen.push(Object.values(response.pokemon_entries)[index])
+                        nationalDex.hoen.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 386 && index < 493) {
-                        nationalDex.sinnoh.push(Object.values(response.pokemon_entries)[index])
+                        nationalDex.sinnoh.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 493 && index < 649) {
-                        nationalDex.unova.push(Object.values(response.pokemon_entries)[index])
+                        nationalDex.unova.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 649 && index < 721) {
-                        nationalDex.kalos.push(Object.values(response.pokemon_entries)[index])
+                        nationalDex.kalos.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 721 && index < 809) {
-                        nationalDex.alola.push(Object.values(response.pokemon_entries)[index])
+                        nationalDex.alola.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 809 && index < 897) {
-                        nationalDex.galar.push(Object.values(response.pokemon_entries)[index])
+                        nationalDex.galar.push(Object.values(response.pokemon_entries)[index]);
                     }
                 }
             })
             .catch(error => {
-                throw error
-            })
+                throw error;
+            });
 
-        this.$store.commit('setNationalDex', nationalDex)
+        this.$store.commit('setNationalDex', nationalDex);
     },
-}
+};
 </script>
 
 <style lang="css">

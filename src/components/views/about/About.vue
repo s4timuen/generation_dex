@@ -9,9 +9,9 @@ export default {
     name: 'About',
     components: {},
     date: function() {
-        return {}
+        return {};
     },
-}
+};
 </script>
 
 <style lang="css"></style>

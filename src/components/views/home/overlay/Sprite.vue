@@ -24,36 +24,36 @@ export default {
     name: 'Sprite',
     components: {},
     data() {
-        return {}
+        return {};
     },
     mounted() {},
     methods: {
         getSprite(data, option) {
             if (Object.keys(this.$store.getters.selectedPokemonData).length != 0) {
-                let url
+                let url;
 
                 switch (option) {
                     case 'front_default':
-                        url = data.sprites.front_default
-                        break
+                        url = data.sprites.front_default;
+                        break;
                     case 'back_default':
-                        url = data.sprites.back_default
-                        break
+                        url = data.sprites.back_default;
+                        break;
                     case 'front_shiny':
-                        url = data.sprites.front_shiny
-                        break
+                        url = data.sprites.front_shiny;
+                        break;
                     case 'back_shiny':
-                        url = data.sprites.back_shiny
-                        break
+                        url = data.sprites.back_shiny;
+                        break;
                     default:
-                        url = data.sprites.front_default
+                        url = data.sprites.front_default;
                 }
 
-                return url
+                return url;
             }
         },
     },
-}
+};
 </script>
 
 <style lang="css"></style>

@@ -13,19 +13,19 @@ export default {
     name: 'Burger',
     components: {},
     date: function() {
-        return {}
+        return {};
     },
     computed: {
         isActive() {
-            return this.$store.getters.isActive
+            return this.$store.getters.isActive;
         },
     },
     methods: {
         toggle() {
-            this.$store.commit('setNavOpen')
+            this.$store.commit('setNavOpen');
         },
     },
-}
+};
 </script>
 
 <style lang="css">

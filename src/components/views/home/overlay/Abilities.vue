@@ -13,7 +13,7 @@
 <script>
 // 1 or 2 abilities per pokemon
 // hidden ability for every pokemon
-import { capital } from '@/components/helpers/utilities.js'
+import { capital } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Abilities',
@@ -25,11 +25,11 @@ export default {
                 abilityTwo: '',
                 hiddenAbility: '',
             },
-        }
+        };
     },
     computed: {
         data: function() {
-            return this.$store.getters.selectedPokemonData
+            return this.$store.getters.selectedPokemonData;
         },
     },
     watch: {
@@ -38,16 +38,16 @@ export default {
             if (this.$store.getters.dataFilter != 'kanto' && this.$store.getters.dataFilter != 'johto') {
                 // get abilities
                 if (Object.keys(data).length != 0) {
-                    this.abilities.abilityOne = data.abilities[0].ability.name
+                    this.abilities.abilityOne = data.abilities[0].ability.name;
 
                     // only one ability
                     if (Object.keys(data.abilities).length == 2 && data.abilities[1].is_hidden == true) {
-                        this.abilities.hiddenAbility = data.abilities[1].ability.name
+                        this.abilities.hiddenAbility = data.abilities[1].ability.name;
                     }
                     // with two abilities
                     if (Object.keys(data.abilities).length == 3 && data.abilities[2].is_hidden == true) {
-                        this.abilities.abilityTwo = data.abilities[1].ability.name
-                        this.abilities.hiddenAbility = data.abilities[2].ability.name
+                        this.abilities.abilityTwo = data.abilities[1].ability.name;
+                        this.abilities.hiddenAbility = data.abilities[2].ability.name;
                     }
                 }
             }
@@ -56,7 +56,7 @@ export default {
     methods: {
         capitalize,
     },
-}
+};
 </script>
 
 <style lang="css"></style>

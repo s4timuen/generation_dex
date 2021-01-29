@@ -30,22 +30,22 @@ export default {
     name: 'Sidebar',
     components: {},
     date: function() {
-        return {}
+        return {};
     },
     computed: {
         isPanelOpen() {
-            return this.$store.getters.isNavOpen
+            return this.$store.getters.isNavOpen;
         },
     },
     methods: {
         closeSidebarPanel() {
-            this.$store.commit('setNavOpen')
+            this.$store.commit('setNavOpen');
         },
         setDataFilter(edition) {
-            this.$store.commit('setDataFilter', edition)
+            this.$store.commit('setDataFilter', edition);
         },
     },
-}
+};
 </script>
 
 <style lang="css">

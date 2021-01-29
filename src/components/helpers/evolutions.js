@@ -16,62 +16,62 @@ function getEvolutionChain(context) {
                         first: [],
                         second: [],
                         mega: [],
-                    }
+                    };
 
-                    console.log(response)
+                    console.log(response);
 
                     // https://jsonformatter.curiousconcept.com/#
                     // see data structure
 
                     // start from baby stage
                     if (response.chain.is_baby) {
-                        evolutionChain.baby.push(response.chain.species.name) // baby // getData(response)
+                        evolutionChain.baby.push(response.chain.species.name); // baby // getData(response)
 
-                        console.log(response.chain.evolves_to instanceof Array)
+                        console.log(response.chain.evolves_to instanceof Array);
 
                         Array.prototype.forEach.call(response.chain.evolves_to, baseStageElement => {
-                            evolutionChain.base.push(baseStageElement.species.name) // base
+                            evolutionChain.base.push(baseStageElement.species.name); // base
 
                             Array.prototype.forEach.call(baseStageElement.evolves_to, firstStageElement => {
-                                evolutionChain.first.push(firstStageElement.species.name) // first
+                                evolutionChain.first.push(firstStageElement.species.name); // first
 
                                 Array.prototype.forEach.call(firstStageElement.evolves_to, secondStageElement => {
-                                    evolutionChain.second.push(secondStageElement.species.name) // second
+                                    evolutionChain.second.push(secondStageElement.species.name); // second
 
                                     Array.prototype.forEach.call(secondStageElement.evolves_to, megaStageElement => {
-                                        evolutionChain.mega.push(megaStageElement.species.name) // mega
-                                    })
-                                })
-                            })
-                        })
+                                        evolutionChain.mega.push(megaStageElement.species.name); // mega
+                                    });
+                                });
+                            });
+                        });
                     }
 
                     // start from base stage
                     if (!response.chain.is_baby) {
-                        evolutionChain.base.push(response.chain.species.name) // base
+                        evolutionChain.base.push(response.chain.species.name); // base
 
                         Array.prototype.forEach.call(response.chain.evolves_to, firstStageElement => {
-                            evolutionChain.first.push(firstStageElement.species.name) // first
+                            evolutionChain.first.push(firstStageElement.species.name); // first
 
                             Array.prototype.forEach.call(firstStageElement.evolves_to, secondStageElement => {
-                                evolutionChain.second.push(secondStageElement.species.name) // second
+                                evolutionChain.second.push(secondStageElement.species.name); // second
 
                                 Array.prototype.forEach.call(secondStageElement.evolves_to, megaStageElement => {
-                                    evolutionChain.mega.push(megaStageElement.species.name) // mega
-                                })
-                            })
-                        })
+                                    evolutionChain.mega.push(megaStageElement.species.name); // mega
+                                });
+                            });
+                        });
                     }
 
-                    return evolutionChain
+                    return evolutionChain;
                 })
                 .catch(error => {
-                    throw error
-                })
+                    throw error;
+                });
         })
         .catch(error => {
-            throw error
-        })
+            throw error;
+        });
 }
 
 /** 
@@ -119,4 +119,4 @@ function getData(data) {
 }
 */
 
-export { getEvolutionChain }
+export { getEvolutionChain };

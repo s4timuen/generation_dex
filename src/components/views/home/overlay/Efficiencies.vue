@@ -35,8 +35,8 @@
 
 <script>
 // 1 or 2 types per pokemon
-import { capital } from '@/components/helpers/utilities.js'
-import { typeEfficiencies } from '@/components/helpers/typeEfficiencies.js'
+import { capital } from '@/components/helpers/utilities.js';
+import { typeEfficiencies } from '@/components/helpers/typeEfficiencies.js';
 
 export default {
     name: 'Efficiencies',
@@ -59,39 +59,39 @@ export default {
                     four: [''],
                 },
             },
-        }
+        };
     },
     computed: {
         data: function() {
-            return this.$store.getters.selectedPokemonData
+            return this.$store.getters.selectedPokemonData;
         },
     },
     watch: {
         data: function(data) {
-            const THIS = this
+            const THIS = this;
 
             if (Object.keys(data).length != 0) {
-                let typeOne = data.types[0].type.name
-                let typeTwo = 'none'
+                let typeOne = data.types[0].type.name;
+                let typeTwo = 'none';
 
                 if (data.types.length > 1) {
-                    typeTwo = data.types[1].type.name
+                    typeTwo = data.types[1].type.name;
                 }
 
                 typeEfficiencies(this, typeOne, typeTwo, this.$store.getters.dataFilter)
                     .then(function(response) {
-                        THIS.efficiencies = response
+                        THIS.efficiencies = response;
                     })
                     .catch(error => {
-                        throw error
-                    })
+                        throw error;
+                    });
             }
         },
     },
     methods: {
         capitalize,
     },
-}
+};
 </script>
 
 <style lang="css"></style>

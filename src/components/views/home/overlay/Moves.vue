@@ -6,7 +6,7 @@
 export default {
     name: 'Moves',
     components: {},
-}
+};
 </script>
 
 <style lang="css"></style>

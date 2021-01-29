@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Burger from './components/views/menu/Burger.vue'
-import Sidebar from './components/views/menu/Sidebar.vue'
+import Burger from './components/views/menu/Burger.vue';
+import Sidebar from './components/views/menu/Sidebar.vue';
 
 export default {
     name: 'App',
@@ -21,9 +21,9 @@ export default {
         Sidebar,
     },
     data: function() {
-        return {}
+        return {};
     },
-}
+};
 </script>
 
 <style>

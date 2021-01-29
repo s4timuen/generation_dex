@@ -27,15 +27,15 @@
 </template>
 
 <script>
-import Sprite from '@/components/views/home/overlay/Sprite.vue'
-import Efficiencies from '@/components/views/home/overlay/Efficiencies.vue'
-import Abilities from '@/components/views/home/overlay/Abilities.vue'
-import Evolutions from '@/components/views/home/overlay/Evolutions.vue'
-import Moves from '@/components/views/home/overlay/Moves.vue'
-import Stats from '@/components/views/home/overlay/Stats.vue'
-import GeneralProperties from '@/components/views/home/overlay/GeneralProperties.vue'
+import Sprite from '@/components/views/home/overlay/Sprite.vue';
+import Efficiencies from '@/components/views/home/overlay/Efficiencies.vue';
+import Abilities from '@/components/views/home/overlay/Abilities.vue';
+import Evolutions from '@/components/views/home/overlay/Evolutions.vue';
+import Moves from '@/components/views/home/overlay/Moves.vue';
+import Stats from '@/components/views/home/overlay/Stats.vue';
+import GeneralProperties from '@/components/views/home/overlay/GeneralProperties.vue';
 
-import { capital } from '@/components/helpers/utilities.js'
+import { capital } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Overlay',
@@ -49,29 +49,29 @@ export default {
         GeneralProperties,
     },
     data() {
-        return {}
+        return {};
     },
     computed: {
         isOverlayOpen() {
-            return this.$store.getters.isOverlayOpen
+            return this.$store.getters.isOverlayOpen;
         },
         pokemonName() {
-            let name = ''
+            let name = '';
 
             if (Object.keys(this.$store.getters.selectedPokemonData).length != 0) {
-                name = this.$store.getters.selectedPokemonData.name
+                name = this.$store.getters.selectedPokemonData.name;
             }
 
-            return name
+            return name;
         },
     },
     methods: {
         closeOverlayPanel() {
-            this.$store.commit('setOverlayOpen')
+            this.$store.commit('setOverlayOpen');
         },
         capitalize,
     },
-}
+};
 </script>
 
 <style lang="css">

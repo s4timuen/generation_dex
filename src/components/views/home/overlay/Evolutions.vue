@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { getEvolutionChain } from '@/components/helpers/evolutions.js'
+import { getEvolutionChain } from '@/components/helpers/evolutions.js';
 
 export default {
     name: 'Evolutions',
@@ -23,27 +23,27 @@ export default {
                 second: [],
                 mega: [],
             },
-        }
+        };
     },
     computed: {
         data: function() {
-            return this.$store.getters.selectedPokemonData
+            return this.$store.getters.selectedPokemonData;
         },
     },
     watch: {
         data: function() {
-            const THIS = this
+            const THIS = this;
 
             getEvolutionChain(this)
                 .then(function(response) {
-                    THIS.evolutionChain = response
+                    THIS.evolutionChain = response;
                 })
                 .catch(error => {
-                    throw error
-                })
+                    throw error;
+                });
         },
     },
-}
+};
 </script>
 
 <style lang="css"></style>
