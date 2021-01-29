@@ -46,7 +46,7 @@ export default {
             this.$store.getters.pokeApiWrapper
                 .getPokemonByName(pokemonName)
                 .then(function(response) {
-                    THIS.$store.commit('setPokemonData', response)
+                    THIS.$store.commit('setSelectedPokemonData', response)
                 })
                 .catch(error => {
                     throw error

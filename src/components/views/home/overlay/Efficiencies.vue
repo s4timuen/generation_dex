@@ -63,7 +63,7 @@ export default {
     },
     computed: {
         data: function() {
-            return this.$store.getters.pokemonData
+            return this.$store.getters.selectedPokemonData
         },
     },
     watch: {

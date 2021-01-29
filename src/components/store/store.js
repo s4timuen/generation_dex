@@ -18,7 +18,7 @@ const store = new Vuex.Store({
         pokeApiWrapper: pokeApiWrapper,
         nationalDex: {},
         dataFilter: '',
-        pokemonData: {},
+        selectedPokemonData: {},
     },
     mutations: {
         setNavOpen(state) {
@@ -33,8 +33,8 @@ const store = new Vuex.Store({
         setDataFilter(state, edition) {
             state.dataFilter = edition
         },
-        setPokemonData(state, data) {
-            state.pokemonData = data
+        setSelectedPokemonData(state, data) {
+            state.selectedPokemonData = data
         },
     },
     getters: {
@@ -43,7 +43,7 @@ const store = new Vuex.Store({
         pokeApiWrapper: state => state.pokeApiWrapper,
         nationalDex: state => state.nationalDex,
         dataFilter: state => state.dataFilter,
-        pokemonData: state => state.pokemonData,
+        selectedPokemonData: state => state.selectedPokemonData,
     },
 })
 

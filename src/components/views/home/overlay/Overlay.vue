@@ -56,8 +56,8 @@ export default {
         pokemonName() {
             let name = ''
 
-            if (Object.keys(this.$store.getters.pokemonData).length != 0) {
-                name = this.$store.getters.pokemonData.name
+            if (Object.keys(this.$store.getters.selectedPokemonData).length != 0) {
+                name = this.$store.getters.selectedPokemonData.name
             }
 
             return name

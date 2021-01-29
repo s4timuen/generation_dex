@@ -2,18 +2,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-6">
-                <img :src="getSprite($store.getters.pokemonData, 'front_default')" :alt="$store.getters.pokemonData.name" />
+                <img :src="getSprite($store.getters.selectedPokemonData, 'front_default')" :alt="$store.getters.selectedPokemonData.name" />
             </div>
             <div class="col-12 col-sm-6">
-                <img :src="getSprite($store.getters.pokemonData, 'back_default')" :alt="$store.getters.pokemonData.name" />
+                <img :src="getSprite($store.getters.selectedPokemonData, 'back_default')" :alt="$store.getters.selectedPokemonData.name" />
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-sm-6">
-                <img :src="getSprite($store.getters.pokemonData, 'front_shiny')" :alt="$store.getters.pokemonData.name" />
+                <img :src="getSprite($store.getters.selectedPokemonData, 'front_shiny')" :alt="$store.getters.selectedPokemonData.name" />
             </div>
             <div class="col-12 col-sm-6">
-                <img :src="getSprite($store.getters.pokemonData, 'back_shiny')" :alt="$store.getters.pokemonData.name" />
+                <img :src="getSprite($store.getters.selectedPokemonData, 'back_shiny')" :alt="$store.getters.selectedPokemonData.name" />
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@ export default {
     mounted() {},
     methods: {
         getSprite(data, option) {
-            if (Object.keys(this.$store.getters.pokemonData).length != 0) {
+            if (Object.keys(this.$store.getters.selectedPokemonData).length != 0) {
                 let url
 
                 switch (option) {

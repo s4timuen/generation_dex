@@ -9,7 +9,7 @@ function getEvolutionChain(context, dataFilter) {
     }
 
     context.$store.getters.pokeApiWrapper
-        .resource(context.$store.getters.pokemonData.species.url)
+        .resource(context.$store.getters.selectedPokemonData.species.url)
         .then(async function(response) {
             // get first of evolution chain
             return await context.$store.getters.pokeApiWrapper
