@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="col-12 col-ms-6">{{ $t('abilities-one') + capital(abilities.abilityOne) }}</div>
-                <div class="col-12 col-ms-6">{{ $t('abilities-two') + capital(abilities.abilityTwo) }}</div>
-                <div class="col-12 col-ms-6">{{ $t('abilities-hidden') + capital(abilities.hiddenAbility) }}</div>
+                <div class="col-12 col-ms-6">{{ $t('abilities-one') + capitalize(abilities.abilityOne) }}</div>
+                <div class="col-12 col-ms-6">{{ $t('abilities-two') + capitalize(abilities.abilityTwo) }}</div>
+                <div class="col-12 col-ms-6">{{ $t('abilities-hidden') + capitalize(abilities.hiddenAbility) }}</div>
             </div>
         </div>
     </div>
@@ -13,7 +13,7 @@
 <script>
 // 1 or 2 abilities per pokemon
 // hidden ability for every pokemon
-import { capital } from '@/components/helpers/utilities.js';
+import { capitalize } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Abilities',

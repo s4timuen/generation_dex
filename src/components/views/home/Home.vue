@@ -11,7 +11,7 @@
                         @click.prevent="openOverlay(pokemon.pokemon_species.name, $store.getters.dataFilter)"
                     >
                         <img class="img" :src="getImgUrl(pokemon.entry_number)" :alt="pokemon.pokemon_species.name" />
-                        <div>{{ capital(pokemon.pokemon_species.name) }}</div>
+                        <div>{{ capitalize(pokemon.pokemon_species.name) }}</div>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { capital } from '@/components/helpers/utilities.js';
+import { capitalize } from '@/components/helpers/utilities.js';
 import { showHideGenerationDivs } from '@/components/helpers/genDivsVisibility.js';
 import { checkDiffForme } from '@/components/helpers/checkDiffFormes.js';
 
@@ -54,7 +54,7 @@ export default {
 
             this.$store.commit('setOverlayOpen');
         },
-        capital,
+        capitalize,
     },
     computed: {
         dataFilter: function() {

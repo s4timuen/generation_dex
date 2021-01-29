@@ -5,7 +5,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        {{ capital(pokemonName) }}
+                        {{ capitalize(pokemonName) }}
                     </div>
                     <Sprite class="col-12" />
                     <Evolutions class="col-12" />
@@ -35,7 +35,7 @@ import Moves from '@/components/views/home/overlay/Moves.vue';
 import Stats from '@/components/views/home/overlay/Stats.vue';
 import GeneralProperties from '@/components/views/home/overlay/GeneralProperties.vue';
 
-import { capital } from '@/components/helpers/utilities.js';
+import { capitalize } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Overlay',
