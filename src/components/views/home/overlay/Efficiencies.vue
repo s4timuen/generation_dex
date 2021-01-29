@@ -89,7 +89,7 @@ export default {
         },
     },
     methods: {
-        capital,
+        capitalize,
     },
 }
 </script>

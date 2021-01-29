@@ -1,6 +1,6 @@
 // first letter capital
-function capital(name) {
+function capitalize(name) {
     return name.charAt(0).toUpperCase() + name.slice(1)
 }
 
-export { capital }
+export { capitalize }

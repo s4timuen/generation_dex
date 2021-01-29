@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-4">
-                <div v-for="(evolition, key) in evolutionChain" :key="key">{{ evolution.name }} -></div>
+                {{ evolutionChain }}
             </div>
         </div>
     </div>
@@ -16,7 +16,13 @@ export default {
     components: {},
     data() {
         return {
-            evolutionChain: {},
+            evolutionChain: {
+                baby: [],
+                base: [],
+                first: [],
+                second: [],
+                mega: [],
+            },
         }
     },
     computed: {
@@ -25,18 +31,16 @@ export default {
         },
     },
     watch: {
-        data: function(data) {
+        data: function() {
             const THIS = this
 
-            if (Object.keys(data).length != 0) {
-                getEvolutionChain(this, this.$store.getters.dataFilter)
-                    .then(function(response) {
-                        THIS.evolutionChain = response
-                    })
-                    .catch(error => {
-                        throw error
-                    })
-            }
+            getEvolutionChain(this)
+                .then(function(response) {
+                    THIS.evolutionChain = response
+                })
+                .catch(error => {
+                    throw error
+                })
         },
     },
 }

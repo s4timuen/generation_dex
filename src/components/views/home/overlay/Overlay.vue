@@ -35,6 +35,8 @@ import Moves from '@/components/views/home/overlay/Moves.vue'
 import Stats from '@/components/views/home/overlay/Stats.vue'
 import GeneralProperties from '@/components/views/home/overlay/GeneralProperties.vue'
 
+import { capital } from '@/components/helpers/utilities.js'
+
 export default {
     name: 'Overlay',
     components: {
@@ -67,9 +69,7 @@ export default {
         closeOverlayPanel() {
             this.$store.commit('setOverlayOpen')
         },
-        capital(name) {
-            return name.charAt(0).toUpperCase() + name.slice(1)
-        },
+        capitalize,
     },
 }
 </script>
