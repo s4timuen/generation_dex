@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-const Pokedex = require('pokeapi-js-wrapper')
+const PokeApiWrapper = require('pokeapi-js-wrapper')
 
 Vue.use(Vuex)
 
@@ -9,13 +9,13 @@ const dexOptions = {
     cacheImages: true,
 }
 
-const pokedex = new Pokedex.Pokedex(dexOptions)
+const pokeApiWrapper = new PokeApiWrapper.Pokedex(dexOptions)
 
 const store = new Vuex.Store({
     state: {
         isNavOpen: false,
         isOverlayOpen: false,
-        pokedex: pokedex,
+        pokeApiWrapper: pokeApiWrapper,
         nationalDex: {},
         dataFilter: '',
         pokemonData: {},
@@ -40,7 +40,7 @@ const store = new Vuex.Store({
     getters: {
         isNavOpen: state => state.isNavOpen,
         isOverlayOpen: state => state.isOverlayOpen,
-        pokedex: state => state.pokedex,
+        pokeApiWrapper: state => state.pokeApiWrapper,
         nationalDex: state => state.nationalDex,
         dataFilter: state => state.dataFilter,
         pokemonData: state => state.pokemonData,

@@ -8,11 +8,11 @@ function getEvolutionChain(context, dataFilter) {
         // mega
     }
 
-    context.$store.getters.pokedex
+    context.$store.getters.pokeApiWrapper
         .resource(context.$store.getters.pokemonData.species.url)
         .then(async function(response) {
             // get first of evolution chain
-            return await context.$store.getters.pokedex
+            return await context.$store.getters.pokeApiWrapper
                 .resource(response.evolution_chain.url)
                 .then(function(response) {
                     return response

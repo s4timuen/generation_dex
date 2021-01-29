@@ -1,7 +1,7 @@
 // calculate type efficiencies
 function typeEfficiencies(context, typeOne, typeTwo, generation) {
     // get type one object
-    return context.$store.getters.pokedex
+    return context.$store.getters.pokeApiWrapper
         .getTypeByName(typeOne)
         .then(async function(response) {
             // get type two object
@@ -9,7 +9,7 @@ function typeEfficiencies(context, typeOne, typeTwo, generation) {
             let typeTwoData = null
 
             if (typeTwo != 'none') {
-                await context.$store.getters.pokedex
+                await context.$store.getters.pokeApiWrapper
                     .getTypeByName(typeTwo)
                     .then(function(response) {
                         typeTwoData = response
@@ -121,7 +121,7 @@ function getBaseEfficiencies(context, typesObject, generation) {
 
     // base efficiencies for dual type
     if (typesObject.typeOneData != null && typesObject.typeTwoData != null) {
-        context.$store.getters.pokedex.getTypesList().then(function(response) {
+        context.$store.getters.pokeApiWrapper.getTypesList().then(function(response) {
             for (let index = 1; index < 19; index++) {
                 let type = Object.values(response.results)[index].name
 
@@ -369,7 +369,7 @@ function changeEfficiency(context, typesObject, attackType, defenceType, newValu
 }
 
 function getTypeUrl(context, type) {
-    context.$store.getters.pokedex
+    context.$store.getters.pokeApiWrapper
         .getTypeByName(type)
         .then(function(response) {
             let number = response.id

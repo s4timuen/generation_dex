@@ -43,7 +43,7 @@ export default {
             const THIS = this
             let pokemonName = checkDiffForme(name)
 
-            this.$store.getters.pokedex
+            this.$store.getters.pokeApiWrapper
                 .getPokemonByName(pokemonName)
                 .then(function(response) {
                     THIS.$store.commit('setPokemonData', response)
@@ -80,7 +80,7 @@ export default {
             galar: [],
         }
 
-        this.$store.getters.pokedex
+        this.$store.getters.pokeApiWrapper
             .getPokedexByName(dex)
             .then(function(response) {
                 for (let index = 0; index < response.pokemon_entries.length; index++) {
