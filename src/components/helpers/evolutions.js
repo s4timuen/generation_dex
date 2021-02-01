@@ -10,59 +10,46 @@ function getEvolutionChain(context) {
                 .then(function(response) {
                     // response is evolution chain
 
+                    console.log(response);
+
                     let evolutionChain = {
                         baby: [],
                         base: [],
                         first: [],
                         second: [],
-                        mega: [],
                     };
 
-                    console.log(response);
-
-                    // https://jsonformatter.curiousconcept.com/#
-                    // see data structure
+                    let isBaby = response.chain.is_baby;
 
                     // start from baby stage
-                    if (response.chain.is_baby) {
-                        evolutionChain.baby.push(response.chain.species.name); // baby // getData(response)
-
-                        console.log(response.chain.evolves_to instanceof Array);
+                    if (isBaby) {
+                        evolutionChain.baby.push(getData(response, context, true)); // baby
 
                         Array.prototype.forEach.call(response.chain.evolves_to, baseStageElement => {
-                            evolutionChain.base.push(baseStageElement.species.name); // base
+                            evolutionChain.base.push(getData(baseStageElement, context, false)); // base
 
                             Array.prototype.forEach.call(baseStageElement.evolves_to, firstStageElement => {
-                                evolutionChain.first.push(firstStageElement.species.name); // first
+                                evolutionChain.first.push(getData(firstStageElement, context, false)); // first
 
                                 Array.prototype.forEach.call(firstStageElement.evolves_to, secondStageElement => {
-                                    evolutionChain.second.push(secondStageElement.species.name); // second
-
-                                    Array.prototype.forEach.call(secondStageElement.evolves_to, megaStageElement => {
-                                        evolutionChain.mega.push(megaStageElement.species.name); // mega
-                                    });
+                                    evolutionChain.second.push(getData(secondStageElement, context, false)); // second
                                 });
                             });
                         });
                     }
 
                     // start from base stage
-                    if (!response.chain.is_baby) {
-                        evolutionChain.base.push(response.chain.species.name); // base
+                    if (!isBaby) {
+                        evolutionChain.base.push(getData(response, context, true)); // base
 
                         Array.prototype.forEach.call(response.chain.evolves_to, firstStageElement => {
-                            evolutionChain.first.push(firstStageElement.species.name); // first
+                            evolutionChain.first.push(getData(firstStageElement, context, false)); // first
 
                             Array.prototype.forEach.call(firstStageElement.evolves_to, secondStageElement => {
-                                evolutionChain.second.push(secondStageElement.species.name); // second
-
-                                Array.prototype.forEach.call(secondStageElement.evolves_to, megaStageElement => {
-                                    evolutionChain.mega.push(megaStageElement.species.name); // mega
-                                });
+                                evolutionChain.second.push(getData(secondStageElement, context, false)); // second
                             });
                         });
                     }
-
                     return evolutionChain;
                 })
                 .catch(error => {
@@ -74,49 +61,78 @@ function getEvolutionChain(context) {
         });
 }
 
-/** 
-function setName(response) {
+function getData(data, context, isChainRootElement) {
+    // todo: check generations specific triggers (e.g. Magnezone)
+    // todo: check forms (e.g. Persian and Perrserker -> same evolution triggers)
+    // todo: check availablility in generation (context.$store.getters.dataFilter)
+    // todo: reformat triggers
 
-    return response.chain.species.name;
-}
-
-function setEvolutionTrigger(data) {
-
-    // if evolution trigger has changed get generation speciffic 
-
-    // from chain, if not exception defined
-    // context.$store.getters.dataFilter
-    return data;
-}
-
-function setBreedingTrigger(data) {
-
-    // if breeding trigger has changed get generation specific
-    return data; 
-}
-
-function setSpriteUrl(data) {
-
-    // set sprite url
-    return data;
-}
-
-function getData(data) {
+    // todo: mega evolutions ?
 
     let pushObject = {
-        "name": "", 
-        "evolution_trigger": "none",
-        "breeding_trigger": "none",
-        "sprite_url": "",
-    }
+        name: '',
+        evolution_triggers: [],
+        sprite_url: '',
+    };
 
-    pushObject.name = setName(data);
-    pushObject.evolution_trigger = setEvolutionTrigger(data);
-    pushObject.breeding_trigger = setBreedingTrigger(data);
-    pushObject.setSpriteUrl = setSpriteUrl(data);
+    pushObject.name = setName(data, isChainRootElement);
+    pushObject.evolution_triggers = setEvolutionTrigger(data, isChainRootElement);
+    setSpriteUrl(data, context, isChainRootElement).then(function(response) {
+        pushObject.sprite_url = response;
+    });
 
     return pushObject;
 }
-*/
+
+function setName(data, isChainRootElement) {
+    if (isChainRootElement) {
+        return data.chain.species.name;
+    }
+    if (!isChainRootElement) {
+        return data.species.name;
+    }
+}
+
+function setEvolutionTrigger(data, isChainRootElement) {
+    let trigger = [];
+
+    if (!isChainRootElement) {
+        Array.prototype.forEach.call(data.evolution_details, evolutionDetails => {
+            console.log(evolutionDetails);
+            Array.prototype.forEach.call(Object.entries(evolutionDetails), detail => {
+                if (detail[1] != null && detail[1] != '') {
+                    trigger.push(detail);
+                }
+            });
+        });
+    }
+    return trigger;
+}
+
+function setSpriteUrl(data, context, isChainRootElement) {
+    let url = '';
+    if (isChainRootElement) {
+        url = context.$store.getters.pokeApiWrapper
+            .getPokemonByName(data.chain.species.name)
+            .then(async function(response) {
+                return await response.sprites.front_default;
+            })
+            .catch(error => {
+                throw error;
+            });
+    }
+    if (!isChainRootElement) {
+        url = context.$store.getters.pokeApiWrapper
+            .getPokemonByName(data.species.name)
+            .then(async function(response) {
+                return await response.sprites.front_default;
+            })
+            .catch(error => {
+                throw error;
+            });
+    }
+
+    return url;
+}
 
 export { getEvolutionChain };

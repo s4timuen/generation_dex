@@ -1,8 +1,14 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-4">
-                {{ evolutionChain }}
+            <div class="col-12 col-sm-3" v-for="(evolutionStage, key) in evolutionChain" :key="key">
+                <div class="col-12" v-for="(evolution, key) in evolutionStage" :key="key">
+                    {{ capitalize(evolution.name) }}
+                    <img class="img" :src="evolution.sprite_url" :alt="evolution.name" />
+                    <div>
+                        {{ evolution.evolution_triggers }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -10,6 +16,7 @@
 
 <script>
 import { getEvolutionChain } from '@/components/helpers/evolutions.js';
+import { capitalize } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Evolutions',
@@ -21,7 +28,6 @@ export default {
                 base: [],
                 first: [],
                 second: [],
-                mega: [],
             },
         };
     },
@@ -43,7 +49,15 @@ export default {
                 });
         },
     },
+    methods: {
+        capitalize,
+    },
 };
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+.img {
+    max-width: 100%;
+    max-height: 100%;
+}
+</style>
