@@ -2,20 +2,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
-                <p>{{ $t('efficiencies-attack') }}</p>
-                <div v-for="(efficiency, key) in efficiencies.attack" :key="key">
-                    <p v-if="key == 'zero'">{{ $t('efficioncies-multiplier-zero') }}</p>
-                    <p v-if="key == 'quarter'">{{ $t('efficioncies-multiplier-quarter') }}</p>
-                    <p v-if="key == 'half'">{{ $t('efficioncies-multiplier-half') }}</p>
-                    <p v-if="key == 'one'">{{ $t('efficioncies-multiplier-one') }}</p>
-                    <p v-if="key == 'double'">{{ $t('efficioncies-multiplier-double') }}</p>
-                    <p v-if="key == 'four'">{{ $t('efficioncies-multiplier-four') }}</p>
-                    <div v-for="(type, key) in efficiency" :key="key">
-                        <p>{{ capitalize(type) }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
                 <p>{{ $t('efficiencies-defence') }}</p>
                 <div v-for="(efficiency, key) in efficiencies.defence" :key="key">
                     <p v-if="key == 'zero'">{{ $t('efficioncies-multiplier-zero') }}</p>
@@ -44,13 +30,6 @@ export default {
     data() {
         return {
             efficiencies: {
-                attack: {
-                    zero: [''],
-                    quarter: [''],
-                    half: [''],
-                    double: [''],
-                    four: [''],
-                },
                 defence: {
                     zero: [''],
                     quarter: [''],

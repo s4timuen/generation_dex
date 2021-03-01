@@ -33,13 +33,6 @@ function typeEfficiencies(context, typeOne, typeTwo, generation) {
 // calculate base efficiencies
 function getBaseEfficiencies(context, typesObject, generation) {
     let efficiencies = {
-        attack: {
-            zero: [],
-            quarter: [],
-            half: [],
-            double: [],
-            four: [],
-        },
         defence: {
             zero: [],
             quarter: [],
@@ -96,17 +89,6 @@ function getBaseEfficiencies(context, typesObject, generation) {
 
     // base efficiencies for single type
     if (typesObject.typeOneData != null && typesObject.typeTwoData == null) {
-        // as attacker
-        for (const entry of typesObject.typeOneData.damage_relations.no_damage_to) {
-            efficiencies.attack.zero.push(entry.name);
-        }
-        for (const entry of typesObject.typeOneData.damage_relations.half_damage_to) {
-            efficiencies.attack.half.push(entry.name);
-        }
-        for (const entry of typesObject.typeOneData.damage_relations.double_damage_to) {
-            efficiencies.attack.double.push(entry.name);
-        }
-
         // as defender
         for (const entry of typesObject.typeOneData.damage_relations.no_damage_from) {
             efficiencies.defence.zero.push(entry.name);
@@ -124,34 +106,6 @@ function getBaseEfficiencies(context, typesObject, generation) {
         context.$store.getters.pokeApiWrapper.getTypesList().then(function(response) {
             for (let index = 1; index < 19; index++) {
                 let type = Object.values(response.results)[index].name;
-
-                // as attacker
-                let finalMultiplierAttack = getFinalBaseMultiplier(
-                    'attack',
-                    type,
-                    typesObject.typeOneData.damage_relations,
-                    typesObject.typeTwoData.damage_relations
-                );
-
-                switch (finalMultiplierAttack) {
-                    case 0:
-                        efficiencies.attack.zero.push(type);
-                        break;
-                    case 0.25:
-                        efficiencies.attack.quarter.push(type);
-                        break;
-                    case 0.5:
-                        efficiencies.attack.half.push(type);
-                        break;
-                    case 2:
-                        efficiencies.attack.double.push(type);
-                        break;
-                    case 4:
-                        efficiencies.attack.four.push(type);
-                        break;
-                    default:
-                        break;
-                }
 
                 // as defender
                 let finalMultiplierDefence = getFinalBaseMultiplier(
@@ -190,51 +144,6 @@ function getBaseEfficiencies(context, typesObject, generation) {
 function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsTwo) {
     let multiplierOne = 1;
     let multiplierTwo = 1;
-
-    // as attacker
-    if (role == 'attack') {
-        // multiplier type one
-        for (const [key, entry] of Object.entries(damageRelationsOne)) {
-            for (const value of entry) {
-                if (key.includes('damage_to') && value.name == type) {
-                    switch (key) {
-                        case 'no_damage_to':
-                            multiplierOne = 0;
-                            break;
-                        case 'half_damage_to':
-                            multiplierOne = 0.5;
-                            break;
-                        case 'double_damage_to':
-                            multiplierOne = 2;
-                            break;
-                        default:
-                            multiplierOne = 1;
-                    }
-                }
-            }
-        }
-
-        // multiplier type two
-        for (const [key, entry] of Object.entries(damageRelationsTwo)) {
-            for (const value of entry) {
-                if (key.includes('damage_to') && value.name == type) {
-                    switch (key) {
-                        case 'no_damage_to':
-                            multiplierTwo = 0;
-                            break;
-                        case 'half_damage_to':
-                            multiplierTwo = 0.5;
-                            break;
-                        case 'double_damage_to':
-                            multiplierTwo = 2;
-                            break;
-                        default:
-                            multiplierTwo = 1;
-                    }
-                }
-            }
-        }
-    }
 
     // as defender
     if (role == 'defence') {
@@ -303,36 +212,6 @@ function changeEfficiency(context, typesObject, attackType, defenceType, newValu
     // change efficiency values
     for (const entry of Object.entries(typesObject)) {
         for (const [key, subEntry] of Object.entries(entry[1].damage_relations)) {
-            // as attacker
-            if (key.includes('damage_to')) {
-                for (const value of subEntry) {
-                    if (value.name == attackType) {
-                        subEntry.splice(subEntry.indexOf(value), 1);
-
-                        let pushObject = {
-                            name: '',
-                            url: '',
-                        };
-                        pushObject.name = defenceType;
-                        pushObject.url = getTypeUrl(context, defenceType);
-
-                        switch (newValue) {
-                            case 0:
-                                entry[1].damage_relations.no_damage_to.push(pushObject);
-                                break;
-                            case 0.5:
-                                entry[1].damage_relations.half_damage_to.push(pushObject);
-                                break;
-                            case 2:
-                                entry[1].damage_relations.double_damage_to.push(pushObject);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                }
-            }
-
             // as defender
             if (key.includes('damage_from')) {
                 for (const value of subEntry) {
