@@ -196,10 +196,12 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
 function deleteType(typesObject, type) {
     // delete none existing type from type objects
     for (const entry of Object.entries(typesObject)) {
-        for (const subEntry of Object.entries(entry[1].damage_relations)) {
-            for (const value of subEntry[1]) {
-                if (value.name == type) {
-                    subEntry[1].splice(subEntry[1].indexOf(value), 1);
+        if (entry[1] != null) {
+            for (const subEntry of Object.entries(entry[1].damage_relations)) {
+                for (const value of subEntry[1]) {
+                    if (value.name == type) {
+                        subEntry[1].splice(subEntry[1].indexOf(value), 1);
+                    }
                 }
             }
         }
@@ -211,32 +213,34 @@ function deleteType(typesObject, type) {
 function changeEfficiency(context, typesObject, attackType, defenceType, newValue) {
     // change efficiency values
     for (const entry of Object.entries(typesObject)) {
-        for (const [key, subEntry] of Object.entries(entry[1].damage_relations)) {
-            // as defender
-            if (key.includes('damage_from')) {
-                for (const value of subEntry) {
-                    if (value.name == defenceType) {
-                        subEntry.splice(subEntry.indexOf(value), 1);
+        if (entry[1] != null) {
+            for (const [key, subEntry] of Object.entries(entry[1].damage_relations)) {
+                // as defender
+                if (key.includes('damage_from')) {
+                    for (const value of subEntry) {
+                        if (value.name == defenceType) {
+                            subEntry.splice(subEntry.indexOf(value), 1);
 
-                        let pushObject = {
-                            name: '',
-                            url: '',
-                        };
-                        pushObject.name = attackType;
-                        pushObject.url = getTypeUrl(context, attackType);
+                            let pushObject = {
+                                name: '',
+                                url: '',
+                            };
+                            pushObject.name = attackType;
+                            pushObject.url = getTypeUrl(context, attackType);
 
-                        switch (newValue) {
-                            case 0:
-                                entry[1].damage_relations.no_damage_from.push(pushObject);
-                                break;
-                            case 0.5:
-                                entry[1].damage_relations.half_damage_from.push(pushObject);
-                                break;
-                            case 2:
-                                entry[1].damage_relations.double_damage_from.push(pushObject);
-                                break;
-                            default:
-                                break;
+                            switch (newValue) {
+                                case 0:
+                                    entry[1].damage_relations.no_damage_from.push(pushObject);
+                                    break;
+                                case 0.5:
+                                    entry[1].damage_relations.half_damage_from.push(pushObject);
+                                    break;
+                                case 2:
+                                    entry[1].damage_relations.double_damage_from.push(pushObject);
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                     }
                 }
