@@ -23,7 +23,7 @@
 <script>
 import { capitalize } from '@/components/helpers/utilities.js';
 import { showHideGenerationDivs } from '@/components/helpers/genDivsVisibility.js';
-import { checkDiffForme } from '@/components/helpers/checkDiffFormes.js';
+import { getDefaultSpriteName } from '@/components/helpers/checkDiffForms.js';
 
 import Overlay from '@/components/views/home/overlay/Overlay.vue';
 
@@ -41,7 +41,7 @@ export default {
         },
         openOverlay: function(name) {
             const THIS = this;
-            let pokemonName = checkDiffForme(name);
+            let pokemonName = getDefaultSpriteName(name);
 
             this.$store.getters.pokeApiWrapper
                 .getPokemonByName(pokemonName)

@@ -1,3 +1,5 @@
+import efficencyDifferences from '@/components/assets/efficiencyDifferences.json';
+
 // calculate type efficiencies
 function typeEfficiencies(context, typeOne, typeTwo, generation) {
     // get type one object
@@ -43,49 +45,16 @@ function getBaseEfficiencies(context, typesObject, generation) {
     };
 
     // generation specific changes to efficiencies
-    switch (generation) {
-        case 'national':
-            break;
-        case 'kanto':
-            typesObject = deleteType(typesObject, 'fairy');
-            typesObject = deleteType(typesObject, 'steel');
-            typesObject = deleteType(typesObject, 'dark');
-            typesObject = changeEfficiency(context, typesObject, 'poison', 'bug', 2);
-            typesObject = changeEfficiency(context, typesObject, 'bug', 'poison', 2);
-            typesObject = changeEfficiency(context, typesObject, 'ghost', 'psychic', 0);
-            typesObject = changeEfficiency(context, typesObject, 'ice', 'fire', 1);
-            typesObject = changeEfficiency(context, typesObject, 'ghost', 'steel', 0.5);
-            typesObject = changeEfficiency(context, typesObject, 'dark', 'steel', 0.5);
-            break;
-        case 'johto':
-            typesObject = deleteType(typesObject, 'fairy');
-            typesObject = changeEfficiency(context, typesObject, 'ghost', 'steel', 0.5);
-            typesObject = changeEfficiency(context, typesObject, 'dark', 'steel', 0.5);
-            break;
-        case 'hoenn':
-            typesObject = deleteType(typesObject, 'fairy');
-            typesObject = changeEfficiency(context, typesObject, 'ghost', 'steel', 0.5);
-            typesObject = changeEfficiency(context, typesObject, 'dark', 'steel', 0.5);
-            break;
-        case 'sinnoh':
-            typesObject = deleteType(typesObject, 'fairy');
-            typesObject = changeEfficiency(context, typesObject, 'ghost', 'steel', 0.5);
-            typesObject = changeEfficiency(context, typesObject, 'dark', 'steel', 0.5);
-            break;
-        case 'unova':
-            typesObject = deleteType(typesObject, 'fairy');
-            typesObject = changeEfficiency(context, typesObject, 'ghost', 'steel', 0.5);
-            typesObject = changeEfficiency(context, typesObject, 'dark', 'steel', 0.5);
-            break;
-        case 'kalos':
-            break;
-        case 'alola':
-            break;
-        case 'galar':
-            break;
-        default:
-            break;
-    }
+    Object.entries(efficencyDifferences).forEach(generationElement => {
+        if (generationElement[0] == generation) {
+            generationElement[1].unavailable_types.forEach(type => {
+                typesObject = deleteType(typesObject, type);
+            });
+            generationElement[1].changed_types.forEach(change => {
+                typesObject = changeEfficiency(context, typesObject, change);
+            });
+        }
+    });
 
     // base efficiencies for single type
     if (typesObject.typeOneData != null && typesObject.typeTwoData == null) {
@@ -210,7 +179,11 @@ function deleteType(typesObject, type) {
     return typesObject;
 }
 
-function changeEfficiency(context, typesObject, attackType, defenceType, newValue) {
+function changeEfficiency(context, typesObject, change) {
+    let attackType = change.attack_type;
+    let defenceType = change.defence_type;
+    let newValue = change.new_value;
+
     // change efficiency values
     for (const entry of Object.entries(typesObject)) {
         if (entry[1] != null) {

@@ -1,0 +1,100 @@
+{
+    "kanto": {
+        "unavailable_types": ["steel", "dark", "fairy"],
+        "changed_types": [
+            {
+                "attack_type": "poison",
+                "defence_type": "bug",
+                "new_value": 2
+            },
+            {
+                "attack_type": "bug",
+                "defence_type": "poison",
+                "new_value": 2
+            },
+            {
+                "attack_type": "ghost",
+                "defence_type": "psychic",
+                "new_value": 0
+            },
+            {
+                "attack_type": "ice",
+                "defence_type": "fire",
+                "new_value": 1
+            },
+            {
+                "attack_type": "ghost",
+                "defence_type": "steel",
+                "new_value": 0.5
+            },
+            {
+                "attack_type": "dark",
+                "defence_type": "steel",
+                "new_value": 0.5
+            }
+        ]
+    },
+    "johto": {
+        "unavailable_types": ["fairy"],
+        "changed_types": [
+            {
+                "attack_type": "ghost",
+                "defence_type": "steel",
+                "new_value": 0.5
+            },
+            {
+                "attack_type": "dark",
+                "defence_type": "steel",
+                "new_value": 0.5
+            }
+        ]
+    },
+    "hoenn": {
+        "unavailable_types": ["fairy"],
+        "changed_types": [
+            {
+                "attack_type": "ghost",
+                "defence_type": "steel",
+                "new_value": 0.5
+            },
+            {
+                "attack_type": "dark",
+                "defence_type": "steel",
+                "new_value": 0.5
+            }
+        ]
+    },
+    "sinnoh": {
+        "unavailable_types": ["fairy"],
+        "changed_types": [
+            {
+                "attack_type": "ghost",
+                "defence_type": "steel",
+                "new_value": 0.5
+            },
+            {
+                "attack_type": "dark",
+                "defence_type": "steel",
+                "new_value": 0.5
+            }
+        ]
+    },
+    "unova": {
+        "unavailable_types": ["fairy"],
+        "changed_types": [
+            {
+                "attack_type": "ghost",
+                "defence_type": "steel",
+                "new_value": 0.5
+            },
+            {
+                "attack_type": "dark",
+                "defence_type": "steel",
+                "new_value": 0.5
+            }
+        ]
+    },
+    "kalos": {},
+    "alola": {},
+    "galar": {}
+}

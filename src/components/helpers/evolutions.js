@@ -1,8 +1,8 @@
 // get edition specific evolution chain and triggers
 // https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_with_branched_evolutions
 
-// todo: mega evolutions ?
-
+// todo: form specifics
+// todo: mega evolutions (?)
 function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper
         .resource(context.$store.getters.selectedPokemonData.species.url)
@@ -55,21 +55,13 @@ function getEvolutionChain(context) {
                     return evolutionChain; // base evolution chain
                 })
                 .then(function(response) {
-                    // adjust chain to generation specifict
-                    let evolutionChain = deleteUnavailablePokemon(response, context);
-                    return evolutionChain;
+                    // adjust base chain to generation specifics pokemon
+                    return removeUnavailablePokemon(response, context);
                 })
                 .then(function(response) {
-                    // todo: check forms (e.g. Persian and Perrserker -> same evolution triggers)
-                    let evolutionChain = response;
-                    return evolutionChain;
+                    // adjust base chain to generation specific evolution triggers
+                    return adjustEvolutionTriggers(response, context);
                 })
-                .then(function(response) {
-                    // todo: check generations specific triggers (e.g. Magnezone)
-                    let evolutionChain = response;
-                    return evolutionChain;
-                })
-
                 .catch(error => {
                     throw error;
                 });
@@ -80,17 +72,13 @@ function getEvolutionChain(context) {
 }
 
 // alter base evolution chain to generation specific pokemon availability
-async function deleteUnavailablePokemon(chain, context) {
+async function removeUnavailablePokemon(chain, context) {
     let newChain = {
         baby: [],
         base: [],
         first: [],
         second: [],
     };
-
-    console.log('base chain: ');
-    console.log(chain);
-
     for (let stage of Object.entries(chain)) {
         for (let pokemon of stage[1]) {
             await context.$store.getters.pokeApiWrapper
@@ -99,10 +87,6 @@ async function deleteUnavailablePokemon(chain, context) {
                     await context.$store.getters.pokeApiWrapper
                         .resource(response.species.url)
                         .then(function(response) {
-                            console.log(context.$store.getters.dataFilter);
-                            console.log(response.name);
-                            console.log(response.generation.name);
-
                             switch (true) {
                                 // national
                                 case context.$store.getters.dataFilter == '' && stage[0] == 'baby':
@@ -159,8 +143,8 @@ async function deleteUnavailablePokemon(chain, context) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
-                                // hoen
-                                case context.$store.getters.dataFilter == 'hoen' && stage[0] == 'baby':
+                                // hoenn
+                                case context.$store.getters.dataFilter == 'hoenn' && stage[0] == 'baby':
                                     if (
                                         response.generation.name == 'generation-i' ||
                                         response.generation.name == 'generation-ii' ||
@@ -169,7 +153,7 @@ async function deleteUnavailablePokemon(chain, context) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'hoen' && stage[0] == 'base':
+                                case context.$store.getters.dataFilter == 'hoenn' && stage[0] == 'base':
                                     if (
                                         response.generation.name == 'generation-i' ||
                                         response.generation.name == 'generation-ii' ||
@@ -178,7 +162,7 @@ async function deleteUnavailablePokemon(chain, context) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'hoen' && stage[0] == 'first':
+                                case context.$store.getters.dataFilter == 'hoenn' && stage[0] == 'first':
                                     if (
                                         response.generation.name == 'generation-i' ||
                                         response.generation.name == 'generation-ii' ||
@@ -187,7 +171,7 @@ async function deleteUnavailablePokemon(chain, context) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'hoen' && stage[0] == 'second':
+                                case context.$store.getters.dataFilter == 'hoenn' && stage[0] == 'second':
                                     if (
                                         response.generation.name == 'generation-i' ||
                                         response.generation.name == 'generation-ii' ||
@@ -454,11 +438,79 @@ async function deleteUnavailablePokemon(chain, context) {
                 });
         }
     }
-
-    console.log('new chain: ');
-    console.log(newChain);
-
     return newChain;
+}
+
+// alter base evolution chaint to generation specific evolution triggers
+function adjustEvolutionTriggers(chain, context) {
+    let generation = context.$store.getters.dataFilter;
+
+    Object.values(chain).forEach(element => {
+        if (element.length != 0) {
+            // evolution_detail contains all triggers unrespective of generation
+            // todo: load differences from json -> data structure?
+            // todo: .splice() triggers not belonging to the selected generation
+
+            // test: just for getting the differences
+            switch (element[0].name) {
+                case 'glaceon':
+                    if (generation == 'sinnoh' || generation == 'unova' || generation == 'kalos' || generation == 'alola') {
+                        // IV,V,VI,VII -> levelup + location
+                    }
+                    if (generation == 'galar') {
+                        // VIII -> Stone
+                    }
+                    break;
+                case 'leafeon':
+                    // IV,V,VI,VII -> levelup + location
+                    // VIII -> Stone
+                    break;
+                case 'sylveon':
+                    // VI -> levelup + attack + trust
+                    // VII -> levelup + attack + trust
+                    // VIII -> attack + friendship
+                    break;
+                case 'milotic':
+                    // III, IV -> beauty
+                    // V, VI, VII, VIII -> item + trade
+                    break;
+                case 'shedinja':
+                    // III -> levelup + pokeball
+                    // IV, V, VI, VII, VIII -> levelup + normal pokeball
+                    break;
+                case 'magnezone':
+                    // IV, V, VI, VII -> levelup + location
+                    // VIII -> stone
+                    break;
+                case 'probopass':
+                    // III, IV, V, VI, VII -> levelup + location
+                    // VIII -> ???
+                    break;
+                case 'donario':
+                    // VII -> levelup + location
+                    // VIII -> stone
+                    break;
+                case 'crabominable':
+                    // VII -> levelup + location
+                    // VIII -> ???
+                    break;
+                case 'runerigus':
+                    // VIII -> damage + location
+                    break;
+                default:
+                    break;
+            }
+        }
+    });
+
+    // remove evolution trigger if pre evolution is not available in selected generation
+    if (chain.baby.length == 0) {
+        chain.base.forEach(element => {
+            element.evolution_triggers = [];
+        });
+    }
+
+    return chain;
 }
 
 // get base data
