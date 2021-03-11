@@ -1,0 +1,46 @@
+{
+    "milotic": {
+        "hoenn": ["level-up", { "min_beaty": 171 }],
+        "sinnoh": ["level-up", { "min_beaty": 171 }],
+        "unova": ["trade", { "held_item": "prism-scale" }],
+        "kalos": ["trade", { "held_item": "prism-scale" }],
+        "alola": ["trade", { "held_item": "prism-scale" }],
+        "galar": ["trade", { "held_item": "prism-scale" }]
+    },
+    "glaceon": {
+        "sinnoh": ["level-up", { "location": "sinnoh-route-217" }],
+        "unova": ["level-up", { "location": "twist-mountain" }],
+        "kalos": ["level-up", { "location": "frost-cavern" }],
+        "alola": ["level-up", { "location": "mount-lanakila" }],
+        "galar": ["use-item", { "item": "ice-stone" }]
+    },
+    "leafeon": {
+        "sinnoh": ["level-up", { "location": "eterna-forest" }],
+        "unova": ["level-up", { "location": "pinwheel-forest" }],
+        "kalos": ["level-up", { "location": "kalos-route-20" }],
+        "alola": ["level-up", { "location": "lush-jungle" }],
+        "galar": ["use-item", { "item": "leaf-stone" }]
+    },
+    "magnezone": {
+        "sinnoh": ["level-up", { "location": "mt-coronet" }],
+        "unova": ["level-up", { "location": "chargestone-cave" }],
+        "kalos": ["level-up", { "location": "kalos-route-13" }],
+        "alola": ["level-up", { "location": "vast-poni-canyon" }],
+        "galar": ["use-item", { "item": "thunder-stone" }]
+    },
+    "probopass": {
+        "sinnoh": ["level-up", { "location": "mt-coronet" }],
+        "unova": ["level-up", { "location": "chargestone-cave" }],
+        "kalos": ["level-up", { "location": "kalos-route-13" }],
+        "alola": ["level-up", { "location": "vast-poni-canyon" }],
+        "galar": ["use-item", { "item": "thunder-stone" }]
+    },
+    "vikavolt": {
+        "alola": ["level-up", { "location": "vast-poni-canyon" }],
+        "galar": ["use-item", { "item": "thunder-stone" }]
+    },
+    "crabominable": {
+        "alola": ["level-up", { "location": "mount-lanakila" }],
+        "galar": ["use-item", { "item": "ice-stone" }]
+    }
+}

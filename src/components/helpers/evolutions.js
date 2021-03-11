@@ -3,6 +3,9 @@
 
 // todo: form specifics
 // todo: mega evolutions (?)
+
+import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
+
 function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper
         .resource(context.$store.getters.selectedPokemonData.species.url)
@@ -442,71 +445,85 @@ async function removeUnavailablePokemon(chain, context) {
 }
 
 // alter base evolution chaint to generation specific evolution triggers
+// evolution_detail contains all triggers unrespective of generation
 function adjustEvolutionTriggers(chain, context) {
     let generation = context.$store.getters.dataFilter;
 
-    Object.values(chain).forEach(element => {
-        if (element.length != 0) {
-            // evolution_detail contains all triggers unrespective of generation
-            // todo: load differences from json -> data structure?
-            // todo: .splice() triggers not belonging to the selected generation
+    Object.values(chain).forEach(stage => {
+        if (stage.length != 0) {
+            stage.forEach(pokemon => {
+                Object.entries(evolutionDifferences).forEach(pokemonEntry => {
+                    if (pokemonEntry[0] == pokemon.name) {
+                        Object.entries(pokemonEntry[1]).forEach(generationTrigger => {
+                            if (generation == generationTrigger[0]) {
+                                //console.log(generationTrigger);
+                                console.log(pokemon.evolution_triggers);
 
-            // test: just for getting the differences
-            switch (element[0].name) {
-                case 'glaceon':
-                    if (generation == 'sinnoh' || generation == 'unova' || generation == 'kalos' || generation == 'alola') {
-                        // IV,V,VI,VII -> levelup + location
+                                let filteredEvolutionTriggers = [];
+
+                                // todo: generation specific trigger filter
+                                /**
+                                 * how to check example:
+                                 * select sinnoh
+                                 * open leafeon overlay
+                                 * check generationTriggers in console
+                                 * compare respective triggers (pokemon.evolution_triggers[0] and [1]) for sinnoh
+                                 */
+
+                                pokemon.evolution_triggers.forEach(trigger => {
+                                    /** test start */
+
+                                    let triggerTrue = generationTrigger[1][0] == trigger[1].name;
+                                    let methodTrue = Object.keys(generationTrigger[1][1])[0] == trigger[0];
+                                    let requirementTrue = Object.values(generationTrigger[1][1])[0] == Object.values(trigger[1])[0];
+
+                                    //console.log(generationTrigger[1][0] == Object.values(trigger[1])[0])
+                                    //console.log(trigger[1].name)
+
+                                    console.log('trigger (level-up)');
+                                    console.log(generationTrigger[1][0]);
+                                    console.log(trigger[1].name);
+                                    console.log(generationTrigger[1][0] == trigger[1].name);
+                                    console.log('method (location)');
+                                    console.log(Object.keys(generationTrigger[1][1])[0]);
+                                    console.log(trigger[0]);
+                                    console.log(Object.keys(generationTrigger[1][1])[0] == trigger[0]);
+                                    console.log('requirement (sinnoh-route-217)');
+                                    console.log(Object.values(generationTrigger[1][1])[0]);
+                                    console.log(Object.values(trigger[1])[0]);
+                                    console.log(Object.values(generationTrigger[1][1])[0] == Object.values(trigger[1])[0]);
+
+                                    if (triggerTrue && methodTrue && requirementTrue) {
+                                        console.log('it works');
+                                    } else {
+                                        console.log('it does not work');
+                                    }
+
+                                    /** test ende */
+
+                                    // todo: fix check for genreatiuon sprecific evolution requiremens
+                                    if (
+                                        // alway false -> evolution triggers empty
+                                        generationTrigger[1][0] == trigger[1].name && // trigger
+                                        Object.keys(generationTrigger[1][1])[0] == trigger[0] && // method
+                                        Object.values(generationTrigger[1][1])[0] == Object.values(trigger[1])[0] // requirement
+                                    ) {
+                                        filteredEvolutionTriggers.push(trigger);
+                                    }
+                                });
+                                pokemon.evolution_triggers = filteredEvolutionTriggers;
+                            }
+                        });
                     }
-                    if (generation == 'galar') {
-                        // VIII -> Stone
-                    }
-                    break;
-                case 'leafeon':
-                    // IV,V,VI,VII -> levelup + location
-                    // VIII -> Stone
-                    break;
-                case 'sylveon':
-                    // VI -> levelup + attack + trust
-                    // VII -> levelup + attack + trust
-                    // VIII -> attack + friendship
-                    break;
-                case 'milotic':
-                    // III, IV -> beauty
-                    // V, VI, VII, VIII -> item + trade
-                    break;
-                case 'shedinja':
-                    // III -> levelup + pokeball
-                    // IV, V, VI, VII, VIII -> levelup + normal pokeball
-                    break;
-                case 'magnezone':
-                    // IV, V, VI, VII -> levelup + location
-                    // VIII -> stone
-                    break;
-                case 'probopass':
-                    // III, IV, V, VI, VII -> levelup + location
-                    // VIII -> ???
-                    break;
-                case 'donario':
-                    // VII -> levelup + location
-                    // VIII -> stone
-                    break;
-                case 'crabominable':
-                    // VII -> levelup + location
-                    // VIII -> ???
-                    break;
-                case 'runerigus':
-                    // VIII -> damage + location
-                    break;
-                default:
-                    break;
-            }
+                });
+            });
         }
     });
 
     // remove evolution trigger if pre evolution is not available in selected generation
     if (chain.baby.length == 0) {
-        chain.base.forEach(element => {
-            element.evolution_triggers = [];
+        chain.base.forEach(pokemon => {
+            pokemon.evolution_triggers = [];
         });
     }
 

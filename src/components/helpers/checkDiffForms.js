@@ -1,5 +1,5 @@
 // check for different forms
-import defaultSpritesNames from '@/components/assets/defaultSpriteNames.json';
+import defaultSpritesNames from '@/components/dataAssets/defaultSpriteNames.json';
 
 // names to get home default sprites
 function getDefaultSpriteName(name) {
