@@ -94,7 +94,7 @@
             }
         ]
     },
-    "kalos": {},
-    "alola": {},
-    "galar": {}
+    "kalos": { "unavailable_types": [], "changed_types": [] },
+    "alola": { "unavailable_types": [], "changed_types": [] },
+    "galar": { "unavailable_types": [], "changed_types": [] }
 }

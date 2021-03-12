@@ -45,14 +45,19 @@ function getBaseEfficiencies(context, typesObject, generation) {
     };
 
     // generation specific changes to efficiencies
+
     Object.entries(efficencyDifferences).forEach(generationElement => {
         if (generationElement[0] == generation) {
-            generationElement[1].unavailable_types.forEach(type => {
-                typesObject = deleteType(typesObject, type);
-            });
-            generationElement[1].changed_types.forEach(change => {
-                typesObject = changeEfficiency(context, typesObject, change);
-            });
+            if (generationElement[1].unavailable_types.length != 0) {
+                generationElement[1].unavailable_types.forEach(type => {
+                    typesObject = deleteType(typesObject, type);
+                });
+            }
+            if (generationElement[1].changed_types.length != 0) {
+                generationElement[1].changed_types.forEach(change => {
+                    typesObject = changeEfficiency(context, typesObject, change);
+                });
+            }
         }
     });
 

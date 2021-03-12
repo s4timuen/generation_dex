@@ -2,9 +2,10 @@
 // https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_with_branched_evolutions
 
 // todo: form specifics
-// todo: mega evolutions (?)
+// todo: mega evolutions
 
 import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
+import { forPairsOfTwo } from '@/components/helpers/utilities.js';
 
 function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper
@@ -456,58 +457,16 @@ function adjustEvolutionTriggers(chain, context) {
                     if (pokemonEntry[0] == pokemon.name) {
                         Object.entries(pokemonEntry[1]).forEach(generationTrigger => {
                             if (generation == generationTrigger[0]) {
-                                //console.log(generationTrigger);
-                                console.log(pokemon.evolution_triggers);
-
                                 let filteredEvolutionTriggers = [];
-
-                                // todo: generation specific trigger filter
-                                /**
-                                 * how to check example:
-                                 * select sinnoh
-                                 * open leafeon overlay
-                                 * check generationTriggers in console
-                                 * compare respective triggers (pokemon.evolution_triggers[0] and [1]) for sinnoh
-                                 */
-
-                                pokemon.evolution_triggers.forEach(trigger => {
-                                    /** test start */
-
-                                    let triggerTrue = generationTrigger[1][0] == trigger[1].name;
-                                    let methodTrue = Object.keys(generationTrigger[1][1])[0] == trigger[0];
-                                    let requirementTrue = Object.values(generationTrigger[1][1])[0] == Object.values(trigger[1])[0];
-
-                                    //console.log(generationTrigger[1][0] == Object.values(trigger[1])[0])
-                                    //console.log(trigger[1].name)
-
-                                    console.log('trigger (level-up)');
-                                    console.log(generationTrigger[1][0]);
-                                    console.log(trigger[1].name);
-                                    console.log(generationTrigger[1][0] == trigger[1].name);
-                                    console.log('method (location)');
-                                    console.log(Object.keys(generationTrigger[1][1])[0]);
-                                    console.log(trigger[0]);
-                                    console.log(Object.keys(generationTrigger[1][1])[0] == trigger[0]);
-                                    console.log('requirement (sinnoh-route-217)');
-                                    console.log(Object.values(generationTrigger[1][1])[0]);
-                                    console.log(Object.values(trigger[1])[0]);
-                                    console.log(Object.values(generationTrigger[1][1])[0] == Object.values(trigger[1])[0]);
-
-                                    if (triggerTrue && methodTrue && requirementTrue) {
-                                        console.log('it works');
-                                    } else {
-                                        console.log('it does not work');
-                                    }
-
-                                    /** test ende */
-
-                                    // todo: fix check for genreatiuon sprecific evolution requiremens
+                                // always [method], [trigger], [method], [trigger], ...
+                                // each method and trigger pair represents a generation
+                                forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function(method, trigger) {
                                     if (
-                                        // alway false -> evolution triggers empty
                                         generationTrigger[1][0] == trigger[1].name && // trigger
-                                        Object.keys(generationTrigger[1][1])[0] == trigger[0] && // method
-                                        Object.values(generationTrigger[1][1])[0] == Object.values(trigger[1])[0] // requirement
+                                        Object.keys(generationTrigger[1][1])[0] == method[0] && // method
+                                        Object.values(generationTrigger[1][1])[0] == method[1].name // requirement
                                     ) {
+                                        filteredEvolutionTriggers.push(method);
                                         filteredEvolutionTriggers.push(trigger);
                                     }
                                 });
