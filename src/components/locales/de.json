@@ -22,5 +22,14 @@
 
     "abilities-one": "Fähigkeit 1: ",
     "abilities-two": "Fähigkeit 2: ",
-    "abilities-hidden": "Versteckte Fähigkeit: "
+    "abilities-hidden": "Versteckte Fähigkeit: ",
+
+    "base-stats-title": "Basis Werte",
+    "base-stats-hp": "KP",
+    "base-stats-attack": "Angriff",
+    "base-stats-deffence": "Verteidigung",
+    "base-stats-special": "Spezial",
+    "base-stats-special-attack": "Spezial Angriff",
+    "base-stats-special-defence": "Spezial Verteidigung",
+    "base-stats-speed": "Initiative"
 }

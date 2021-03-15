@@ -22,5 +22,14 @@
 
     "abilities-one": "Ability 1: ",
     "abilities-two": "Ability 2: ",
-    "abilities-hidden": "Hidden ability: "
+    "abilities-hidden": "Hidden ability: ",
+
+    "base-stats-title": "Base stats",
+    "base-stats-hp": "HP",
+    "base-stats-attack": "attack",
+    "base-stats-deffence": "defence",
+    "base-stats-special": "special",
+    "base-stats-special-attack": "special attack",
+    "base-stats-special-defence": "special defence",
+    "base-stats-speed": "speed"
 }

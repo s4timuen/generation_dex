@@ -1,8 +1,9 @@
 // get edition specific evolution chain and triggers
 // https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_with_branched_evolutions
 
-// todo: form specifics
-// todo: mega evolutions
+// todo: form
+// todo: mega
+// todo: gmax
 
 import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
 import { forPairsOfTwo } from '@/components/helpers/utilities.js';
@@ -11,11 +12,21 @@ function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper
         .resource(context.$store.getters.selectedPokemonData.species.url)
         .then(async function(response) {
+            // console.log(response)
+
+            // response.varities -> form / mega / gmax
+
+            // check for more than one element and not is_default: true
+            // url -> data, form/mega/gmax from name
+
+            // not in evolution chain !!
+            // no evolution chain for not default form
+
             // get first element of evolution chain
             return await context.$store.getters.pokeApiWrapper
                 .resource(response.evolution_chain.url)
                 .then(function(response) {
-                    console.log(response);
+                    // console.log(response);
 
                     let evolutionChain = {
                         baby: [],
@@ -442,6 +453,7 @@ async function removeUnavailablePokemon(chain, context) {
                 });
         }
     }
+    // console.log(newChain)
     return newChain;
 }
 
@@ -466,8 +478,7 @@ function adjustEvolutionTriggers(chain, context) {
                                         Object.keys(generationTrigger[1][1])[0] == method[0] && // method
                                         Object.values(generationTrigger[1][1])[0] == method[1].name // requirement
                                     ) {
-                                        filteredEvolutionTriggers.push(method);
-                                        filteredEvolutionTriggers.push(trigger);
+                                        filteredEvolutionTriggers.push(method, trigger);
                                     }
                                 });
                                 pokemon.evolution_triggers = filteredEvolutionTriggers;
