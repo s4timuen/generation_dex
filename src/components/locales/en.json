@@ -26,10 +26,10 @@
 
     "base-stats-title": "Base stats",
     "base-stats-hp": "HP",
-    "base-stats-attack": "attack",
-    "base-stats-deffence": "defence",
-    "base-stats-special": "special",
-    "base-stats-special-attack": "special attack",
-    "base-stats-special-defence": "special defence",
-    "base-stats-speed": "speed"
+    "base-stats-attack": "Attack",
+    "base-stats-deffence": "Defense",
+    "base-stats-special": "Special",
+    "base-stats-special-attack": "Special attack",
+    "base-stats-special-defence": "Special defense",
+    "base-stats-speed": "Speed"
 }
