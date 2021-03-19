@@ -5,14 +5,14 @@
     "sidebar-generation-national": "National",
     "sidebar-generation-kanto": "Kanto",
     "sidebar-generation-johto": "Johto",
-    "sidebar-generation-hoen": "Hoen",
+    "sidebar-generation-hoenn": "Hoenn",
     "sidebar-generation-sinnoh": "Sinnoh",
     "sidebar-generation-unova": "Unova",
     "sidebar-generation-alola": "Alola",
     "sidebar-generation-kalos": "Kalos",
     "sidebar-generation-galar": "Galar",
 
-    "efficiencies-defence": "Defender",
+    "efficiencies-defense": "Defender",
     "efficioncies-multiplier-zero": "x0",
     "efficioncies-multiplier-quarter": "x0.25",
     "efficioncies-multiplier-half": "x0.5",
@@ -30,6 +30,6 @@
     "base-stats-deffence": "Defense",
     "base-stats-special": "Special",
     "base-stats-special-attack": "Special attack",
-    "base-stats-special-defence": "Special defense",
+    "base-stats-special-defense": "Special defense",
     "base-stats-speed": "Speed"
 }

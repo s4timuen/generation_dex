@@ -2,107 +2,107 @@
     "pokemon_names": [
         {
             "pokemon_name": "deoxys",
-            "default_sprite_name": "deoxys-normal"
+            "default_sprite_name": "deoxys_normal"
         },
         {
             "pokemon_name": "wormadam",
-            "default_sprite_name": "wormadam-plant"
+            "default_sprite_name": "wormadam_plant"
         },
         {
             "pokemon_name": "shaymin",
-            "default_sprite_name": "shaymin-land"
+            "default_sprite_name": "shaymin_land"
         },
         {
             "pokemon_name": "giratina",
-            "default_sprite_name": "giratina-altered"
+            "default_sprite_name": "giratina_altered"
         },
         {
             "pokemon_name": "darmanitan",
-            "default_sprite_name": "darmanitan-standard"
+            "default_sprite_name": "darmanitan_standard"
         },
         {
             "pokemon_name": "basculin",
-            "default_sprite_name": "basculin-red-striped"
+            "default_sprite_name": "basculin_red_striped"
         },
         {
             "pokemon_name": "tornadus",
-            "default_sprite_name": "tornadus-incarnate"
+            "default_sprite_name": "tornadus_incarnate"
         },
         {
             "pokemon_name": "thundurus",
-            "default_sprite_name": "thundurus-incarnate"
+            "default_sprite_name": "thundurus_incarnate"
         },
         {
             "pokemon_name": "landorus",
-            "default_sprite_name": "landorus-incarnate"
+            "default_sprite_name": "landorus_incarnate"
         },
         {
             "pokemon_name": "keldeo",
-            "default_sprite_name": "keldeo-ordinary"
+            "default_sprite_name": "keldeo_ordinary"
         },
         {
             "pokemon_name": "meloetta",
-            "default_sprite_name": "meloetta-aria"
+            "default_sprite_name": "meloetta_aria"
         },
         {
             "pokemon_name": "meowstic",
-            "default_sprite_name": "meowstic-male"
+            "default_sprite_name": "meowstic_male"
         },
         {
             "pokemon_name": "aegislash",
-            "default_sprite_name": "aegislash-shield"
+            "default_sprite_name": "aegislash_shield"
         },
         {
             "pokemon_name": "pumpkaboo",
-            "default_sprite_name": "pumpkaboo-average"
+            "default_sprite_name": "pumpkaboo_average"
         },
         {
             "pokemon_name": "gourgeist",
-            "default_sprite_name": "gourgeist-average"
+            "default_sprite_name": "gourgeist_average"
         },
         {
             "pokemon_name": "oricorio",
-            "default_sprite_name": "oricorio-baile"
+            "default_sprite_name": "oricorio_baile"
         },
         {
             "pokemon_name": "lycanroc",
-            "default_sprite_name": "lycanroc-midday"
+            "default_sprite_name": "lycanroc_midday"
         },
         {
             "pokemon_name": "wishiwashi",
-            "default_sprite_name": "wishiwashi-solo"
+            "default_sprite_name": "wishiwashi_solo"
         },
         {
             "pokemon_name": "minior",
-            "default_sprite_name": "minior-red-meteor"
+            "default_sprite_name": "minior_red_meteor"
         },
         {
             "pokemon_name": "mimikyu",
-            "default_sprite_name": "mimikyu-disguised"
+            "default_sprite_name": "mimikyu_disguised"
         },
         {
             "pokemon_name": "toxtricity",
-            "default_sprite_name": "toxtricity-amped"
+            "default_sprite_name": "toxtricity_amped"
         },
         {
             "pokemon_name": "eiscue",
-            "default_sprite_name": "eiscue-ice"
+            "default_sprite_name": "eiscue_ice"
         },
         {
             "pokemon_name": "indeedee",
-            "default_sprite_name": "indeedee-male"
+            "default_sprite_name": "indeedee_male"
         },
         {
             "pokemon_name": "zacian",
-            "default_sprite_name": "zacian-hero"
+            "default_sprite_name": "zacian_hero"
         },
         {
             "pokemon_name": "zamazenta",
-            "default_sprite_name": "zamazenta-hero"
+            "default_sprite_name": "zamazenta_hero"
         },
         {
             "pokemon_name": "urshifu",
-            "default_sprite_name": "urshifu-single-strike"
+            "default_sprite_name": "urshifu_single_strike"
         }
     ]
 }

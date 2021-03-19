@@ -10,7 +10,7 @@
                     <li @click.prevent="setDataFilter('national')">{{ $t('sidebar-generation-national') }}</li>
                     <li @click.prevent="setDataFilter('kanto')">{{ $t('sidebar-generation-kanto') }}</li>
                     <li @click.prevent="setDataFilter('johto')">{{ $t('sidebar-generation-johto') }}</li>
-                    <li @click.prevent="setDataFilter('hoen')">{{ $t('sidebar-generation-hoen') }}</li>
+                    <li @click.prevent="setDataFilter('hoenn')">{{ $t('sidebar-generation-hoenn') }}</li>
                     <li @click.prevent="setDataFilter('sinnoh')">{{ $t('sidebar-generation-sinnoh') }}</li>
                     <li @click.prevent="setDataFilter('unova')">{{ $t('sidebar-generation-unova') }}</li>
                     <li @click.prevent="setDataFilter('kalos')">{{ $t('sidebar-generation-kalos') }}</li>

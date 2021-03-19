@@ -3,7 +3,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -13,7 +13,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             }
@@ -23,7 +23,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -33,7 +33,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -43,7 +43,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -53,7 +53,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -63,7 +63,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -73,7 +73,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -83,7 +83,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -93,7 +93,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 20
                 }
             }
@@ -103,7 +103,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 25
                 }
             }
@@ -113,14 +113,14 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
-                    "special-attack": 80
+                "affected_stats": {
+                    "special_attack": 80
                 }
             }
         ]
@@ -129,7 +129,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 20
                 }
             }
@@ -139,7 +139,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 25
                 }
             }
@@ -149,13 +149,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 45
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 80
                 }
             }
@@ -165,7 +165,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 35
                 }
             }
@@ -175,7 +175,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -185,13 +185,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
+                "affected_stats": {
                     "speed": 91
                 }
             }
@@ -201,7 +201,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 25
                 }
             }
@@ -211,7 +211,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -221,7 +221,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 31
                 }
             }
@@ -231,7 +231,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 61
                 }
             }
@@ -241,7 +241,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -251,13 +251,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -267,20 +267,20 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
-                    "defence": 30
+                "affected_stats": {
+                    "defense": 30
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
-                    "special-defence": 40
+                "affected_stats": {
+                    "special_defense": 40
                 }
             }
         ]
@@ -289,13 +289,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 90
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
+                "affected_stats": {
                     "speed": 100
                 }
             }
@@ -305,7 +305,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 30
                 }
             }
@@ -315,17 +315,17 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 55
                 }
             }
         ]
     },
-    "nidoran-f": {
+    "nidoran_f": {
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -335,7 +335,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 55
                 }
             }
@@ -345,23 +345,23 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 75
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 100
                 }
             }
         ]
     },
-    "nidoran-m": {
+    "nidoran_m": {
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -371,7 +371,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 55
                 }
             }
@@ -381,13 +381,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 75
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 92
                 }
             }
@@ -397,7 +397,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 60
                 }
             }
@@ -407,14 +407,14 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
-                    "special-attack": 85
+                "affected_stats": {
+                    "special_attack": 85
                 }
             }
         ]
@@ -423,7 +423,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -433,7 +433,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -443,7 +443,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 25
                 }
             }
@@ -453,14 +453,14 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
-                    "special-attack": 75
+                "affected_stats": {
+                    "special_attack": 75
                 }
             }
         ]
@@ -469,7 +469,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -479,7 +479,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 75
                 }
             }
@@ -489,7 +489,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 75
                 }
             }
@@ -499,7 +499,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -509,14 +509,14 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
-                    "special-attack": 100
+                "affected_stats": {
+                    "special_attack": 100
                 }
             }
         ]
@@ -525,7 +525,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 55
                 }
             }
@@ -535,7 +535,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             }
@@ -545,7 +545,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -555,7 +555,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 90
                 }
             }
@@ -565,7 +565,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 45
                 }
             }
@@ -575,13 +575,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 80
                 }
             }
@@ -591,7 +591,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -601,7 +601,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -611,7 +611,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -621,7 +621,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             }
@@ -631,7 +631,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 35
                 }
             }
@@ -641,7 +641,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 60
                 }
             }
@@ -651,7 +651,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -661,7 +661,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             }
@@ -671,7 +671,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -681,7 +681,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -691,13 +691,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 75
                 }
             }
@@ -707,7 +707,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 105
                 }
             }
@@ -717,7 +717,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 120
                 }
             }
@@ -727,14 +727,14 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 135
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
-                    "special-defence": 85
+                "generations": ["johto", "hoenn", "sinnoh", "unova"],
+                "affected_stats": {
+                    "special_defense": 85
                 }
             }
         ]
@@ -743,7 +743,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 35
                 }
             }
@@ -753,7 +753,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -763,7 +763,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -773,7 +773,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             }
@@ -783,7 +783,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -793,14 +793,14 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
-                    "special-defence": 60
+                "affected_stats": {
+                    "special_defense": 60
                 }
             }
         ]
@@ -809,7 +809,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -819,7 +819,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 120
                 }
             }
@@ -829,7 +829,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 30
                 }
             }
@@ -839,7 +839,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 45
                 }
             }
@@ -849,13 +849,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 55
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 110
                 }
             }
@@ -865,7 +865,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -875,7 +875,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             }
@@ -885,7 +885,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -895,7 +895,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             }
@@ -905,7 +905,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 95
                 }
             }
@@ -915,7 +915,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 120
                 }
             }
@@ -925,13 +925,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 58
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 65
                 }
             }
@@ -941,7 +941,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 35
                 }
             }
@@ -951,13 +951,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 60
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "speed": 100
                 }
             }
@@ -967,7 +967,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             }
@@ -977,7 +977,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 95
                 }
             }
@@ -987,7 +987,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -997,7 +997,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -1007,7 +1007,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 45
                 }
             }
@@ -1017,7 +1017,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -1027,7 +1027,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -1037,7 +1037,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 115
                 }
             }
@@ -1047,7 +1047,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 130
                 }
             }
@@ -1057,7 +1057,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 30
                 }
             }
@@ -1067,7 +1067,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 90
                 }
             }
@@ -1077,7 +1077,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 115
                 }
             }
@@ -1087,7 +1087,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 25
                 }
             }
@@ -1097,7 +1097,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -1107,7 +1107,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 55
                 }
             }
@@ -1117,13 +1117,13 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "speed": 140
                 }
             }
@@ -1133,7 +1133,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 60
                 }
             }
@@ -1143,14 +1143,14 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 125
                 }
             },
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "special-defence": 65
+                "affected_stats": {
+                    "special_defense": 65
                 }
             }
         ]
@@ -1159,7 +1159,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -1169,7 +1169,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -1179,7 +1179,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 35
                 }
             }
@@ -1189,7 +1189,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 35
                 }
             }
@@ -1199,7 +1199,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 60
                 }
             }
@@ -1209,7 +1209,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 60
                 }
             }
@@ -1219,7 +1219,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -1229,7 +1229,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 30
                 }
             }
@@ -1239,7 +1239,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 45
                 }
             }
@@ -1249,7 +1249,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 105
                 }
             }
@@ -1259,7 +1259,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -1269,7 +1269,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 40
                 }
             }
@@ -1279,7 +1279,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             }
@@ -1289,7 +1289,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 95
                 }
             }
@@ -1299,7 +1299,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -1309,7 +1309,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 80
                 }
             }
@@ -1319,7 +1319,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             }
@@ -1329,7 +1329,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -1339,7 +1339,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -1349,7 +1349,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 55
                 }
             }
@@ -1359,7 +1359,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 95
                 }
             }
@@ -1369,7 +1369,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -1379,7 +1379,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 85
                 }
             }
@@ -1389,7 +1389,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 55
                 }
             }
@@ -1399,7 +1399,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             }
@@ -1409,7 +1409,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 20
                 }
             }
@@ -1419,7 +1419,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -1429,7 +1429,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 95
                 }
             }
@@ -1439,7 +1439,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 48
                 }
             }
@@ -1449,7 +1449,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -1459,7 +1459,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 110
                 }
             }
@@ -1469,7 +1469,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 110
                 }
             }
@@ -1479,7 +1479,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 110
                 }
             }
@@ -1489,7 +1489,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 75
                 }
             }
@@ -1499,7 +1499,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 90
                 }
             }
@@ -1509,7 +1509,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 115
                 }
             }
@@ -1519,7 +1519,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 45
                 }
             }
@@ -1529,7 +1529,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             }
@@ -1539,7 +1539,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 60
                 }
             }
@@ -1549,7 +1549,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 65
                 }
             }
@@ -1559,7 +1559,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 125
                 }
             }
@@ -1569,7 +1569,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 125
                 }
             }
@@ -1579,7 +1579,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 125
                 }
             }
@@ -1589,7 +1589,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 50
                 }
             }
@@ -1599,7 +1599,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 70
                 }
             }
@@ -1609,7 +1609,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -1619,7 +1619,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 154
                 }
             }
@@ -1629,7 +1629,7 @@
         "differences": [
             {
                 "generations": ["kanto"],
-                "affected-stats": {
+                "affected_stats": {
                     "special": 100
                 }
             }
@@ -1639,8 +1639,8 @@
         "differences": [
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "special-attack": 76
+                "affected_stats": {
+                    "special_attack": 76
                 }
             }
         ]
@@ -1649,7 +1649,7 @@
         "differences": [
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "speed": 60
                 }
             }
@@ -1659,8 +1659,8 @@
         "differences": [
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "defence": 75
+                "affected_stats": {
+                    "defense": 75
                 }
             }
         ]
@@ -1669,8 +1669,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "unova"],
-                "affected-stats": {
-                    "defence": 75
+                "affected_stats": {
+                    "defense": 75
                 }
             }
         ]
@@ -1679,9 +1679,9 @@
         "differences": [
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "hp": 50,
-                    "special-attack": 80
+                    "special_attack": 80
                 }
             }
         ]
@@ -1690,9 +1690,9 @@
         "differences": [
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "hp": 55,
-                    "defence": 85,
+                    "defense": 85,
                     "speed": 85
                 }
             }
@@ -1702,7 +1702,7 @@
         "differences": [
             {
                 "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "hp": 65
                 }
             }
@@ -1712,8 +1712,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "special-attack": 50
+                "affected_stats": {
+                    "special_attack": 50
                 }
             }
         ]
@@ -1722,8 +1722,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "special-attack": 85
+                "affected_stats": {
+                    "special_attack": 85
                 }
             }
         ]
@@ -1732,8 +1732,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "special-attack": 80,
+                "affected_stats": {
+                    "special_attack": 80,
                     "speed": 60
                 }
             }
@@ -1743,8 +1743,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "special-attack": 80,
+                "affected_stats": {
+                    "special_attack": 80,
                     "speed": 70
                 }
             }
@@ -1754,9 +1754,9 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "defence": 55,
-                    "special-defence": 75
+                "affected_stats": {
+                    "defense": 55,
+                    "special_defense": 75
                 }
             }
         ]
@@ -1765,9 +1765,9 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
-                    "defence": 55,
-                    "speciaö-defence": 75
+                "affected_stats": {
+                    "defense": 55,
+                    "speciaö_defense": 75
                 }
             }
         ]
@@ -1776,7 +1776,7 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 70
                 }
             }
@@ -1786,7 +1786,7 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "hp": 70
                 }
             }
@@ -1796,10 +1796,10 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "hp": 65,
-                    "defence": 70,
-                    "special-defence": 80
+                    "defense": 70,
+                    "special_defense": 80
                 }
             }
         ]
@@ -1808,7 +1808,7 @@
         "differences": [
             {
                 "generations": ["univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "hp": 55
                 }
             }
@@ -1818,7 +1818,7 @@
         "differences": [
             {
                 "generations": ["univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 95
                 }
             }
@@ -1828,7 +1828,7 @@
         "differences": [
             {
                 "generations": ["univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 110
                 }
             }
@@ -1838,9 +1838,9 @@
         "differences": [
             {
                 "generations": ["univa", "kalos"],
-                "affected-stats": {
+                "affected_stats": {
                     "hp": 70,
-                    "defence": 30
+                    "defense": 30
                 }
             }
         ]
@@ -1849,8 +1849,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "unova"],
-                "affected-stats": {
-                    "special-attack": 50
+                "affected_stats": {
+                    "special_attack": 50
                 }
             }
         ]
@@ -1859,8 +1859,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "unova"],
-                "affected-stats": {
-                    "defence": 75
+                "affected_stats": {
+                    "defense": 75
                 }
             }
         ]
@@ -1869,8 +1869,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "unova"],
-                "affected-stats": {
-                    "special-defence": 85
+                "affected_stats": {
+                    "special_defense": 85
                 }
             }
         ]
@@ -1879,8 +1879,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "unova"],
-                "affected-stats": {
-                    "special-attack": 90
+                "affected_stats": {
+                    "special_attack": 90
                 }
             }
         ]
@@ -1889,8 +1889,8 @@
         "differences": [
             {
                 "generations": ["hoenn", "sinnoh", "unova"],
-                "affected-stats": {
-                    "special-defence": 63
+                "affected_stats": {
+                    "special_defense": 63
                 }
             }
         ]
@@ -1899,8 +1899,8 @@
         "differences": [
             {
                 "generations": ["sinnoh", "unova"],
-                "affected-stats": {
-                    "special-defence": 50
+                "affected_stats": {
+                    "special_defense": 50
                 }
             }
         ]
@@ -1909,8 +1909,8 @@
         "differences": [
             {
                 "generations": ["sinnoh", "unova"],
-                "affected-stats": {
-                    "defence": 55
+                "affected_stats": {
+                    "defense": 55
                 }
             }
         ]
@@ -1919,7 +1919,7 @@
         "differences": [
             {
                 "generations": ["unova"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 100
                 }
             }
@@ -1929,7 +1929,7 @@
         "differences": [
             {
                 "generations": ["unova"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 105
                 }
             }
@@ -1939,8 +1939,8 @@
         "differences": [
             {
                 "generations": ["unova"],
-                "affected-stats": {
-                    "special-defence": 70
+                "affected_stats": {
+                    "special_defense": 70
                 }
             }
         ]
@@ -1949,7 +1949,7 @@
         "differences": [
             {
                 "generations": ["unova"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 70
                 }
             }
@@ -1959,8 +1959,8 @@
         "differences": [
             {
                 "generations": ["unova"],
-                "affected-stats": {
-                    "special-defence": 70
+                "affected_stats": {
+                    "special_defense": 70
                 }
             }
         ]
@@ -1969,7 +1969,7 @@
         "differences": [
             {
                 "generations": ["unova"],
-                "affected-stats": {
+                "affected_stats": {
                     "attack": 90
                 }
             }
@@ -1979,8 +1979,8 @@
         "differences": [
             {
                 "generations": ["unova"],
-                "affected-stats": {
-                    "defence": 70
+                "affected_stats": {
+                    "defense": 70
                 }
             }
         ]

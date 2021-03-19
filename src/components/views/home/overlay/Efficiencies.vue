@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
-                <p>{{ $t('efficiencies-defence') }}</p>
-                <div v-for="(efficiency, key) in efficiencies.defence" :key="key">
+                <p>{{ $t('efficiencies-defense') }}</p>
+                <div v-for="(efficiency, key) in efficiencies.defense" :key="key">
                     <p v-if="key == 'zero'">{{ $t('efficioncies-multiplier-zero') }}</p>
                     <p v-if="key == 'quarter'">{{ $t('efficioncies-multiplier-quarter') }}</p>
                     <p v-if="key == 'half'">{{ $t('efficioncies-multiplier-half') }}</p>
@@ -30,7 +30,7 @@ export default {
     data() {
         return {
             efficiencies: {
-                defence: {
+                defense: {
                     zero: [''],
                     quarter: [''],
                     half: [''],

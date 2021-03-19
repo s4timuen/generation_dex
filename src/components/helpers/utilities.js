@@ -10,4 +10,14 @@ function forPairsOfTwo(array, distancePairElements, distanceStartElements, func)
     }
 }
 
-export { capitalize, forPairsOfTwo };
+// show div
+function showDiv(id) {
+    document.getElementById(id).setAttribute('style', 'display: block');
+}
+
+// hide div
+function hideDiv(id) {
+    document.getElementById(id).setAttribute('style', 'display: none');
+}
+
+export { capitalize, forPairsOfTwo, showDiv, hideDiv };

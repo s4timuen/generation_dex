@@ -4,32 +4,32 @@
         "changed_types": [
             {
                 "attack_type": "poison",
-                "defence_type": "bug",
+                "defense_type": "bug",
                 "new_value": 2
             },
             {
                 "attack_type": "bug",
-                "defence_type": "poison",
+                "defense_type": "poison",
                 "new_value": 2
             },
             {
                 "attack_type": "ghost",
-                "defence_type": "psychic",
+                "defense_type": "psychic",
                 "new_value": 0
             },
             {
                 "attack_type": "ice",
-                "defence_type": "fire",
+                "defense_type": "fire",
                 "new_value": 1
             },
             {
                 "attack_type": "ghost",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             },
             {
                 "attack_type": "dark",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             }
         ]
@@ -39,12 +39,12 @@
         "changed_types": [
             {
                 "attack_type": "ghost",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             },
             {
                 "attack_type": "dark",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             }
         ]
@@ -54,12 +54,12 @@
         "changed_types": [
             {
                 "attack_type": "ghost",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             },
             {
                 "attack_type": "dark",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             }
         ]
@@ -69,12 +69,12 @@
         "changed_types": [
             {
                 "attack_type": "ghost",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             },
             {
                 "attack_type": "dark",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             }
         ]
@@ -84,12 +84,12 @@
         "changed_types": [
             {
                 "attack_type": "ghost",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             },
             {
                 "attack_type": "dark",
-                "defence_type": "steel",
+                "defense_type": "steel",
                 "new_value": 0.5
             }
         ]

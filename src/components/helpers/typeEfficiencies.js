@@ -35,7 +35,7 @@ function typeEfficiencies(context, typeOne, typeTwo, generation) {
 // calculate base efficiencies
 function getBaseEfficiencies(context, typesObject, generation) {
     let efficiencies = {
-        defence: {
+        defense: {
             zero: [],
             quarter: [],
             half: [],
@@ -65,13 +65,13 @@ function getBaseEfficiencies(context, typesObject, generation) {
     if (typesObject.typeOneData != null && typesObject.typeTwoData == null) {
         // as defender
         for (const entry of typesObject.typeOneData.damage_relations.no_damage_from) {
-            efficiencies.defence.zero.push(entry.name);
+            efficiencies.defense.zero.push(entry.name);
         }
         for (const entry of typesObject.typeOneData.damage_relations.half_damage_from) {
-            efficiencies.defence.half.push(entry.name);
+            efficiencies.defense.half.push(entry.name);
         }
         for (const entry of typesObject.typeOneData.damage_relations.double_damage_from) {
-            efficiencies.defence.double.push(entry.name);
+            efficiencies.defense.double.push(entry.name);
         }
     }
 
@@ -82,28 +82,28 @@ function getBaseEfficiencies(context, typesObject, generation) {
                 let type = Object.values(response.results)[index].name;
 
                 // as defender
-                let finalMultiplierDefence = getFinalBaseMultiplier(
-                    'defence',
+                let finalMultiplierdefense = getFinalBaseMultiplier(
+                    'defense',
                     type,
                     typesObject.typeOneData.damage_relations,
                     typesObject.typeTwoData.damage_relations
                 );
 
-                switch (finalMultiplierDefence) {
+                switch (finalMultiplierdefense) {
                     case 0:
-                        efficiencies.defence.zero.push(type);
+                        efficiencies.defense.zero.push(type);
                         break;
                     case 0.25:
-                        efficiencies.defence.quarter.push(type);
+                        efficiencies.defense.quarter.push(type);
                         break;
                     case 0.5:
-                        efficiencies.defence.half.push(type);
+                        efficiencies.defense.half.push(type);
                         break;
                     case 2:
-                        efficiencies.defence.double.push(type);
+                        efficiencies.defense.double.push(type);
                         break;
                     case 4:
-                        efficiencies.defence.four.push(type);
+                        efficiencies.defense.four.push(type);
                         break;
                     default:
                         break;
@@ -120,7 +120,7 @@ function getFinalBaseMultiplier(role, type, damageRelationsOne, damageRelationsT
     let multiplierTwo = 1;
 
     // as defender
-    if (role == 'defence') {
+    if (role == 'defense') {
         // multiplier type one
         for (const [key, entry] of Object.entries(damageRelationsOne)) {
             for (const value of entry) {
@@ -186,7 +186,7 @@ function deleteType(typesObject, type) {
 
 function changeEfficiency(context, typesObject, change) {
     let attackType = change.attack_type;
-    let defenceType = change.defence_type;
+    let defenseType = change.defense_type;
     let newValue = change.new_value;
 
     // change efficiency values
@@ -196,7 +196,7 @@ function changeEfficiency(context, typesObject, change) {
                 // as defender
                 if (key.includes('damage_from')) {
                     for (const value of subEntry) {
-                        if (value.name == defenceType) {
+                        if (value.name == defenseType) {
                             subEntry.splice(subEntry.indexOf(value), 1);
 
                             let pushObject = {

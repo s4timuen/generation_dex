@@ -1,46 +1,46 @@
 {
     "milotic": {
-        "hoenn": ["level-up", { "min_beaty": 171 }],
-        "sinnoh": ["level-up", { "min_beaty": 171 }],
-        "unova": ["trade", { "held_item": "prism-scale" }],
-        "kalos": ["trade", { "held_item": "prism-scale" }],
-        "alola": ["trade", { "held_item": "prism-scale" }],
-        "galar": ["trade", { "held_item": "prism-scale" }]
+        "hoenn": ["level_up", { "min_beaty": 171 }],
+        "sinnoh": ["level_up", { "min_beaty": 171 }],
+        "unova": ["trade", { "held_item": "prism_scale" }],
+        "kalos": ["trade", { "held_item": "prism_scale" }],
+        "alola": ["trade", { "held_item": "prism_scale" }],
+        "galar": ["trade", { "held_item": "prism_scale" }]
     },
     "glaceon": {
-        "sinnoh": ["level-up", { "location": "sinnoh-route-217" }],
-        "unova": ["level-up", { "location": "twist-mountain" }],
-        "kalos": ["level-up", { "location": "frost-cavern" }],
-        "alola": ["level-up", { "location": "mount-lanakila" }],
-        "galar": ["use-item", { "item": "ice-stone" }]
+        "sinnoh": ["level_up", { "location": "sinnoh_route_217" }],
+        "unova": ["level_up", { "location": "twist_mountain" }],
+        "kalos": ["level_up", { "location": "frost_cavern" }],
+        "alola": ["level_up", { "location": "mount_lanakila" }],
+        "galar": ["use_item", { "item": "ice_stone" }]
     },
     "leafeon": {
-        "sinnoh": ["level-up", { "location": "eterna-forest" }],
-        "unova": ["level-up", { "location": "pinwheel-forest" }],
-        "kalos": ["level-up", { "location": "kalos-route-20" }],
-        "alola": ["level-up", { "location": "lush-jungle" }],
-        "galar": ["use-item", { "item": "leaf-stone" }]
+        "sinnoh": ["level_up", { "location": "eterna_forest" }],
+        "unova": ["level_up", { "location": "pinwheel_forest" }],
+        "kalos": ["level_up", { "location": "kalos_route_20" }],
+        "alola": ["level_up", { "location": "lush_jungle" }],
+        "galar": ["use_item", { "item": "leaf_stone" }]
     },
     "magnezone": {
-        "sinnoh": ["level-up", { "location": "mt-coronet" }],
-        "unova": ["level-up", { "location": "chargestone-cave" }],
-        "kalos": ["level-up", { "location": "kalos-route-13" }],
-        "alola": ["level-up", { "location": "vast-poni-canyon" }],
-        "galar": ["use-item", { "item": "thunder-stone" }]
+        "sinnoh": ["level_up", { "location": "mt_coronet" }],
+        "unova": ["level_up", { "location": "chargestone_cave" }],
+        "kalos": ["level_up", { "location": "kalos_route_13" }],
+        "alola": ["level_up", { "location": "vast_poni_canyon" }],
+        "galar": ["use_item", { "item": "thunder_stone" }]
     },
     "probopass": {
-        "sinnoh": ["level-up", { "location": "mt-coronet" }],
-        "unova": ["level-up", { "location": "chargestone-cave" }],
-        "kalos": ["level-up", { "location": "kalos-route-13" }],
-        "alola": ["level-up", { "location": "vast-poni-canyon" }],
-        "galar": ["use-item", { "item": "thunder-stone" }]
+        "sinnoh": ["level_up", { "location": "mt_coronet" }],
+        "unova": ["level_up", { "location": "chargestone_cave" }],
+        "kalos": ["level_up", { "location": "kalos_route_13" }],
+        "alola": ["level_up", { "location": "vast_poni_canyon" }],
+        "galar": ["use_item", { "item": "thunder_stone" }]
     },
     "vikavolt": {
-        "alola": ["level-up", { "location": "vast-poni-canyon" }],
-        "galar": ["use-item", { "item": "thunder-stone" }]
+        "alola": ["level_up", { "location": "vast_poni_canyon" }],
+        "galar": ["use_item", { "item": "thunder_stone" }]
     },
     "crabominable": {
-        "alola": ["level-up", { "location": "mount-lanakila" }],
-        "galar": ["use-item", { "item": "ice-stone" }]
+        "alola": ["level_up", { "location": "mount_lanakila" }],
+        "galar": ["use_item", { "item": "ice_stone" }]
     }
 }

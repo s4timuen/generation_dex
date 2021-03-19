@@ -1,3 +1,5 @@
+import { showDiv, hideDiv } from '@/components/helpers/utilities.js';
+
 // filter generation divs to display
 function showHideGenerationDivs(dataFilter) {
     switch (dataFilter) {
@@ -101,12 +103,6 @@ function showHideGenerationDivs(dataFilter) {
             showDiv('alola');
             showDiv('galar');
     }
-}
-function showDiv(id) {
-    document.getElementById(id).setAttribute('style', 'display: block');
-}
-function hideDiv(id) {
-    document.getElementById(id).setAttribute('style', 'display: none');
 }
 
 export { showHideGenerationDivs };
