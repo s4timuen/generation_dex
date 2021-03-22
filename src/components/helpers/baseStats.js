@@ -82,9 +82,6 @@ function getBaseStats(pokemon, context) {
             });
         }
     });
-
-    console.log(baseStats);
-
     return baseStats;
 }
 

@@ -15,8 +15,10 @@
                     <Abilities class="col-12 col-md-6" />
                 </div>
                 <div class="row">
-                    <Moves class="col-12" />
                     <Stats class="col-12" />
+                </div>
+                <div>
+                    <Moves class="col-12" />
                 </div>
                 <div calss="row">
                     <GeneralProperties class="col-12" />
