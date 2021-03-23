@@ -1,46 +1,46 @@
 {
     "milotic": {
-        "hoenn": ["level_up", { "min_beaty": 171 }],
-        "sinnoh": ["level_up", { "min_beaty": 171 }],
-        "unova": ["trade", { "held_item": "prism_scale" }],
-        "kalos": ["trade", { "held_item": "prism_scale" }],
-        "alola": ["trade", { "held_item": "prism_scale" }],
-        "galar": ["trade", { "held_item": "prism_scale" }]
+        "generation-iii": ["level_up", { "min_beaty": 171 }],
+        "generation-iv": ["level_up", { "min_beaty": 171 }],
+        "generation-v": ["trade", { "held_item": "prism_scale" }],
+        "generation-vi": ["trade", { "held_item": "prism_scale" }],
+        "generation-vii": ["trade", { "held_item": "prism_scale" }],
+        "generation-viii": ["trade", { "held_item": "prism_scale" }]
     },
     "glaceon": {
-        "sinnoh": ["level_up", { "location": "sinnoh_route_217" }],
-        "unova": ["level_up", { "location": "twist_mountain" }],
-        "kalos": ["level_up", { "location": "frost_cavern" }],
-        "alola": ["level_up", { "location": "mount_lanakila" }],
-        "galar": ["use_item", { "item": "ice_stone" }]
+        "generation-iv": ["level_up", { "location": "generation-iv_route_217" }],
+        "generation-v": ["level_up", { "location": "twist_mountain" }],
+        "generation-vi": ["level_up", { "location": "frost_cavern" }],
+        "generation-vii": ["level_up", { "location": "mount_lanakila" }],
+        "generation-viii": ["use_item", { "item": "ice_stone" }]
     },
     "leafeon": {
-        "sinnoh": ["level_up", { "location": "eterna_forest" }],
-        "unova": ["level_up", { "location": "pinwheel_forest" }],
-        "kalos": ["level_up", { "location": "kalos_route_20" }],
-        "alola": ["level_up", { "location": "lush_jungle" }],
-        "galar": ["use_item", { "item": "leaf_stone" }]
+        "generation-iv": ["level_up", { "location": "eterna_forest" }],
+        "generation-v": ["level_up", { "location": "pinwheel_forest" }],
+        "generation-vi": ["level_up", { "location": "generation-vi_route_20" }],
+        "generation-vii": ["level_up", { "location": "lush_jungle" }],
+        "generation-viii": ["use_item", { "item": "leaf_stone" }]
     },
     "magnezone": {
-        "sinnoh": ["level_up", { "location": "mt_coronet" }],
-        "unova": ["level_up", { "location": "chargestone_cave" }],
-        "kalos": ["level_up", { "location": "kalos_route_13" }],
-        "alola": ["level_up", { "location": "vast_poni_canyon" }],
-        "galar": ["use_item", { "item": "thunder_stone" }]
+        "generation-iv": ["level_up", { "location": "mt_coronet" }],
+        "generation-v": ["level_up", { "location": "chargestone_cave" }],
+        "generation-vi": ["level_up", { "location": "generation-vi_route_13" }],
+        "generation-vii": ["level_up", { "location": "vast_poni_canyon" }],
+        "generation-viii": ["use_item", { "item": "thunder_stone" }]
     },
     "probopass": {
-        "sinnoh": ["level_up", { "location": "mt_coronet" }],
-        "unova": ["level_up", { "location": "chargestone_cave" }],
-        "kalos": ["level_up", { "location": "kalos_route_13" }],
-        "alola": ["level_up", { "location": "vast_poni_canyon" }],
-        "galar": ["use_item", { "item": "thunder_stone" }]
+        "generation-iv": ["level_up", { "location": "mt_coronet" }],
+        "generation-v": ["level_up", { "location": "chargestone_cave" }],
+        "generation-vi": ["level_up", { "location": "generation-vi_route_13" }],
+        "generation-vii": ["level_up", { "location": "vast_poni_canyon" }],
+        "generation-viii": ["use_item", { "item": "thunder_stone" }]
     },
     "vikavolt": {
-        "alola": ["level_up", { "location": "vast_poni_canyon" }],
-        "galar": ["use_item", { "item": "thunder_stone" }]
+        "generation-vii": ["level_up", { "location": "vast_poni_canyon" }],
+        "generation-viii": ["use_item", { "item": "thunder_stone" }]
     },
     "crabominable": {
-        "alola": ["level_up", { "location": "mount_lanakila" }],
-        "galar": ["use_item", { "item": "ice_stone" }]
+        "generation-vii": ["level_up", { "location": "mount_lanakila" }],
+        "generation-viii": ["use_item", { "item": "ice_stone" }]
     }
 }

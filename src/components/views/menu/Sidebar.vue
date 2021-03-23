@@ -8,14 +8,14 @@
                         <router-link to="/">{{ $t('link-home') }}</router-link>
                     </li>
                     <li @click.prevent="setDataFilter('national')">{{ $t('sidebar-generation-national') }}</li>
-                    <li @click.prevent="setDataFilter('kanto')">{{ $t('sidebar-generation-kanto') }}</li>
-                    <li @click.prevent="setDataFilter('johto')">{{ $t('sidebar-generation-johto') }}</li>
-                    <li @click.prevent="setDataFilter('hoenn')">{{ $t('sidebar-generation-hoenn') }}</li>
-                    <li @click.prevent="setDataFilter('sinnoh')">{{ $t('sidebar-generation-sinnoh') }}</li>
-                    <li @click.prevent="setDataFilter('unova')">{{ $t('sidebar-generation-unova') }}</li>
-                    <li @click.prevent="setDataFilter('kalos')">{{ $t('sidebar-generation-kalos') }}</li>
-                    <li @click.prevent="setDataFilter('alola')">{{ $t('sidebar-generation-alola') }}</li>
-                    <li @click.prevent="setDataFilter('galar')">{{ $t('sidebar-generation-galar') }}</li>
+                    <li @click.prevent="setDataFilter('generation-i')">{{ $t('sidebar-generation-generation-i') }}</li>
+                    <li @click.prevent="setDataFilter('generation-ii')">{{ $t('sidebar-generation-generation-ii') }}</li>
+                    <li @click.prevent="setDataFilter('generation-iii')">{{ $t('sidebar-generation-generation-iii') }}</li>
+                    <li @click.prevent="setDataFilter('generation-iv')">{{ $t('sidebar-generation-generation-iv') }}</li>
+                    <li @click.prevent="setDataFilter('generation-v')">{{ $t('sidebar-generation-generation-v') }}</li>
+                    <li @click.prevent="setDataFilter('generation-vi')">{{ $t('sidebar-generation-generation-vi') }}</li>
+                    <li @click.prevent="setDataFilter('generation-vii')">{{ $t('sidebar-generation-generation-vii') }}</li>
+                    <li @click.prevent="setDataFilter('generation-viii')">{{ $t('sidebar-generation-generation-viii') }}</li>
                     <li>
                         <router-link to="/about">{{ $t('link-about') }}</router-link>
                     </li>

@@ -6,14 +6,12 @@
 // todo: gmax
 
 import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
-import { forPairsOfTwo } from '@/components/helpers/utilities.js';
+import { forPairsOfTwo, genToIntTranslator } from '@/components/helpers/utilities.js';
 
 function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper
         .resource(context.$store.getters.selectedPokemonData.species.url)
         .then(async function(response) {
-            // console.log(response)
-
             // response.varities -> form / mega / gmax
 
             // check for more than one element and not is_default: true
@@ -26,8 +24,6 @@ function getEvolutionChain(context) {
             return await context.$store.getters.pokeApiWrapper
                 .resource(response.evolution_chain.url)
                 .then(function(response) {
-                    // console.log(response);
-
                     let evolutionChain = {
                         baby: [],
                         base: [],
@@ -102,341 +98,186 @@ async function removeUnavailablePokemon(chain, context) {
                     await context.$store.getters.pokeApiWrapper
                         .resource(response.species.url)
                         .then(function(response) {
+                            let dataFilter = context.$store.getters.dataFilter;
                             switch (true) {
                                 // national
-                                case context.$store.getters.dataFilter == '' && stage[0] == 'baby':
+                                case genToIntTranslator(dataFilter) == 0 && stage[0] == 'baby':
                                     newChain.baby.push(pokemon);
                                     break;
-                                case context.$store.getters.dataFilter == '' && stage[0] == 'base':
+                                case genToIntTranslator(dataFilter) == 0 && stage[0] == 'base':
                                     newChain.base.push(pokemon);
                                     break;
-                                case context.$store.getters.dataFilter == '' && stage[0] == 'first':
+                                case genToIntTranslator(dataFilter) == 0 && stage[0] == 'first':
                                     newChain.first.push(pokemon);
                                     break;
-                                case context.$store.getters.dataFilter == '' && stage[0] == 'second':
+                                case genToIntTranslator(dataFilter) == 0 && stage[0] == 'second':
                                     newChain.second.push(pokemon);
                                     break;
-                                // kanto
-                                case context.$store.getters.dataFilter == 'kanto' && stage[0] == 'baby':
-                                    if (response.generation.name == 'generation-i') {
+                                // generation-i
+                                case genToIntTranslator(dataFilter) == 1 && stage[0] == 'baby':
+                                    if (genToIntTranslator(response.generation.name) == 1) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'kanto' && stage[0] == 'base':
-                                    if (response.generation.name == 'generation-i') {
+                                case genToIntTranslator(dataFilter) == 1 && stage[0] == 'base':
+                                    if (genToIntTranslator(response.generation.name) == 1) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'kanto' && stage[0] == 'first':
-                                    if (response.generation.name == 'generation-i') {
+                                case genToIntTranslator(dataFilter) == 1 && stage[0] == 'first':
+                                    if (genToIntTranslator(response.generation.name) == 1) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'kanto' && stage[0] == 'second':
-                                    if (response.generation.name == 'generation-i') {
+                                case genToIntTranslator(dataFilter) == 1 && stage[0] == 'second':
+                                    if (genToIntTranslator(response.generation.name) == 1) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
-                                // johto
-                                case context.$store.getters.dataFilter == 'johto' && stage[0] == 'baby':
-                                    if (response.generation.name == 'generation-i' || response.generation.name == 'generation-ii') {
+                                // generation-ii
+                                case genToIntTranslator(dataFilter) == 2 && stage[0] == 'baby':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 2) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'johto' && stage[0] == 'base':
-                                    if (response.generation.name == 'generation-i' || response.generation.name == 'generation-ii') {
+                                case genToIntTranslator(dataFilter) == 2 && stage[0] == 'base':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 2) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'johto' && stage[0] == 'first':
-                                    if (response.generation.name == 'generation-i' || response.generation.name == 'generation-ii') {
+                                case genToIntTranslator(dataFilter) == 2 && stage[0] == 'first':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 2) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'johto' && stage[0] == 'second':
-                                    if (response.generation.name == 'generation-i' || response.generation.name == 'generation-ii') {
+                                case genToIntTranslator(dataFilter) == 2 && stage[0] == 'second':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 2) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
-                                // hoenn
-                                case context.$store.getters.dataFilter == 'hoenn' && stage[0] == 'baby':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii'
-                                    ) {
+                                // generation-iii
+                                case genToIntTranslator(dataFilter) == 3 && stage[0] == 'baby':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 3) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'hoenn' && stage[0] == 'base':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 3 && stage[0] == 'base':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 3) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'hoenn' && stage[0] == 'first':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 3 && stage[0] == 'first':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 3) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'hoenn' && stage[0] == 'second':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 3 && stage[0] == 'second':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 3) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
-                                // sinnoh
-                                case context.$store.getters.dataFilter == 'sinnoh' && stage[0] == 'baby':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv'
-                                    ) {
+                                // generation-iv
+                                case genToIntTranslator(dataFilter) == 4 && stage[0] == 'baby':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 4) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'sinnoh' && stage[0] == 'base':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 4 && stage[0] == 'base':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 4) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'sinnoh' && stage[0] == 'first':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv'
-                                    ) {
+                                case context.$store.getters.dataFilter == 4 && stage[0] == 'first':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 4) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'sinnoh' && stage[0] == 'second':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 4 && stage[0] == 'second':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 4) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
-                                // unova
-                                case context.$store.getters.dataFilter == 'unova' && stage[0] == 'baby':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v'
-                                    ) {
+                                // generation-v
+                                case genToIntTranslator(dataFilter) == 5 && stage[0] == 'baby':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 5) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'unova' && stage[0] == 'base':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 5 && stage[0] == 'base':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 5) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'unova' && stage[0] == 'first':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 5 && stage[0] == 'first':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 5) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'unova' && stage[0] == 'second':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 5 && stage[0] == 'second':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 5) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
-                                // kalos
-                                case context.$store.getters.dataFilter == 'kalos' && stage[0] == 'baby':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi'
-                                    ) {
+                                // generation-vi
+                                case genToIntTranslator(dataFilter) == 6 && stage[0] == 'baby':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 6) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'kalos' && stage[0] == 'base':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 6 && stage[0] == 'base':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 6) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'kalos' && stage[0] == 'first':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 6 && stage[0] == 'first':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 6) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'kalos' && stage[0] == 'second':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 6 && stage[0] == 'second':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 6) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
-                                // alola
-                                case context.$store.getters.dataFilter == 'alola' && stage[0] == 'baby':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi' ||
-                                        response.generation.name == 'generation-vii'
-                                    ) {
+                                // generation-vii
+                                case genToIntTranslator(dataFilter) == 7 && stage[0] == 'baby':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 7) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'alola' && stage[0] == 'base':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi' ||
-                                        response.generation.name == 'generation-vii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 7 && stage[0] == 'base':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 7) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'alola' && stage[0] == 'first':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi' ||
-                                        response.generation.name == 'generation-vii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 7 && stage[0] == 'first':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 7) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'alola' && stage[0] == 'second':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi' ||
-                                        response.generation.name == 'generation-vii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 7 && stage[0] == 'second':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 7) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
-                                // galar
-                                case context.$store.getters.dataFilter == 'galar' && stage[0] == 'baby':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi' ||
-                                        response.generation.name == 'generation-vii' ||
-                                        response.generation.name == 'generation-viii'
-                                    ) {
+                                // generation-viii
+                                case genToIntTranslator(dataFilter) == 8 && stage[0] == 'baby':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 8) {
                                         newChain.baby.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'galar' && stage[0] == 'base':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi' ||
-                                        response.generation.name == 'generation-vii' ||
-                                        response.generation.name == 'generation-viii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 8 && stage[0] == 'base':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 8) {
                                         newChain.base.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'galar' && stage[0] == 'first':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi' ||
-                                        response.generation.name == 'generation-vii' ||
-                                        response.generation.name == 'generation-viii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 8 && stage[0] == 'first':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 8) {
                                         newChain.first.push(pokemon);
                                     }
                                     break;
-                                case context.$store.getters.dataFilter == 'galar' && stage[0] == 'second':
-                                    if (
-                                        response.generation.name == 'generation-i' ||
-                                        response.generation.name == 'generation-ii' ||
-                                        response.generation.name == 'generation-iii' ||
-                                        response.generation.name == 'generation-iv' ||
-                                        response.generation.name == 'generation-v' ||
-                                        response.generation.name == 'generation-vi' ||
-                                        response.generation.name == 'generation-vii' ||
-                                        response.generation.name == 'generation-viii'
-                                    ) {
+                                case genToIntTranslator(dataFilter) == 8 && stage[0] == 'second':
+                                    if (1 <= genToIntTranslator(response.generation.name) <= 8) {
                                         newChain.second.push(pokemon);
                                     }
                                     break;
@@ -453,7 +294,6 @@ async function removeUnavailablePokemon(chain, context) {
                 });
         }
     }
-    // console.log(newChain)
     return newChain;
 }
 

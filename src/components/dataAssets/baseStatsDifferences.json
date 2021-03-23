@@ -2,7 +2,7 @@
     "bulbasaur": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -12,7 +12,7 @@
     "ivysaur": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
@@ -22,7 +22,7 @@
     "venusaur": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -32,7 +32,7 @@
     "charmander": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -42,7 +42,7 @@
     "charmeleon": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -52,7 +52,7 @@
     "charizard": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -62,7 +62,7 @@
     "squirtle": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -72,7 +72,7 @@
     "wartortle": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -82,7 +82,7 @@
     "blastoise": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -92,7 +92,7 @@
     "caterpie": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 20
                 }
@@ -102,7 +102,7 @@
     "metapod": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 25
                 }
@@ -112,13 +112,13 @@
     "butterfree": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "special_attack": 80
                 }
@@ -128,7 +128,7 @@
     "weedle": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 20
                 }
@@ -138,7 +138,7 @@
     "kakuna": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 25
                 }
@@ -148,13 +148,13 @@
     "beedrill": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 45
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "attack": 80
                 }
@@ -164,7 +164,7 @@
     "pidgey": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 35
                 }
@@ -174,7 +174,7 @@
     "pidgeotto": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -184,13 +184,13 @@
     "pidgeot": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "speed": 91
                 }
@@ -200,7 +200,7 @@
     "rattata": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 25
                 }
@@ -210,7 +210,7 @@
     "raticate": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -220,7 +220,7 @@
     "spearow": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 31
                 }
@@ -230,7 +230,7 @@
     "fearow": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 61
                 }
@@ -240,7 +240,7 @@
     "ekans": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -250,13 +250,13 @@
     "arbok": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -266,19 +266,19 @@
     "pikachu": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "defense": 30
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "special_defense": 40
                 }
@@ -288,13 +288,13 @@
     "raichu": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 90
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "speed": 100
                 }
@@ -304,7 +304,7 @@
     "sandshrew": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 30
                 }
@@ -314,7 +314,7 @@
     "sandslash": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 55
                 }
@@ -324,7 +324,7 @@
     "nidoran_f": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -334,7 +334,7 @@
     "nidorina": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 55
                 }
@@ -344,13 +344,13 @@
     "nidoqueen": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 75
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "attack": 100
                 }
@@ -360,7 +360,7 @@
     "nidoran_m": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -370,7 +370,7 @@
     "nidorino": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 55
                 }
@@ -380,13 +380,13 @@
     "nidoking": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 75
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "attack": 92
                 }
@@ -396,7 +396,7 @@
     "clefairy": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 60
                 }
@@ -406,13 +406,13 @@
     "clefable": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "special_attack": 85
                 }
@@ -422,7 +422,7 @@
     "vulpix": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -432,7 +432,7 @@
     "ninetails": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -442,7 +442,7 @@
     "jigglypuff": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 25
                 }
@@ -452,13 +452,13 @@
     "wigglytuff": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "special_attack": 75
                 }
@@ -468,7 +468,7 @@
     "zubat": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -478,7 +478,7 @@
     "golbat": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 75
                 }
@@ -488,7 +488,7 @@
     "oddish": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 75
                 }
@@ -498,7 +498,7 @@
     "gloom": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -508,13 +508,13 @@
     "vileplume": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "special_attack": 100
                 }
@@ -524,7 +524,7 @@
     "paras": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 55
                 }
@@ -534,7 +534,7 @@
     "parasec": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
@@ -544,7 +544,7 @@
     "venonat": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -554,7 +554,7 @@
     "venomoth": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 90
                 }
@@ -564,7 +564,7 @@
     "diglett": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 45
                 }
@@ -574,13 +574,13 @@
     "dugtrio": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "attack": 80
                 }
@@ -590,7 +590,7 @@
     "meowth": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -600,7 +600,7 @@
     "persian": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -610,7 +610,7 @@
     "psyduck": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -620,7 +620,7 @@
     "golduck": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
@@ -630,7 +630,7 @@
     "mankey": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 35
                 }
@@ -640,7 +640,7 @@
     "primeape": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 60
                 }
@@ -650,7 +650,7 @@
     "growlithe": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -660,7 +660,7 @@
     "arcanine": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
@@ -670,7 +670,7 @@
     "poliwag": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -680,7 +680,7 @@
     "poliwhirl": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -690,13 +690,13 @@
     "poliwrath": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "attack": 75
                 }
@@ -706,7 +706,7 @@
     "abra": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 105
                 }
@@ -716,7 +716,7 @@
     "kadabra": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 120
                 }
@@ -726,13 +726,13 @@
     "alakazam": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 135
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "unova"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
                 "affected_stats": {
                     "special_defense": 85
                 }
@@ -742,7 +742,7 @@
     "machop": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 35
                 }
@@ -752,7 +752,7 @@
     "machoke": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -762,7 +762,7 @@
     "machamp": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -772,7 +772,7 @@
     "bellsprout": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
@@ -782,7 +782,7 @@
     "weepinbell": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -792,13 +792,13 @@
     "victreebel": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "special_defense": 60
                 }
@@ -808,7 +808,7 @@
     "tentacool": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -818,7 +818,7 @@
     "tentacrruel": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 120
                 }
@@ -828,7 +828,7 @@
     "geodude": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 30
                 }
@@ -838,7 +838,7 @@
     "graveler": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 45
                 }
@@ -848,13 +848,13 @@
     "golem": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 55
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
                 "affected_stats": {
                     "attack": 110
                 }
@@ -864,7 +864,7 @@
     "ponyta": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -874,7 +874,7 @@
     "rapidash": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
@@ -884,7 +884,7 @@
     "slowpoke": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -894,7 +894,7 @@
     "slowbro": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
@@ -904,7 +904,7 @@
     "magnemite": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 95
                 }
@@ -914,7 +914,7 @@
     "magneton": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 120
                 }
@@ -924,13 +924,13 @@
     "farfetch'd": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 58
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "attack": 65
                 }
@@ -940,7 +940,7 @@
     "doduo": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 35
                 }
@@ -950,13 +950,13 @@
     "dodrio": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 60
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "speed": 100
                 }
@@ -966,7 +966,7 @@
     "seel": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
@@ -976,7 +976,7 @@
     "dewgong": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 95
                 }
@@ -986,7 +986,7 @@
     "grimer": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -996,7 +996,7 @@
     "muk": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -1006,7 +1006,7 @@
     "shellder": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 45
                 }
@@ -1016,7 +1016,7 @@
     "cloyster": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -1026,7 +1026,7 @@
     "gastly": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -1036,7 +1036,7 @@
     "haunter": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 115
                 }
@@ -1046,7 +1046,7 @@
     "gengar": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 130
                 }
@@ -1056,7 +1056,7 @@
     "onix": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 30
                 }
@@ -1066,7 +1066,7 @@
     "drowzee": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 90
                 }
@@ -1076,7 +1076,7 @@
     "hypno": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 115
                 }
@@ -1086,7 +1086,7 @@
     "krabby": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 25
                 }
@@ -1096,7 +1096,7 @@
     "kingler": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -1106,7 +1106,7 @@
     "voltorb": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 55
                 }
@@ -1116,13 +1116,13 @@
     "electrode": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "speed": 140
                 }
@@ -1132,7 +1132,7 @@
     "exeggcute": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 60
                 }
@@ -1142,13 +1142,13 @@
     "exeggutor": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 125
                 }
             },
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "special_defense": 65
                 }
@@ -1158,7 +1158,7 @@
     "cubone": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -1168,7 +1168,7 @@
     "marowak": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -1178,7 +1178,7 @@
     "hitmonlee": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 35
                 }
@@ -1188,7 +1188,7 @@
     "hitmonchan": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 35
                 }
@@ -1198,7 +1198,7 @@
     "likitung": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 60
                 }
@@ -1208,7 +1208,7 @@
     "koffing": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 60
                 }
@@ -1218,7 +1218,7 @@
     "weezing": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -1228,7 +1228,7 @@
     "rhyhorn": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 30
                 }
@@ -1238,7 +1238,7 @@
     "rhydon": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 45
                 }
@@ -1248,7 +1248,7 @@
     "chansey": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 105
                 }
@@ -1258,7 +1258,7 @@
     "tangela": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -1268,7 +1268,7 @@
     "kangaskhan": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 40
                 }
@@ -1278,7 +1278,7 @@
     "horsea": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
@@ -1288,7 +1288,7 @@
     "seadra": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 95
                 }
@@ -1298,7 +1298,7 @@
     "goldeen": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -1308,7 +1308,7 @@
     "seaking": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 80
                 }
@@ -1318,7 +1318,7 @@
     "staryu": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
@@ -1328,7 +1328,7 @@
     "starmie": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -1338,7 +1338,7 @@
     "mr. mime": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -1348,7 +1348,7 @@
     "scyther": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 55
                 }
@@ -1358,7 +1358,7 @@
     "jynx": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 95
                 }
@@ -1368,7 +1368,7 @@
     "electabuzz": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -1378,7 +1378,7 @@
     "magmar": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 85
                 }
@@ -1388,7 +1388,7 @@
     "pinsir": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 55
                 }
@@ -1398,7 +1398,7 @@
     "tauros": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
@@ -1408,7 +1408,7 @@
     "magikarp": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 20
                 }
@@ -1418,7 +1418,7 @@
     "gyarados": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -1428,7 +1428,7 @@
     "lapras": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 95
                 }
@@ -1438,7 +1438,7 @@
     "ditto": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 48
                 }
@@ -1448,7 +1448,7 @@
     "eevee": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -1458,7 +1458,7 @@
     "vaporeon": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 110
                 }
@@ -1468,7 +1468,7 @@
     "jolteon": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 110
                 }
@@ -1478,7 +1478,7 @@
     "flaeron": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 110
                 }
@@ -1488,7 +1488,7 @@
     "porygon": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 75
                 }
@@ -1498,7 +1498,7 @@
     "omanyte": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 90
                 }
@@ -1508,7 +1508,7 @@
     "omastar": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 115
                 }
@@ -1518,7 +1518,7 @@
     "kabuto": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 45
                 }
@@ -1528,7 +1528,7 @@
     "kabutops": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
@@ -1538,7 +1538,7 @@
     "aerodactyl": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 60
                 }
@@ -1548,7 +1548,7 @@
     "snorlax": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 65
                 }
@@ -1558,7 +1558,7 @@
     "articuno": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 125
                 }
@@ -1568,7 +1568,7 @@
     "zapdos": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 125
                 }
@@ -1578,7 +1578,7 @@
     "moltres": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 125
                 }
@@ -1588,7 +1588,7 @@
     "dratini": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 50
                 }
@@ -1598,7 +1598,7 @@
     "dragonair": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 70
                 }
@@ -1608,7 +1608,7 @@
     "dragonite": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -1618,7 +1618,7 @@
     "mweto": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 154
                 }
@@ -1628,7 +1628,7 @@
     "mew": {
         "differences": [
             {
-                "generations": ["kanto"],
+                "generations": ["generation-i"],
                 "affected_stats": {
                     "special": 100
                 }
@@ -1638,7 +1638,7 @@
     "noctowl": {
         "differences": [
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "special_attack": 76
                 }
@@ -1648,7 +1648,7 @@
     "ariados": {
         "differences": [
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "speed": 60
                 }
@@ -1658,7 +1658,7 @@
     "qwilfish": {
         "differences": [
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "defense": 75
                 }
@@ -1668,7 +1668,7 @@
     "ampharos": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "unova"],
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
                 "affected_stats": {
                     "defense": 75
                 }
@@ -1678,7 +1678,7 @@
     "magcargo": {
         "differences": [
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "hp": 50,
                     "special_attack": 80
@@ -1689,7 +1689,7 @@
     "corsola": {
         "differences": [
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "hp": 55,
                     "defense": 85,
@@ -1701,7 +1701,7 @@
     "mantine": {
         "differences": [
             {
-                "generations": ["johto", "hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "hp": 65
                 }
@@ -1711,7 +1711,7 @@
     "swellow": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "special_attack": 50
                 }
@@ -1721,7 +1721,7 @@
     "pelipper": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "special_attack": 85
                 }
@@ -1731,7 +1731,7 @@
     "masquerain": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "special_attack": 80,
                     "speed": 60
@@ -1742,7 +1742,7 @@
     "delcatty": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "special_attack": 80,
                     "speed": 70
@@ -1753,7 +1753,7 @@
     "volbeat": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "defense": 55,
                     "special_defense": 75
@@ -1764,7 +1764,7 @@
     "illumise": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "defense": 55,
                     "speciaö_defense": 75
@@ -1775,7 +1775,7 @@
     "lunatone": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "attack": 70
                 }
@@ -1785,7 +1785,7 @@
     "solrock": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "hp": 70
                 }
@@ -1795,7 +1795,7 @@
     "chimecho": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "univa", "kalos"],
+                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
                 "affected_stats": {
                     "hp": 65,
                     "defense": 70,
@@ -1807,7 +1807,7 @@
     "woobat": {
         "differences": [
             {
-                "generations": ["univa", "kalos"],
+                "generations": ["univa", "generation-vi"],
                 "affected_stats": {
                     "hp": 55
                 }
@@ -1817,7 +1817,7 @@
     "crustile": {
         "differences": [
             {
-                "generations": ["univa", "kalos"],
+                "generations": ["univa", "generation-vi"],
                 "affected_stats": {
                     "attack": 95
                 }
@@ -1827,7 +1827,7 @@
     "beartic": {
         "differences": [
             {
-                "generations": ["univa", "kalos"],
+                "generations": ["univa", "generation-vi"],
                 "affected_stats": {
                     "attack": 110
                 }
@@ -1837,7 +1837,7 @@
     "cryogonal": {
         "differences": [
             {
-                "generations": ["univa", "kalos"],
+                "generations": ["univa", "generation-vi"],
                 "affected_stats": {
                     "hp": 70,
                     "defense": 30
@@ -1848,7 +1848,7 @@
     "bellossom": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "unova"],
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
                 "affected_stats": {
                     "special_attack": 50
                 }
@@ -1858,7 +1858,7 @@
     "azumarill": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "unova"],
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
                 "affected_stats": {
                     "defense": 75
                 }
@@ -1868,7 +1868,7 @@
     "jumpluff": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "unova"],
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
                 "affected_stats": {
                     "special_defense": 85
                 }
@@ -1878,7 +1878,7 @@
     "beaitifly": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "unova"],
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
                 "affected_stats": {
                     "special_attack": 90
                 }
@@ -1888,7 +1888,7 @@
     "exploud": {
         "differences": [
             {
-                "generations": ["hoenn", "sinnoh", "unova"],
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
                 "affected_stats": {
                     "special_defense": 63
                 }
@@ -1898,7 +1898,7 @@
     "staraptor": {
         "differences": [
             {
-                "generations": ["sinnoh", "unova"],
+                "generations": ["generation-iv", "generation-v"],
                 "affected_stats": {
                     "special_defense": 50
                 }
@@ -1908,7 +1908,7 @@
     "roserade": {
         "differences": [
             {
-                "generations": ["sinnoh", "unova"],
+                "generations": ["generation-iv", "generation-v"],
                 "affected_stats": {
                     "defense": 55
                 }
@@ -1918,7 +1918,7 @@
     "stoutland": {
         "differences": [
             {
-                "generations": ["unova"],
+                "generations": ["generation-v"],
                 "affected_stats": {
                     "attack": 100
                 }
@@ -1928,7 +1928,7 @@
     "unfezant": {
         "differences": [
             {
-                "generations": ["unova"],
+                "generations": ["generation-v"],
                 "affected_stats": {
                     "attack": 105
                 }
@@ -1938,7 +1938,7 @@
     "gigalith": {
         "differences": [
             {
-                "generations": ["unova"],
+                "generations": ["generation-v"],
                 "affected_stats": {
                     "special_defense": 70
                 }
@@ -1948,7 +1948,7 @@
     "seismitoad": {
         "differences": [
             {
-                "generations": ["unova"],
+                "generations": ["generation-v"],
                 "affected_stats": {
                     "attack": 70
                 }
@@ -1958,7 +1958,7 @@
     "leavanny": {
         "differences": [
             {
-                "generations": ["unova"],
+                "generations": ["generation-v"],
                 "affected_stats": {
                     "special_defense": 70
                 }
@@ -1968,7 +1968,7 @@
     "scolipede": {
         "differences": [
             {
-                "generations": ["unova"],
+                "generations": ["generation-v"],
                 "affected_stats": {
                     "attack": 90
                 }
@@ -1978,7 +1978,7 @@
     "krookodile": {
         "differences": [
             {
-                "generations": ["unova"],
+                "generations": ["generation-v"],
                 "affected_stats": {
                     "defense": 70
                 }

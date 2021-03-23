@@ -20,4 +20,20 @@ function hideDiv(id) {
     document.getElementById(id).setAttribute('style', 'display: none');
 }
 
-export { capitalize, forPairsOfTwo, showDiv, hideDiv };
+// translate generation string to integer
+function genToIntTranslator(generationString) {
+    let translatorObject = {
+        '': 0,
+        'generation-i': 1,
+        'generation-ii': 2,
+        'generation-iii': 3,
+        'generation-iv': 4,
+        'generation-v': 5,
+        'generation-vi': 6,
+        'generation-vii': 7,
+        'generation-viii': 8,
+    };
+    return translatorObject[generationString];
+}
+
+export { capitalize, forPairsOfTwo, showDiv, hideDiv, genToIntTranslator };

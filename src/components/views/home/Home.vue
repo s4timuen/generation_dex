@@ -70,14 +70,14 @@ export default {
         // get default pokemon
         let dex = 'national';
         let nationalDex = {
-            kanto: [],
-            johto: [],
-            hoen: [],
-            sinnoh: [],
-            unova: [],
-            kalos: [],
-            alola: [],
-            galar: [],
+            generation_i: [],
+            generation_ii: [],
+            generation_iii: [],
+            generation_iv: [],
+            generation_v: [],
+            generation_vi: [],
+            generation_vii: [],
+            generation_viii: [],
         };
 
         this.$store.getters.pokeApiWrapper
@@ -86,28 +86,28 @@ export default {
                 for (let index = 0; index < response.pokemon_entries.length; index++) {
                     // categorize pokemon in generations
                     if (index >= 0 && index < 151) {
-                        nationalDex.kanto.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex.generation_i.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 151 && index < 251) {
-                        nationalDex.johto.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex.generation_ii.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 251 && index < 386) {
-                        nationalDex.hoen.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex.generation_iii.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 386 && index < 493) {
-                        nationalDex.sinnoh.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex.generation_iv.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 493 && index < 649) {
-                        nationalDex.unova.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex.generation_v.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 649 && index < 721) {
-                        nationalDex.kalos.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex.generation_vi.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 721 && index < 809) {
-                        nationalDex.alola.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex.generation_vii.push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 809 && index < 897) {
-                        nationalDex.galar.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex.generation_viii.push(Object.values(response.pokemon_entries)[index]);
                     }
                 }
             })

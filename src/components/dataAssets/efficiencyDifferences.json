@@ -1,5 +1,5 @@
 {
-    "kanto": {
+    "generation-i": {
         "unavailable_types": ["steel", "dark", "fairy"],
         "changed_types": [
             {
@@ -34,7 +34,7 @@
             }
         ]
     },
-    "johto": {
+    "generation-ii": {
         "unavailable_types": ["fairy"],
         "changed_types": [
             {
@@ -49,7 +49,7 @@
             }
         ]
     },
-    "hoenn": {
+    "generation-iii": {
         "unavailable_types": ["fairy"],
         "changed_types": [
             {
@@ -64,7 +64,7 @@
             }
         ]
     },
-    "sinnoh": {
+    "generation-iv": {
         "unavailable_types": ["fairy"],
         "changed_types": [
             {
@@ -79,7 +79,7 @@
             }
         ]
     },
-    "unova": {
+    "generation-v": {
         "unavailable_types": ["fairy"],
         "changed_types": [
             {
@@ -94,7 +94,7 @@
             }
         ]
     },
-    "kalos": { "unavailable_types": [], "changed_types": [] },
-    "alola": { "unavailable_types": [], "changed_types": [] },
-    "galar": { "unavailable_types": [], "changed_types": [] }
+    "generation-vi": { "unavailable_types": [], "changed_types": [] },
+    "generation-vii": { "unavailable_types": [], "changed_types": [] },
+    "generation-viii": { "unavailable_types": [], "changed_types": [] }
 }

@@ -9,9 +9,9 @@
                             <th scope="col">{{ $t('base-stats-hp') }}</th>
                             <th scope="col">{{ $t('base-stats-attack') }}</th>
                             <th scope="col">{{ $t('base-stats-deffence') }}</th>
-                            <th v-if="dataFilter == 'kanto'" scope="col">{{ $t('base-stats-special') }}</th>
-                            <th v-if="dataFilter != 'kanto'" scope="col">{{ $t('base-stats-special-attack') }}</th>
-                            <th v-if="dataFilter != 'kanto'" scope="col">{{ $t('base-stats-special-defense') }}</th>
+                            <th v-if="dataFilter == 'generation-i'" scope="col">{{ $t('base-stats-special') }}</th>
+                            <th v-if="dataFilter != 'generation-i'" scope="col">{{ $t('base-stats-special-attack') }}</th>
+                            <th v-if="dataFilter != 'generation-i'" scope="col">{{ $t('base-stats-special-defense') }}</th>
                             <th scope="col">{{ $t('base-stats-speed') }}</th>
                         </tr>
                     </thead>
@@ -20,9 +20,9 @@
                             <td>{{ baseStats.hp }}</td>
                             <td>{{ baseStats.attack }}</td>
                             <td>{{ baseStats.defense }}</td>
-                            <td v-if="dataFilter == 'kanto'">{{ baseStats.special }}</td>
-                            <td v-if="dataFilter != 'kanto'">{{ baseStats.specialAttack }}</td>
-                            <td v-if="dataFilter != 'kanto'">{{ baseStats.specialDefense }}</td>
+                            <td v-if="dataFilter == 'generation-i'">{{ baseStats.special }}</td>
+                            <td v-if="dataFilter != 'generation-i'">{{ baseStats.specialAttack }}</td>
+                            <td v-if="dataFilter != 'generation-i'">{{ baseStats.specialDefense }}</td>
                             <td>{{ baseStats.speed }}</td>
                         </tr>
                     </tbody>

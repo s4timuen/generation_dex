@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <div v-for="(move, key) in moves" :key="key">
-                    <p>{{ move.move.name }}</p>
+                    <p>{{ move }}</p>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@ export default {
     },
     watch: {
         data: async function(response) {
-            this.moves = await getMoves(response);
+            this.moves = await getMoves(response, this);
         },
     },
 };

@@ -4,104 +4,104 @@ import { showDiv, hideDiv } from '@/components/helpers/utilities.js';
 function showHideGenerationDivs(dataFilter) {
     switch (dataFilter) {
         case 'national':
-            showDiv('kanto');
-            showDiv('johto');
+            showDiv('generation-i');
+            showDiv('generation-ii');
             showDiv('hoen');
-            showDiv('sinnoh');
-            showDiv('unova');
-            showDiv('kalos');
-            showDiv('alola');
-            showDiv('galar');
+            showDiv('generation-iv');
+            showDiv('generation-v');
+            showDiv('generation-vi');
+            showDiv('generation-vii');
+            showDiv('generation-viii');
             break;
-        case 'kanto':
-            showDiv('kanto');
-            hideDiv('johto');
+        case 'generation-i':
+            showDiv('generation-i');
+            hideDiv('generation-ii');
             hideDiv('hoen');
-            hideDiv('sinnoh');
-            hideDiv('unova');
-            hideDiv('kalos');
-            hideDiv('alola');
-            hideDiv('galar');
+            hideDiv('generation-iv');
+            hideDiv('generation-v');
+            hideDiv('generation-vi');
+            hideDiv('generation-vii');
+            hideDiv('generation-viii');
             break;
-        case 'johto':
-            showDiv('kanto');
-            showDiv('johto');
+        case 'generation-ii':
+            showDiv('generation-i');
+            showDiv('generation-ii');
             hideDiv('hoen');
-            hideDiv('sinnoh');
-            hideDiv('unova');
-            hideDiv('kalos');
-            hideDiv('alola');
-            hideDiv('galar');
+            hideDiv('generation-iv');
+            hideDiv('generation-v');
+            hideDiv('generation-vi');
+            hideDiv('generation-vii');
+            hideDiv('generation-viii');
             break;
         case 'hoen':
-            showDiv('kanto');
-            showDiv('johto');
+            showDiv('generation-i');
+            showDiv('generation-ii');
             showDiv('hoen');
-            hideDiv('sinnoh');
-            hideDiv('unova');
-            hideDiv('kalos');
-            hideDiv('alola');
-            hideDiv('galar');
+            hideDiv('generation-iv');
+            hideDiv('generation-v');
+            hideDiv('generation-vi');
+            hideDiv('generation-vii');
+            hideDiv('generation-viii');
             break;
-        case 'sinnoh':
-            showDiv('kanto');
-            showDiv('johto');
+        case 'generation-iv':
+            showDiv('generation-i');
+            showDiv('generation-ii');
             showDiv('hoen');
-            showDiv('sinnoh');
-            hideDiv('unova');
-            hideDiv('kalos');
-            hideDiv('alola');
-            hideDiv('galar');
+            showDiv('generation-iv');
+            hideDiv('generation-v');
+            hideDiv('generation-vi');
+            hideDiv('generation-vii');
+            hideDiv('generation-viii');
             break;
-        case 'unova':
-            showDiv('kanto');
-            showDiv('johto');
+        case 'generation-v':
+            showDiv('generation-i');
+            showDiv('generation-ii');
             showDiv('hoen');
-            showDiv('sinnoh');
-            showDiv('unova');
-            hideDiv('kalos');
-            hideDiv('alola');
-            hideDiv('galar');
+            showDiv('generation-iv');
+            showDiv('generation-v');
+            hideDiv('generation-vi');
+            hideDiv('generation-vii');
+            hideDiv('generation-viii');
             break;
-        case 'kalos':
-            showDiv('kanto');
-            showDiv('johto');
+        case 'generation-vi':
+            showDiv('generation-i');
+            showDiv('generation-ii');
             showDiv('hoen');
-            showDiv('sinnoh');
-            showDiv('unova');
-            showDiv('kalos');
-            hideDiv('alola');
-            hideDiv('galar');
+            showDiv('generation-iv');
+            showDiv('generation-v');
+            showDiv('generation-vi');
+            hideDiv('generation-vii');
+            hideDiv('generation-viii');
             break;
-        case 'alola':
-            showDiv('kanto');
-            showDiv('johto');
+        case 'generation-vii':
+            showDiv('generation-i');
+            showDiv('generation-ii');
             showDiv('hoen');
-            showDiv('sinnoh');
-            showDiv('unova');
-            showDiv('kalos');
-            showDiv('alola');
-            hideDiv('galar');
+            showDiv('generation-iv');
+            showDiv('generation-v');
+            showDiv('generation-vi');
+            showDiv('generation-vii');
+            hideDiv('generation-viii');
             break;
-        case 'galar':
-            showDiv('kanto');
-            showDiv('johto');
+        case 'generation-viii':
+            showDiv('generation-i');
+            showDiv('generation-ii');
             showDiv('hoen');
-            showDiv('sinnoh');
-            showDiv('unova');
-            showDiv('kalos');
-            showDiv('alola');
-            showDiv('galar');
+            showDiv('generation-iv');
+            showDiv('generation-v');
+            showDiv('generation-vi');
+            showDiv('generation-vii');
+            showDiv('generation-viii');
             break;
         default:
-            showDiv('kanto');
-            showDiv('johto');
+            showDiv('generation-i');
+            showDiv('generation-ii');
             showDiv('hoen');
-            showDiv('sinnoh');
-            showDiv('unova');
-            showDiv('kalos');
-            showDiv('alola');
-            showDiv('galar');
+            showDiv('generation-iv');
+            showDiv('generation-v');
+            showDiv('generation-vi');
+            showDiv('generation-vii');
+            showDiv('generation-viii');
     }
 }
 

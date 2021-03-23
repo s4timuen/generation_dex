@@ -35,7 +35,7 @@ export default {
     watch: {
         data: function(data) {
             // no abilities in gen 1 and 2
-            if (this.$store.getters.dataFilter != 'kanto' && this.$store.getters.dataFilter != 'johto') {
+            if (this.$store.getters.dataFilter != 'generation-i' && this.$store.getters.dataFilter != 'generation-ii') {
                 // get abilities
                 if (Object.keys(data).length != 0) {
                     this.abilities.abilityOne = data.abilities[0].ability.name;

@@ -50,8 +50,6 @@ function getBaseStats(pokemon, context) {
             entry[1].differences.forEach(function(difference) {
                 if (difference.generations.includes(datafilter)) {
                     Object.entries(difference.affected_stats).forEach(function(stat) {
-                        console.log(datafilter);
-                        console.log(stat);
                         switch (stat[0]) {
                             case 'hp':
                                 baseStats.hp = stat[1];
