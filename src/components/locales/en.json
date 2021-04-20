@@ -3,22 +3,24 @@
     "link-about": "About",
 
     "sidebar-generation-national": "National",
-    "sidebar-generation-generation-i": "generation-i",
-    "sidebar-generation-generation-ii": "generation-ii",
-    "sidebar-generation-generation-iii": "generation-iii",
-    "sidebar-generation-generation-iv": "generation-iv",
-    "sidebar-generation-generation-v": "generation-v",
-    "sidebar-generation-generation-vii": "generation-vii",
-    "sidebar-generation-generation-vi": "generation-vi",
-    "sidebar-generation-generation-viii": "generation-viii",
+    "sidebar-generation-generation-i": "Kanto",
+    "sidebar-generation-generation-ii": "Johto",
+    "sidebar-generation-generation-iii": "Hoenn",
+    "sidebar-generation-generation-iv": "Sinnoh",
+    "sidebar-generation-generation-v": "Unova",
+    "sidebar-generation-generation-vii": "Kalos",
+    "sidebar-generation-generation-vi": "Alola",
+    "sidebar-generation-generation-viii": "Galar",
 
-    "efficiencies-defense": "Defender",
+    "efficiencies-defense": "Defender efficiencies",
     "efficioncies-multiplier-zero": "x0",
     "efficioncies-multiplier-quarter": "x0.25",
     "efficioncies-multiplier-half": "x0.5",
     "efficioncies-multiplier-one": "x1",
     "efficioncies-multiplier-double": "x2",
     "efficioncies-multiplier-four": "x4",
+
+    "types": "Type(s): ",
 
     "abilities-one": "Ability 1: ",
     "abilities-two": "Ability 2: ",
@@ -31,5 +33,22 @@
     "base-stats-special": "Special",
     "base-stats-special-attack": "Special attack",
     "base-stats-special-defense": "Special defense",
-    "base-stats-speed": "Speed"
+    "base-stats-speed": "Speed",
+
+    "general-properties-base-experience": "Base Experience: ",
+    "general-properties-height": "Height: ",
+    "general-properties-weight": "Weight: ",
+    "general-properties-held-items": "Held items: ",
+
+    "moves": "Moves",
+    "move-name": "Name",
+    "move-accuracy": "Accurycy",
+    "move-power": "Power",
+    "move-pp": "PP",
+    "move-priority": "Priority",
+    "move-damage-class": "Damage class",
+    "move-type": "Type",
+
+    "encounter-locations-title": "Encounter locations",
+    "encounter-location-name": "Location name"
 }

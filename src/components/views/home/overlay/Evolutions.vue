@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-3" v-for="(evolutionStage, key) in evolutionChain" :key="key">
-                <div class="col-12" v-for="(evolution, key) in evolutionStage" :key="key">
+                <div v-for="(evolution, key) in evolutionStage" :key="key">
                     {{ capitalize(evolution.name) }}
                     <img class="img" :src="evolution.sprite_url" :alt="evolution.name" />
                     <div>

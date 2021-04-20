@@ -1,0 +1,433 @@
+{
+    "azumarrill": {
+        "differences": [
+            {
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "water",
+                            "url": "https://pokeapi.co/api/v2/type/water/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "azurill": {
+        "differences": [
+            {
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/water/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "clefable": {
+        "differences": [
+            {
+                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "clefairy": {
+        "differences": [
+            {
+                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "cleffa": {
+        "differences": [
+            {
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "cottonee": {
+        "differences": [
+            {
+                "generations": ["generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "grass",
+                            "url": "https://pokeapi.co/api/v2/type/grass/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "gardevoir": {
+        "differences": [
+            {
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "psychic",
+                            "url": "https://pokeapi.co/api/v2/type/psychic/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "granbull": {
+        "differences": [
+            {
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "igglybuff": {
+        "differences": [
+            {
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "jigglypuff": {
+        "differences": [
+            {
+                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "kirlia": {
+        "differences": [
+            {
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "psychic",
+                            "url": "https://pokeapi.co/api/v2/type/psychic/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "magnemite": {
+        "differences": [
+            {
+                "generations": ["generation-i"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "electric",
+                            "url": "https://pokeapi.co/api/v2/type/electric/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "magneton": {
+        "differences": [
+            {
+                "generations": ["generation-i"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "electric",
+                            "url": "https://pokeapi.co/api/v2/type/electric/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "marill": {
+        "differences": [
+            {
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "water",
+                            "url": "https://pokeapi.co/api/v2/type/water/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "mawile": {
+        "differences": [
+            {
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "steel",
+                            "url": "https://pokeapi.co/api/v2/type/steel/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "mime jr.": {
+        "differences": [
+            {
+                "generations": ["generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "psychic",
+                            "url": "https://pokeapi.co/api/v2/type/psychic/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "mr. mime": {
+        "differences": [
+            {
+                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "psychic",
+                            "url": "https://pokeapi.co/api/v2/type/psychic/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "ralts": {
+        "differences": [
+            {
+                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "psychic",
+                            "url": "https://pokeapi.co/api/v2/type/psychic/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "rotom": {
+        "differences": [
+            {
+                "generations": ["generation-iv"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "electric",
+                            "url": "https://pokeapi.co/api/v2/type/electric/"
+                        }
+                    },
+                    {
+                        "slot": 2,
+                        "type": {
+                            "name": "ghost",
+                            "url": "https://pokeapi.co/api/v2/type/ghost/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "snubbull": {
+        "differences": [
+            {
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "togekiss": {
+        "differences": [
+            {
+                "generations": ["generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            },
+            {
+                "generations": ["generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 2,
+                        "type": {
+                            "name": "flying",
+                            "url": "https://pokeapi.co/api/v2/type/flying/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "togepi": {
+        "differences": [
+            {
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "togetic": {
+        "differences": [
+            {
+                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            },
+            {
+                "generations": ["generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 2,
+                        "type": {
+                            "name": "flying",
+                            "url": "https://pokeapi.co/api/v2/type/flying/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "whimsicott": {
+        "differences": [
+            {
+                "generations": ["generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "grass",
+                            "url": "https://pokeapi.co/api/v2/type/grass/"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "wigglytuff": {
+        "differences": [
+            {
+                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "types": [
+                    {
+                        "slot": 1,
+                        "type": {
+                            "name": "normal",
+                            "url": "https://pokeapi.co/api/v2/type/normal/"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

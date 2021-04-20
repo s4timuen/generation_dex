@@ -3,22 +3,24 @@
     "link-about": "About",
 
     "sidebar-generation-national": "National",
-    "sidebar-generation-generation-i": "generation-i",
-    "sidebar-generation-generation-ii": "generation-ii",
-    "sidebar-generation-generation-iii": "generation-iii",
-    "sidebar-generation-generation-iv": "generation-iv",
-    "sidebar-generation-generation-v": "generation-v",
-    "sidebar-generation-generation-vii": "generation-vii",
-    "sidebar-generation-generation-vi": "generation-vi",
-    "sidebar-generation-generation-viii": "generation-viii",
+    "sidebar-generation-generation-i": "Kanto",
+    "sidebar-generation-generation-ii": "Johto",
+    "sidebar-generation-generation-iii": "Hoenn",
+    "sidebar-generation-generation-iv": "Sinnoh",
+    "sidebar-generation-generation-v": "Einall",
+    "sidebar-generation-generation-vii": "Kalos",
+    "sidebar-generation-generation-vi": "Alola",
+    "sidebar-generation-generation-viii": "Galar",
 
-    "efficiencies-defense": "Verteidiger",
+    "efficiencies-defense": "Verteidiger Effektivitäten",
     "efficioncies-multiplier-zero": "x0",
     "efficioncies-multiplier-quarter": "x0,25",
     "efficioncies-multiplier-half": "x0,5",
     "efficioncies-multiplier-one": "x1",
     "efficioncies-multiplier-double": "x2",
     "efficioncies-multiplier-four": "x4",
+
+    "types": "Typ(en): ",
 
     "abilities-one": "Fähigkeit 1: ",
     "abilities-two": "Fähigkeit 2: ",
@@ -31,5 +33,22 @@
     "base-stats-special": "Spezial",
     "base-stats-special-attack": "Spezial Angriff",
     "base-stats-special-defense": "Spezial Verteidigung",
-    "base-stats-speed": "Initiative"
+    "base-stats-speed": "Initiative",
+
+    "general-properties-base-experience": "Basis-Erfahrung: ",
+    "general-properties-height": "Größe: ",
+    "general-properties-weight": "Gewicht: ",
+    "general-properties-held-items": "Items: ",
+
+    "moves": "Attacken",
+    "move-name": "Name",
+    "move-accuracy": "Genauigkeit",
+    "move-power": "Stärke",
+    "move-pp": "AP",
+    "move-priority": "Prioritytät",
+    "move-damage-class": "Schadensklasse",
+    "move-type": "Typ",
+
+    "encounter-locations-title": "Fundorte",
+    "encounter-location-name": "Fundort Name"
 }

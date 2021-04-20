@@ -1,19 +1,48 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6">
-                <p>{{ $t('efficiencies-defense') }}</p>
-                <div v-for="(efficiency, key) in efficiencies.defense" :key="key">
-                    <p v-if="key == 'zero'">{{ $t('efficioncies-multiplier-zero') }}</p>
-                    <p v-if="key == 'quarter'">{{ $t('efficioncies-multiplier-quarter') }}</p>
-                    <p v-if="key == 'half'">{{ $t('efficioncies-multiplier-half') }}</p>
-                    <p v-if="key == 'one'">{{ $t('efficioncies-multiplier-one') }}</p>
-                    <p v-if="key == 'double'">{{ $t('efficioncies-multiplier-double') }}</p>
-                    <p v-if="key == 'four'">{{ $t('efficioncies-multiplier-four') }}</p>
-                    <div v-for="(type, key) in efficiency" :key="key">
-                        <p>{{ capitalize(type) }}</p>
-                    </div>
-                </div>
+            <div class="col-12">
+                <p class="col-12 text-left">{{ $t('efficiencies-defense') }}</p>
+                <table class="table col-12">
+                    <thead>
+                        <tr>
+                            <th scope="col">{{ $t('efficioncies-multiplier-zero') }}</th>
+                            <th scope="col">{{ $t('efficioncies-multiplier-quarter') }}</th>
+                            <th scope="col">{{ $t('efficioncies-multiplier-half') }}</th>
+                            <th scope="col">{{ $t('efficioncies-multiplier-double') }}</th>
+                            <th scope="col">{{ $t('efficioncies-multiplier-four') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p v-for="(type, key) in efficiencies.defense.zero" :key="key">
+                                    {{ capitalize(type) }}
+                                </p>
+                            </td>
+                            <td>
+                                <p v-for="(type, key) in efficiencies.defense.quarter" :key="key">
+                                    {{ capitalize(type) }}
+                                </p>
+                            </td>
+                            <td>
+                                <p v-for="(type, key) in efficiencies.defense.half" :key="key">
+                                    {{ capitalize(type) }}
+                                </p>
+                            </td>
+                            <td>
+                                <p v-for="(type, key) in efficiencies.defense.double" :key="key">
+                                    {{ capitalize(type) }}
+                                </p>
+                            </td>
+                            <td>
+                                <p v-for="(type, key) in efficiencies.defense.four" :key="key">
+                                    {{ capitalize(type) }}
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -73,4 +102,11 @@ export default {
 };
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+.table th {
+    width: 20%;
+}
+.table td {
+    width: 20%;
+}
+</style>

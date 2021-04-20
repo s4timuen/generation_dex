@@ -4,24 +4,28 @@
         <div v-if="isOverlayOpen" class="overlay-panel">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 border-bottom">
                         {{ capitalize(pokemonName) }}
                     </div>
-                    <Sprite class="col-12" />
-                    <Evolutions class="col-12" />
+                    <Sprite class="col-12 border-bottom" />
+                    <Evolutions class="col-12 border-bottom" />
                 </div>
                 <div class="row">
-                    <Efficiencies class="col-12 col-md-6" />
-                    <Abilities class="col-12 col-md-6" />
+                    <Types class="col-12 col-md-4 border-bottom" />
+                    <Abilities class="col-12 col-md-4 border-bottom" />
+                    <GeneralProperties class="col-12 col-md-4 border-bottom" />
                 </div>
                 <div class="row">
-                    <Stats class="col-12" />
+                    <Efficiencies class="col-12 col-md-12 border-bottom" />
                 </div>
-                <div>
-                    <Moves class="col-12" />
+                <div class="row">
+                    <Stats class="col-12 border-bottom" />
                 </div>
-                <div calss="row">
-                    <GeneralProperties class="col-12" />
+                <div class="row">
+                    <Moves class="col-12 border-bottom" />
+                </div>
+                <div class="row">
+                    <EncounterLocations class="col-12 border-bottom" />
                 </div>
             </div>
         </div>
@@ -31,11 +35,13 @@
 <script>
 import Sprite from '@/components/views/home/overlay/Sprite.vue';
 import Efficiencies from '@/components/views/home/overlay/Efficiencies.vue';
+import Types from '@/components/views/home/overlay/Types.vue';
 import Abilities from '@/components/views/home/overlay/Abilities.vue';
 import Evolutions from '@/components/views/home/overlay/Evolutions.vue';
 import Moves from '@/components/views/home/overlay/Moves.vue';
 import Stats from '@/components/views/home/overlay/Stats.vue';
 import GeneralProperties from '@/components/views/home/overlay/GeneralProperties.vue';
+import EncounterLocations from '@/components/views/home/overlay/EncounterLocations.vue';
 
 import { capitalize } from '@/components/helpers/utilities.js';
 
@@ -44,10 +50,12 @@ export default {
     components: {
         Sprite,
         Efficiencies,
+        Types,
         Abilities,
         Evolutions,
         Moves,
         Stats,
+        EncounterLocations,
         GeneralProperties,
     },
     data() {

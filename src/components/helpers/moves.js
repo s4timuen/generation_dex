@@ -76,11 +76,8 @@ function getMoves(pokemonData, context) {
             })
             // change move generation specifics
             .then(function(response) {
-                console.log(response);
                 if (response != null) {
-                    if (response.effect_changes.length != 0 && response.past_values.length != 0) {
-                        //todo
-                    }
+                    // todo: generation specific move data
                 }
                 return response;
             })

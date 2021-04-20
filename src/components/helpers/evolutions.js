@@ -1,9 +1,6 @@
 // get edition specific evolution chain and triggers
-// https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_with_branched_evolutions
 
-// todo: form
-// todo: mega
-// todo: gmax
+// todo: form/mega/gmax
 
 import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
 import { forPairsOfTwo, genToIntTranslator } from '@/components/helpers/utilities.js';

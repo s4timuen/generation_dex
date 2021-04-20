@@ -70,14 +70,14 @@ export default {
         // get default pokemon
         let dex = 'national';
         let nationalDex = {
-            generation_i: [],
-            generation_ii: [],
-            generation_iii: [],
-            generation_iv: [],
-            generation_v: [],
-            generation_vi: [],
-            generation_vii: [],
-            generation_viii: [],
+            'generation-i': [],
+            'generation-ii': [],
+            'generation-iii': [],
+            'generation-iv': [],
+            'generation-v': [],
+            'generation-vi': [],
+            'generation-vii': [],
+            'generation-viii': [],
         };
 
         this.$store.getters.pokeApiWrapper
@@ -86,28 +86,28 @@ export default {
                 for (let index = 0; index < response.pokemon_entries.length; index++) {
                     // categorize pokemon in generations
                     if (index >= 0 && index < 151) {
-                        nationalDex.generation_i.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex['generation-i'].push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 151 && index < 251) {
-                        nationalDex.generation_ii.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex['generation-ii'].push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 251 && index < 386) {
-                        nationalDex.generation_iii.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex['generation-iii'].push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 386 && index < 493) {
-                        nationalDex.generation_iv.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex['generation-iv'].push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 493 && index < 649) {
-                        nationalDex.generation_v.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex['generation-v'].push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 649 && index < 721) {
-                        nationalDex.generation_vi.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex['generation-vi'].push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 721 && index < 809) {
-                        nationalDex.generation_vii.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex['generation-vii'].push(Object.values(response.pokemon_entries)[index]);
                     }
                     if (index >= 809 && index < 897) {
-                        nationalDex.generation_viii.push(Object.values(response.pokemon_entries)[index]);
+                        nationalDex['generation-viii'].push(Object.values(response.pokemon_entries)[index]);
                     }
                 }
             })
