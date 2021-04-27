@@ -8,8 +8,8 @@
     "sidebar-generation-generation-iii": "Hoenn",
     "sidebar-generation-generation-iv": "Sinnoh",
     "sidebar-generation-generation-v": "Unova",
-    "sidebar-generation-generation-vii": "Kalos",
-    "sidebar-generation-generation-vi": "Alola",
+    "sidebar-generation-generation-vi": "Kalos",
+    "sidebar-generation-generation-vii": "Alola",
     "sidebar-generation-generation-viii": "Galar",
 
     "efficiencies-defense": "Defender efficiencies",
@@ -50,5 +50,8 @@
     "move-type": "Type",
 
     "encounter-locations-title": "Encounter locations",
-    "encounter-location-name": "Location name"
+    "encounter-location-name": "Location name",
+
+    "about-title": "About",
+    "about-text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 }

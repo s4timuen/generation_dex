@@ -101,10 +101,10 @@ export default {
     position: fixed;
     left: 16.65%;
     top: 0%;
-    height: 100%;
+    height: 95%;
     z-index: 999;
     padding: 3rem 20px 2rem 20px;
-    margin-top: 2.5%;
+    margin-top: 2%;
     width: 66.6%;
 }
 </style>

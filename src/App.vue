@@ -11,6 +11,10 @@
 </template>
 
 <script>
+// todo: styling
+// todo: about page
+// todo: SEO
+
 import Burger from './components/views/menu/Burger.vue';
 import Sidebar from './components/views/menu/Sidebar.vue';
 

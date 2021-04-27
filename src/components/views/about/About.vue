@@ -1,6 +1,9 @@
 <template>
     <div class="container-fluid">
-        <div class="row"></div>
+        <div class="row">
+            <h1 class="col-12">{{ $t('about-title') }}</h1>
+            <p class="col-12">{{ $t('about-text') }}</p>
+        </div>
     </div>
 </template>
 
