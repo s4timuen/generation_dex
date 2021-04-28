@@ -5,13 +5,17 @@
                 <p v-if="key == 'base_experience'">{{ $t('general-properties-base-experience') + property }}</p>
                 <p v-if="key == 'height'">{{ $t('general-properties-height') + property }}</p>
                 <p v-if="key == 'weight'">{{ $t('general-properties-weight') + property }}</p>
-                <p v-if="key == 'held_items'">{{ $t('general-properties-held-items') + property }}</p>
+                <div v-if="key == 'held_items'">
+                    {{ $t('general-properties-held-items') }}
+                    <p v-for="(item, key) in property" :key="key">{{ capitalize(item.item.name) }}</p>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { capitalize } from '@/components/helpers/utilities.js';
 import { getGeneralProperties } from '@/components/helpers/generalProperties.js';
 
 export default {
@@ -34,8 +38,11 @@ export default {
     },
     watch: {
         data: function(response) {
-            this.generalProperties = getGeneralProperties(response);
+            this.generalProperties = getGeneralProperties(response, this);
         },
+    },
+    methods: {
+        capitalize,
     },
 };
 </script>

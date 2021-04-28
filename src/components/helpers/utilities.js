@@ -70,6 +70,12 @@ function versionToGenMap(version) {
         case 'emerald':
             generation = 'generation-iii';
             break;
+        case 'firered':
+            generation = 'generation-iii';
+            break;
+        case 'leafgreen':
+            generation = 'generation-iii';
+            break;
         case 'pearl':
             generation = 'generation-iv';
             break;
@@ -77,6 +83,12 @@ function versionToGenMap(version) {
             generation = 'generation-iv';
             break;
         case 'platinum':
+            generation = 'generation-iv';
+            break;
+        case 'heartgold':
+            generation = 'generation-iv';
+            break;
+        case 'soulsilver':
             generation = 'generation-iv';
             break;
         case 'black':
@@ -95,6 +107,12 @@ function versionToGenMap(version) {
             generation = 'generation-vi';
             break;
         case 'y':
+            generation = 'generation-vi';
+            break;
+        case 'omega-ruby':
+            generation = 'generation-vi';
+            break;
+        case 'alpha-sapphire':
             generation = 'generation-vi';
             break;
         case 'sun':
