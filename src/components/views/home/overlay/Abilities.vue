@@ -1,6 +1,7 @@
 <template>
     <div class="container-fluid">
         <div class="row">
+            <div class="col-12 bold">{{ $t('abilities-title') }}</div>
             <div class="col-12">
                 <div class="col-12 col-ms-6 text-left">{{ $t('abilities-one') + capitalize(abilities.abilityOne) }}</div>
                 <div class="col-12 col-ms-6 text-left">{{ $t('abilities-two') + capitalize(abilities.abilityTwo) }}</div>

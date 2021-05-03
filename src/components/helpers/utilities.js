@@ -23,7 +23,7 @@ function hideDiv(id) {
 // translate generation string to integer
 function genToIntTranslator(generationString) {
     let translatorObject = {
-        '': 0,
+        nationa: 99,
         'generation-i': 1,
         'generation-ii': 2,
         'generation-iii': 3,
@@ -40,7 +40,7 @@ function genToIntTranslator(generationString) {
 function versionToGenMap(version) {
     // fix: e.g. leafgreen not in obj -> null ref -> switch?
 
-    let generation = '';
+    let generation = 'nationa';
 
     switch (version) {
         case 'red':
@@ -134,7 +134,7 @@ function versionToGenMap(version) {
             generation = 'generation-viii';
             break;
         default:
-            generation = '';
+            generation = 'nationa';
             break;
     }
     return generation;

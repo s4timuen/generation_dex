@@ -1,25 +1,23 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-                <p class="col-12 text-left">{{ $t('encounter-locations-title') }}</p>
-                <table class="table col-12">
-                    <thead>
-                        <tr>
-                            <th scope="col">{{ $t('encounter-location-name') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(location, key) in encounterLocations" :key="key">
-                            <td>
-                                <p>
-                                    {{ capitalize(location.location_area.name) }}
-                                </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <p class="col-12 bold">{{ $t('encounter-locations-title') }}</p>
+            <table class="table col-12">
+                <thead>
+                    <tr>
+                        <th scope="col">{{ $t('encounter-location-name') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(location, key) in encounterLocations" :key="key">
+                        <td>
+                            <p>
+                                {{ capitalize(location.location_area.name) }}
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </template>

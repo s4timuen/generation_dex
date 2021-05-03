@@ -70,6 +70,10 @@ function getEvolutionChain(context) {
                     // adjust base chain to generation specific evolution triggers
                     return adjustEvolutionTriggers(response, context);
                 })
+                // make single objects from trigger, metod and requirement
+                .then(response => {
+                    return createEvolutionTriggerObjects(response);
+                })
                 .catch(error => {
                     throw error;
                 });
@@ -77,6 +81,13 @@ function getEvolutionChain(context) {
         .catch(error => {
             throw error;
         });
+}
+
+function createEvolutionTriggerObjects(chain) {
+    console.log(chain);
+    // todo: create single object for easy use in Evolutions.vue
+
+    return chain;
 }
 
 // alter base evolution chain to generation specific pokemon availability
@@ -98,16 +109,16 @@ async function removeUnavailablePokemon(chain, context) {
                             let dataFilter = context.$store.getters.dataFilter;
                             switch (true) {
                                 // national
-                                case genToIntTranslator(dataFilter) == 0 && stage[0] == 'baby':
+                                case genToIntTranslator(dataFilter) == 99 && stage[0] == 'baby':
                                     newChain.baby.push(pokemon);
                                     break;
-                                case genToIntTranslator(dataFilter) == 0 && stage[0] == 'base':
+                                case genToIntTranslator(dataFilter) == 99 && stage[0] == 'base':
                                     newChain.base.push(pokemon);
                                     break;
-                                case genToIntTranslator(dataFilter) == 0 && stage[0] == 'first':
+                                case genToIntTranslator(dataFilter) == 99 && stage[0] == 'first':
                                     newChain.first.push(pokemon);
                                     break;
-                                case genToIntTranslator(dataFilter) == 0 && stage[0] == 'second':
+                                case genToIntTranslator(dataFilter) == 99 && stage[0] == 'second':
                                     newChain.second.push(pokemon);
                                     break;
                                 // generation-i
@@ -300,7 +311,7 @@ function adjustEvolutionTriggers(chain, context) {
     let generation = context.$store.getters.dataFilter;
 
     Object.values(chain).forEach(stage => {
-        if (stage.length != 0) {
+        if (stage.length) {
             stage.forEach(pokemon => {
                 Object.entries(evolutionDifferences).forEach(pokemonEntry => {
                     if (pokemonEntry[0] == pokemon.name) {
@@ -333,7 +344,6 @@ function adjustEvolutionTriggers(chain, context) {
             pokemon.evolution_triggers = [];
         });
     }
-
     return chain;
 }
 

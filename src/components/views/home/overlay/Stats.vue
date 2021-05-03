@@ -1,33 +1,31 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <p class="col-12 text-left">{{ $t('base-stats-title') }}</p>
-            <div class="col-6">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">{{ $t('base-stats-hp') }}</th>
-                            <th scope="col">{{ $t('base-stats-attack') }}</th>
-                            <th scope="col">{{ $t('base-stats-deffence') }}</th>
-                            <th v-if="dataFilter == 'generation-i'" scope="col">{{ $t('base-stats-special') }}</th>
-                            <th v-if="dataFilter != 'generation-i'" scope="col">{{ $t('base-stats-special-attack') }}</th>
-                            <th v-if="dataFilter != 'generation-i'" scope="col">{{ $t('base-stats-special-defense') }}</th>
-                            <th scope="col">{{ $t('base-stats-speed') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{ baseStats.hp }}</td>
-                            <td>{{ baseStats.attack }}</td>
-                            <td>{{ baseStats.defense }}</td>
-                            <td v-if="dataFilter == 'generation-i'">{{ baseStats.special }}</td>
-                            <td v-if="dataFilter != 'generation-i'">{{ baseStats.specialAttack }}</td>
-                            <td v-if="dataFilter != 'generation-i'">{{ baseStats.specialDefense }}</td>
-                            <td>{{ baseStats.speed }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <p class="col-12 bold">{{ $t('base-stats-title') }}</p>
+            <table class="col-12 table">
+                <thead>
+                    <tr>
+                        <th scope="col">{{ $t('base-stats-hp') }}</th>
+                        <th scope="col">{{ $t('base-stats-attack') }}</th>
+                        <th scope="col">{{ $t('base-stats-deffence') }}</th>
+                        <th v-if="dataFilter == 'generation-i'" scope="col">{{ $t('base-stats-special') }}</th>
+                        <th v-if="dataFilter != 'generation-i'" scope="col">{{ $t('base-stats-special-attack') }}</th>
+                        <th v-if="dataFilter != 'generation-i'" scope="col">{{ $t('base-stats-special-defense') }}</th>
+                        <th scope="col">{{ $t('base-stats-speed') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ baseStats.hp }}</td>
+                        <td>{{ baseStats.attack }}</td>
+                        <td>{{ baseStats.defense }}</td>
+                        <td v-if="dataFilter == 'generation-i'">{{ baseStats.special }}</td>
+                        <td v-if="dataFilter != 'generation-i'">{{ baseStats.specialAttack }}</td>
+                        <td v-if="dataFilter != 'generation-i'">{{ baseStats.specialDefense }}</td>
+                        <td>{{ baseStats.speed }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </template>

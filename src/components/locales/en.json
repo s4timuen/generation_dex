@@ -2,6 +2,8 @@
     "link-home": "Home",
     "link-about": "About",
 
+    "nav-search": "Search",
+
     "sidebar-generation-national": "National",
     "sidebar-generation-generation-i": "Kanto",
     "sidebar-generation-generation-ii": "Johto",
@@ -12,7 +14,7 @@
     "sidebar-generation-generation-vii": "Alola",
     "sidebar-generation-generation-viii": "Galar",
 
-    "efficiencies-defense": "Defender efficiencies",
+    "efficiencies-defense": "Defender efficiencies: ",
     "efficioncies-multiplier-zero": "x0",
     "efficioncies-multiplier-quarter": "x0.25",
     "efficioncies-multiplier-half": "x0.5",
@@ -22,11 +24,12 @@
 
     "types": "Type(s): ",
 
+    "abilities-title": "Abilities: ",
     "abilities-one": "Ability 1: ",
     "abilities-two": "Ability 2: ",
     "abilities-hidden": "Hidden ability: ",
 
-    "base-stats-title": "Base stats",
+    "base-stats-title": "Base stats: ",
     "base-stats-hp": "HP",
     "base-stats-attack": "Attack",
     "base-stats-deffence": "Defense",
@@ -35,12 +38,13 @@
     "base-stats-special-defense": "Special defense",
     "base-stats-speed": "Speed",
 
+    "general-properties-title": "General properties: ",
     "general-properties-base-experience": "Base Experience: ",
     "general-properties-height": "Height: ",
     "general-properties-weight": "Weight: ",
     "general-properties-held-items": "Held items: ",
 
-    "moves": "Moves",
+    "moves": "Moves: ",
     "move-name": "Name",
     "move-accuracy": "Accurycy",
     "move-power": "Power",
@@ -49,7 +53,7 @@
     "move-damage-class": "Damage class",
     "move-type": "Type",
 
-    "encounter-locations-title": "Encounter locations",
+    "encounter-locations-title": "Encounter locations: ",
     "encounter-location-name": "Location name",
 
     "about-title": "About",

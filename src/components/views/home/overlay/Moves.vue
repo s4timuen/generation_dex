@@ -1,33 +1,31 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 ">
-                <p class="col-12 text-left">{{ $t('moves') }}</p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">{{ $t('move-name') }}</th>
-                            <th scope="col">{{ $t('move-accuracy') }}</th>
-                            <th scope="col">{{ $t('move-power') }}</th>
-                            <th scope="col">{{ $t('move-pp') }}</th>
-                            <th scope="col">{{ $t('move-priority') }}</th>
-                            <th scope="col">{{ $t('move-damage-class') }}</th>
-                            <th scope="col">{{ $t('move-type') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody v-for="(move, key) in moves" :key="key">
-                        <tr>
-                            <td>{{ capitalize(move.name) }}</td>
-                            <td>{{ move.accuracy }}</td>
-                            <td>{{ move.power }}</td>
-                            <td>{{ move.pp }}</td>
-                            <td>{{ move.priority }}</td>
-                            <td>{{ capitalize(move.damage_class.name) }}</td>
-                            <td>{{ capitalize(move.type.name) }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <p class="col-12 bold">{{ $t('moves') }}</p>
+            <table class="table col-12">
+                <thead>
+                    <tr>
+                        <th scope="col">{{ $t('move-name') }}</th>
+                        <th scope="col">{{ $t('move-accuracy') }}</th>
+                        <th scope="col">{{ $t('move-power') }}</th>
+                        <th scope="col">{{ $t('move-pp') }}</th>
+                        <th scope="col">{{ $t('move-priority') }}</th>
+                        <th scope="col">{{ $t('move-damage-class') }}</th>
+                        <th scope="col">{{ $t('move-type') }}</th>
+                    </tr>
+                </thead>
+                <tbody v-for="(move, key) in moves" :key="key">
+                    <tr>
+                        <td>{{ capitalize(move.name) }}</td>
+                        <td>{{ move.accuracy }}</td>
+                        <td>{{ move.power }}</td>
+                        <td>{{ move.pp }}</td>
+                        <td>{{ move.priority }}</td>
+                        <td>{{ capitalize(move.damage_class.name) }}</td>
+                        <td>{{ capitalize(move.type.name) }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </template>

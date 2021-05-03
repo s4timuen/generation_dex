@@ -2,6 +2,8 @@
     "link-home": "Home",
     "link-about": "About",
 
+    "nav-search": "Suchen",
+
     "sidebar-generation-national": "National",
     "sidebar-generation-generation-i": "Kanto",
     "sidebar-generation-generation-ii": "Johto",
@@ -12,7 +14,7 @@
     "sidebar-generation-generation-vii": "Alola",
     "sidebar-generation-generation-viii": "Galar",
 
-    "efficiencies-defense": "Verteidiger Effektivitäten",
+    "efficiencies-defense": "Verteidiger Effektivitäten: ",
     "efficioncies-multiplier-zero": "x0",
     "efficioncies-multiplier-quarter": "x0,25",
     "efficioncies-multiplier-half": "x0,5",
@@ -22,11 +24,12 @@
 
     "types": "Typ(en): ",
 
+    "abilities-title": "Fähigkeiten: ",
     "abilities-one": "Fähigkeit 1: ",
     "abilities-two": "Fähigkeit 2: ",
     "abilities-hidden": "Versteckte Fähigkeit: ",
 
-    "base-stats-title": "Basis Werte",
+    "base-stats-title": "Basis Werte: ",
     "base-stats-hp": "KP",
     "base-stats-attack": "Angriff",
     "base-stats-deffence": "Verteidigung",
@@ -35,12 +38,13 @@
     "base-stats-special-defense": "Spezial Verteidigung",
     "base-stats-speed": "Initiative",
 
+    "general-properties-title": "Generelle Eigenschaften: ",
     "general-properties-base-experience": "Basis-Erfahrung: ",
     "general-properties-height": "Größe: ",
     "general-properties-weight": "Gewicht: ",
     "general-properties-held-items": "Items: ",
 
-    "moves": "Attacken",
+    "moves": "Attacken: ",
     "move-name": "Name",
     "move-accuracy": "Genauigkeit",
     "move-power": "Stärke",
@@ -49,7 +53,7 @@
     "move-damage-class": "Schadensklasse",
     "move-type": "Typ",
 
-    "encounter-locations-title": "Fundorte",
+    "encounter-locations-title": "Fundorte: ",
     "encounter-location-name": "Fundort Name",
 
     "about-title": "About",

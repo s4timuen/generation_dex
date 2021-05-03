@@ -4,28 +4,28 @@
         <div v-if="isOverlayOpen" class="overlay-panel">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 border-bottom">
+                    <div class="col-12 name">
                         {{ capitalize(pokemonName) }}
                     </div>
-                    <Sprite class="col-12 border-bottom" />
-                    <Evolutions class="col-12 border-bottom" />
+                    <Sprite class="col-12 border" />
+                    <Evolutions class="col-12 border" />
                 </div>
                 <div class="row">
-                    <Types class="col-12 col-md-4 border-bottom" />
-                    <Abilities class="col-12 col-md-4 border-bottom" />
-                    <GeneralProperties class="col-12 col-md-4 border-bottom" />
+                    <Types class="col-12 col-md-4 border" />
+                    <Abilities class="col-12 col-md-4 border" />
+                    <GeneralProperties class="col-12 col-md-4 border" />
                 </div>
                 <div class="row">
-                    <Efficiencies class="col-12 col-md-12 border-bottom" />
+                    <Efficiencies class="col-12 col-md-12 border" />
                 </div>
                 <div class="row">
-                    <Stats class="col-12 border-bottom" />
+                    <Stats class="col-12 border" />
                 </div>
                 <div class="row">
-                    <Moves class="col-12 border-bottom" />
+                    <Moves class="col-12 border" />
                 </div>
                 <div class="row">
-                    <EncounterLocations class="col-12 border-bottom" />
+                    <EncounterLocations class="col-12 border" />
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@ export default {
 
 .overlay-panel {
     overflow-y: auto;
-    background-color: #e94848;
+    background-color: #d8c99b;
     position: fixed;
     left: 16.65%;
     top: 0%;
@@ -106,5 +106,10 @@ export default {
     padding: 3rem 20px 2rem 20px;
     margin-top: 2%;
     width: 66.6%;
+}
+
+.name {
+    font-size: larger;
+    font-weight: bold;
 }
 </style>

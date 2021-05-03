@@ -1,18 +1,16 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-md-3">
                 <img :src="getSprite($store.getters.selectedPokemonData, 'front_default')" :alt="$store.getters.selectedPokemonData.name" />
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-md-3">
                 <img :src="getSprite($store.getters.selectedPokemonData, 'back_default')" :alt="$store.getters.selectedPokemonData.name" />
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-md-3">
                 <img :src="getSprite($store.getters.selectedPokemonData, 'front_shiny')" :alt="$store.getters.selectedPokemonData.name" />
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 col-md-3">
                 <img :src="getSprite($store.getters.selectedPokemonData, 'back_shiny')" :alt="$store.getters.selectedPokemonData.name" />
             </div>
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid home">
         <div class="row">
             <div v-for="(generation, key) in $store.getters.nationalDex" :key="key" :id="key">
                 <div class="row">
@@ -43,6 +43,7 @@ export default {
             const THIS = this;
             let pokemonName = getDefaultSpriteName(name);
 
+            // set $store selectedPokemonData
             this.$store.getters.pokeApiWrapper
                 .getPokemonByName(pokemonName)
                 .then(function(response) {
@@ -124,5 +125,9 @@ export default {
 .img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.home {
+    background-color: #d8973c;
 }
 </style>

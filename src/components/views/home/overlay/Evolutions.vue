@@ -1,12 +1,14 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-3" v-for="(evolutionStage, key) in evolutionChain" :key="key">
-                <div v-for="(evolution, key) in evolutionStage" :key="key">
-                    {{ capitalize(evolution.name) }}
-                    <img class="img" :src="evolution.sprite_url" :alt="evolution.name" />
-                    <div>
-                        {{ evolution.evolution_triggers }}
+            <div class="col-12 col-sm-3" v-for="(evolutionStage, key) in evolutionChain" :key="key" :id="key">
+                <div calss="row" v-for="(evolution, key) in evolutionStage" :key="key">
+                    <div class="col-12">{{ capitalize(evolution.name) }}</div>
+                    <div class="col-12">
+                        <img class="img" :src="evolution.sprite_url" :alt="evolution.name" />
+                    </div>
+                    <div class="col-12" v-for="(trigger, key) in evolution.evolution_triggers" :key="key">
+                        <div>{{ trigger[0] + ' ' + trigger[1] }}</div>
                     </div>
                 </div>
             </div>
@@ -17,6 +19,7 @@
 <script>
 import { getEvolutionChain } from '@/components/helpers/evolutions.js';
 import { capitalize } from '@/components/helpers/utilities.js';
+import { hideDiv } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Evolutions',
@@ -44,6 +47,20 @@ export default {
                 .then(function(response) {
                     THIS.evolutionChain = response;
                 })
+                .then(function() {
+                    if (!THIS.evolutionChain.baby.length) {
+                        hideDiv('baby');
+                    }
+                    if (!THIS.evolutionChain.base.length) {
+                        hideDiv('base');
+                    }
+                    if (!THIS.evolutionChain.first.length) {
+                        hideDiv('first');
+                    }
+                    if (!THIS.evolutionChain.second.length) {
+                        hideDiv('second');
+                    }
+                })
                 .catch(error => {
                     throw error;
                 });
@@ -51,13 +68,9 @@ export default {
     },
     methods: {
         capitalize,
+        hideDiv,
     },
 };
 </script>
 
-<style lang="css">
-.img {
-    max-width: 100%;
-    max-height: 100%;
-}
-</style>
+<style lang="css"></style>

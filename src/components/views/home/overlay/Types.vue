@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <p>{{ $t('types') }}</p>
+                <div class="bold">{{ $t('types') }}</div>
                 <div v-for="(type, key) in types" :key="key">
                     <p>{{ capitalize(type.type.name) }}</p>
                 </div>
@@ -29,7 +29,7 @@ export default {
         },
     },
     watch: {
-        data: function(response) {
+        data(response) {
             this.types = getTypes(response, this);
         },
     },
