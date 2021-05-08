@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <p class="col-12 bold">{{ $t('encounter-locations-title') }}</p>
-            <table class="table col-12">
+            <table class="table-borderless col-12">
                 <thead>
                     <tr>
                         <th scope="col">{{ $t('encounter-location-name') }}</th>

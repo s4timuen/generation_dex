@@ -1,6 +1,9 @@
 <template>
     <div class="container-fluid">
         <div class="row">
+            <p class="col-12 bold">{{ $t('evolutions-title') }}</p>
+        </div>
+        <div class="row">
             <div class="col-12 col-sm-3" v-for="(evolutionStage, key) in evolutionChain" :key="key" :id="key">
                 <div calss="row" v-for="(evolution, key) in evolutionStage" :key="key">
                     <div class="col-12">{{ capitalize(evolution.name) }}</div>

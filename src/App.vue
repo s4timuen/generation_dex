@@ -6,7 +6,7 @@
             <form class="form-inline my-2 my-lg-0 search-form" id="search-form">
                 <input class="form-control mr-sm-2" id="search-input" type="text" placeholder="Search" aria-label="Search" />
                 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" @click.prevent="onSubmit()">
-                    {{ $t('nav-search') }}
+                    {{ $t('navigation-search-button') }}
                 </button>
             </form>
         </div>
@@ -15,8 +15,6 @@
 </template>
 
 <script>
-// todo: styling
-// todo: alerts localization
 // todo: about page
 // todo: SEO
 
@@ -83,20 +81,20 @@ export default {
                                 // pokemon not in selected generation
                                 if (genToIntTranslator(generation[0]) > genToIntTranslator(dataFilter)) {
                                     invalidInput = false;
-                                    alert('Pokemon not available in selected generation!');
+                                    alert(this.$t('navigation-search-pokemon-not-available'));
                                 }
                             }
                         });
                     });
                     // invalid input (no pokemon name)
                     if (invalidInput) {
-                        alert('Please check your spelling!');
+                        alert(this.$t('navigation-search-invalid-pokemon-name'));
                     }
                 } else {
-                    alert('Please enter the name of a pokemon!');
+                    alert(this.$t('navigation-search-empty-input'));
                 }
             } else {
-                alert('No data loaded!');
+                alert(this.$t('navigation-search-no-data'));
             }
         },
     },

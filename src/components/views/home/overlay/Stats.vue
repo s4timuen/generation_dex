@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <p class="col-12 bold">{{ $t('base-stats-title') }}</p>
-            <table class="col-12 table">
+            <table class="col-12 table-borderless">
                 <thead>
                     <tr>
                         <th scope="col">{{ $t('base-stats-hp') }}</th>

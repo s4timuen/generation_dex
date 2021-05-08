@@ -2,7 +2,11 @@
     "link-home": "Home",
     "link-about": "About",
 
-    "nav-search": "Search",
+    "navigation-search-button": "Search",
+    "navigation-search-pokemon-not-available": "Pokemon not available in selected generation!",
+    "navigation-search-invalid-pokemon-name": "Please check your spelling!",
+    "navigation-search-empty-input": "Please enter the name of a pokemon!",
+    "navigation-search-no-data": "No data available!",
 
     "sidebar-generation-national": "National",
     "sidebar-generation-generation-i": "Kanto",
@@ -14,6 +18,9 @@
     "sidebar-generation-generation-vii": "Alola",
     "sidebar-generation-generation-viii": "Galar",
 
+    "sprites-title": "Sprites: ",
+
+    "evolutions-title": "Evolutions: ",
     "evolution-trigger": "Trigger: ",
     "evolution-method": "Method: ",
     "evolution-requirement": "Requirement: ",
@@ -58,7 +65,7 @@
     "move-type": "Type",
 
     "encounter-locations-title": "Encounter locations: ",
-    "encounter-location-name": "Location name",
+    "encounter-location-name": "Location",
 
     "about-title": "About",
     "about-text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
