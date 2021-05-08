@@ -70,9 +70,9 @@ function getEvolutionChain(context) {
                     // adjust base chain to generation specific evolution triggers
                     return adjustEvolutionTriggers(response, context);
                 })
-                // make single objects from trigger, metod and requirement
+                // pool respective triggers, metods and requirements together
                 .then(response => {
-                    return createEvolutionTriggerObjects(response);
+                    return poolRespectiveTriggers(response);
                 })
                 .catch(error => {
                     throw error;
@@ -83,10 +83,29 @@ function getEvolutionChain(context) {
         });
 }
 
-function createEvolutionTriggerObjects(chain) {
-    console.log(chain);
-    // todo: create single object for easy use in Evolutions.vue
-
+// pool together respective triggers, metods and requirements
+function poolRespectiveTriggers(chain) {
+    Object.values(chain).forEach(stage => {
+        if (stage.length) {
+            stage.forEach(async pokemon => {
+                let pooledTriggers = [];
+                if (pokemon.evolution_triggers.length != 0) {
+                    await forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function(firstHalf, secondHalf) {
+                        let triggerPool = {
+                            trigger: '',
+                            method: '',
+                            requirement: '',
+                        };
+                        triggerPool.method = firstHalf[0];
+                        triggerPool.requirement = firstHalf[1];
+                        triggerPool.trigger = secondHalf[1].name;
+                        pooledTriggers.push(triggerPool);
+                    });
+                    pokemon.evolution_triggers = pooledTriggers;
+                }
+            });
+        }
+    });
     return chain;
 }
 

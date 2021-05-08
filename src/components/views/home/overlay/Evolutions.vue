@@ -8,7 +8,11 @@
                         <img class="img" :src="evolution.sprite_url" :alt="evolution.name" />
                     </div>
                     <div class="col-12" v-for="(trigger, key) in evolution.evolution_triggers" :key="key">
-                        <div>{{ trigger[0] + ' ' + trigger[1] }}</div>
+                        <div class="row">
+                            <div class="col-12">{{ $t('evolution-trigger') + trigger.method }}</div>
+                            <div class="col-12">{{ $t('evolution-requirement') + trigger.requirement }}</div>
+                            <div class="col-12">{{ $t('evolution-method') + trigger.trigger }}</div>
+                        </div>
                     </div>
                 </div>
             </div>
