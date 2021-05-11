@@ -42,7 +42,7 @@ button:focus {
 }
 
 .burger-button {
-    position: relative;
+    position: absolute;
     height: 30px;
     width: 32px;
     display: block;

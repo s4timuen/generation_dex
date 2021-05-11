@@ -1,7 +1,4 @@
 // get edition specific evolution chain and triggers
-
-// todo: form/mega/gmax
-
 import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
 import { forPairsOfTwo, genToIntTranslator } from '@/components/helpers/utilities.js';
 

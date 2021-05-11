@@ -1,5 +1,5 @@
 <template>
-    <div id="app" calss="container-fluid">
+    <div id="app" class="container-fluid">
         <div class="row nav">
             <Burger class="col-1 d-flex justify-start" />
             <Sidebar />
@@ -15,8 +15,7 @@
 </template>
 
 <script>
-// todo: about page
-// todo: SEO
+// todo: form/mega/dmax/gdmax
 
 import Burger from '@/components/views/menu/Burger.vue';
 import Sidebar from '@/components/views/menu/Sidebar.vue';
@@ -113,7 +112,8 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #000000;
+    background-color: #d8973c;
 }
 
 .nav {

@@ -4,7 +4,7 @@
             <div v-for="(generation, key) in $store.getters.nationalDex" :key="key" :id="key">
                 <div class="row">
                     <div
-                        class="col-4 col-md-3 col-lg-2 col-xl-1"
+                        class="col-12 col-sm-4 col-md-3 col-lg-2 col-xl-1"
                         v-for="(pokemon, key) in generation"
                         :key="key"
                         :id="pokemon.pokemon_species.name"
@@ -37,7 +37,7 @@ export default {
     },
     methods: {
         getImgUrl: function(key) {
-            return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/' + key + '.png';
+            return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + key + '.png';
         },
         openOverlay: function(name) {
             const THIS = this;

@@ -5,8 +5,6 @@ function getTypes(pokemonData, context) {
     let types = [];
     let dataFilter = context.$store.getters.dataFilter;
 
-    // todo: form/mega/gmax
-
     // get default types
     types = pokemonData.types;
 
