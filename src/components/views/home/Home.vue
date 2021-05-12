@@ -8,7 +8,7 @@
                         v-for="(pokemon, key) in generation"
                         :key="key"
                         :id="pokemon.pokemon_species.name"
-                        @click.prevent="openOverlay(pokemon.pokemon_species.name, $store.getters.dataFilter)"
+                        @click.prevent="openOverlay(pokemon.pokemon_species.name)"
                     >
                         <img class="img" :src="getImgUrl(pokemon.entry_number)" :alt="pokemon.pokemon_species.name" />
                         <div>{{ capitalize(pokemon.pokemon_species.name) }}</div>
@@ -21,11 +21,10 @@
 </template>
 
 <script>
+import Overlay from '@/components/views/home/overlay/Overlay.vue';
+import defaultSpritesNames from '@/components/dataAssets/defaultSpriteNames.json';
 import { capitalize } from '@/components/helpers/utilities.js';
 import { showHideGenerationDivs } from '@/components/helpers/genDivsVisibility.js';
-import { getDefaultSpriteName } from '@/components/helpers/checkDiffForms.js';
-
-import Overlay from '@/components/views/home/overlay/Overlay.vue';
 
 export default {
     name: 'Home',
@@ -41,11 +40,17 @@ export default {
         },
         openOverlay: function(name) {
             const THIS = this;
-            let pokemonName = getDefaultSpriteName(name);
+
+            // get default form sprite name
+            defaultSpritesNames.pokemon_names.forEach(element => {
+                if (name == element.pokemon_name) {
+                    name = element.default_sprite_name;
+                }
+            });
 
             // set $store selectedPokemonData
             this.$store.getters.pokeApiWrapper
-                .getPokemonByName(pokemonName)
+                .getPokemonByName(name)
                 .then(function(response) {
                     THIS.$store.commit('setSelectedPokemonData', response);
                 })
