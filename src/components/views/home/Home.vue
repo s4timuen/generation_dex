@@ -23,7 +23,7 @@
 <script>
 import Overlay from '@/components/views/home/overlay/Overlay.vue';
 import defaultSpritesNames from '@/components/dataAssets/defaultSpriteNames.json';
-import { capitalize } from '@/components/helpers/utilities.js';
+import { setSelectedPokemonData, capitalize } from '@/components/helpers/utilities.js';
 import { showHideGenerationDivs } from '@/components/helpers/genDivsVisibility.js';
 
 export default {
@@ -49,10 +49,12 @@ export default {
             });
 
             // set $store selectedPokemonData
+            setSelectedPokemonData(name, this);
+            // set $store selectedPokemonVarieties
             this.$store.getters.pokeApiWrapper
-                .getPokemonByName(name)
+                .getPokemonSpeciesByName(name)
                 .then(function(response) {
-                    THIS.$store.commit('setSelectedPokemonData', response);
+                    THIS.$store.commit('setSelectedPokemonVarieties', response.varieties);
                 })
                 .catch(error => {
                     throw error;

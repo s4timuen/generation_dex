@@ -7,6 +7,9 @@
                     <div class="col-12 name">
                         {{ capitalize(pokemonName) }}
                     </div>
+                    <Varieties class="col-12 border" />
+                </div>
+                <div class="row">
                     <Sprite class="col-12 border" />
                     <Evolutions class="col-12 border" />
                 </div>
@@ -42,6 +45,7 @@ import Moves from '@/components/views/home/overlay/Moves.vue';
 import Stats from '@/components/views/home/overlay/Stats.vue';
 import GeneralProperties from '@/components/views/home/overlay/GeneralProperties.vue';
 import EncounterLocations from '@/components/views/home/overlay/EncounterLocations.vue';
+import Varieties from '@/components/views/home/overlay/Varieties.vue';
 
 import { capitalize } from '@/components/helpers/utilities.js';
 
@@ -57,6 +61,7 @@ export default {
         Stats,
         EncounterLocations,
         GeneralProperties,
+        Varieties,
     },
     data() {
         return {};

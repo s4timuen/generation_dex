@@ -19,6 +19,7 @@ const store = new Vuex.Store({
         nationalDex: {},
         dataFilter: 'nationa',
         selectedPokemonData: {},
+        selectedPokemonVarieties: [],
     },
     mutations: {
         setNavOpen(state) {
@@ -36,6 +37,9 @@ const store = new Vuex.Store({
         setSelectedPokemonData(state, data) {
             state.selectedPokemonData = data;
         },
+        setSelectedPokemonVarieties(state, varieties) {
+            state.selectedPokemonVarieties = varieties;
+        },
     },
     getters: {
         isNavOpen: state => state.isNavOpen,
@@ -44,6 +48,7 @@ const store = new Vuex.Store({
         nationalDex: state => state.nationalDex,
         dataFilter: state => state.dataFilter,
         selectedPokemonData: state => state.selectedPokemonData,
+        selectedPokemonVarieties: state => state.selectedPokemonVarieties,
     },
 });
 

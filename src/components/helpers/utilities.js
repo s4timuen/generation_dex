@@ -1,3 +1,15 @@
+// get data for selected pokemon from API wrapper
+function setSelectedPokemonData(name, context) {
+    context.$store.getters.pokeApiWrapper
+        .getPokemonByName(name)
+        .then(function(response) {
+            context.$store.commit('setSelectedPokemonData', response);
+        })
+        .catch(error => {
+            throw error;
+        });
+}
+
 // first letter capital
 function capitalize(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
@@ -140,4 +152,4 @@ function versionToGenMap(version) {
     return generation;
 }
 
-export { capitalize, forPairsOfTwo, showDiv, hideDiv, genToIntTranslator, versionToGenMap };
+export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDiv, hideDiv, genToIntTranslator, versionToGenMap };
