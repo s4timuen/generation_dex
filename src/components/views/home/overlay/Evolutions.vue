@@ -56,16 +56,16 @@ export default {
                 })
                 .then(function() {
                     if (!THIS.evolutionChain.baby.length) {
-                        hideDiv('baby');
+                        hideDiv(document, 'baby');
                     }
                     if (!THIS.evolutionChain.base.length) {
-                        hideDiv('base');
+                        hideDiv(document, 'base');
                     }
                     if (!THIS.evolutionChain.first.length) {
-                        hideDiv('first');
+                        hideDiv(document, 'first');
                     }
                     if (!THIS.evolutionChain.second.length) {
-                        hideDiv('second');
+                        hideDiv(document, 'second');
                     }
                 })
                 .catch(error => {

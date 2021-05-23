@@ -8,7 +8,6 @@
 </template>
 
 <script>
-// todo: about page text
 export default {
     name: 'About',
     components: {},

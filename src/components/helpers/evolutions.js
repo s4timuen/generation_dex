@@ -6,14 +6,6 @@ function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper
         .resource(context.$store.getters.selectedPokemonData.species.url)
         .then(async function(response) {
-            // response.varities -> form / mega / gmax
-
-            // check for more than one element and not is_default: true
-            // url -> data, form/mega/gmax from name
-
-            // not in evolution chain !!
-            // no evolution chain for not default form
-
             // get first element of evolution chain
             return await context.$store.getters.pokeApiWrapper
                 .resource(response.evolution_chain.url)

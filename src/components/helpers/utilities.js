@@ -4,6 +4,7 @@ function setSelectedPokemonData(name, context) {
         .getPokemonByName(name)
         .then(function(response) {
             context.$store.commit('setSelectedPokemonData', response);
+            // console.log(response);
         })
         .catch(error => {
             throw error;
@@ -23,12 +24,12 @@ function forPairsOfTwo(array, distancePairElements, distanceStartElements, func)
 }
 
 // show div
-function showDiv(id) {
+function showDiv(document, id) {
     document.getElementById(id).setAttribute('style', 'display: block');
 }
 
 // hide div
-function hideDiv(id) {
+function hideDiv(document, id) {
     document.getElementById(id).setAttribute('style', 'display: none');
 }
 
@@ -48,10 +49,36 @@ function genToIntTranslator(generationString) {
     return translatorObject[generationString];
 }
 
+// check if variety is available in selected genertaion
+function checkVarietyGenerationAvailability(name, dataFilter) {
+    // only required if variety/ies was/were introduced in later generation/s than the pokemon was introduced in
+    let available = true;
+    let genInt = genToIntTranslator(dataFilter);
+    // primal (gen 6), mega (gen 6)
+    if (
+        genInt < 6 &&
+        (name.includes('mega') ||
+            name.includes('primal') ||
+            name.includes('alola') ||
+            name.includes('galar') ||
+            name.includes('gmax') ||
+            name.includes('eternamax'))
+    ) {
+        available = false;
+    }
+    // alola (gen 7)
+    if (genInt == 6 && (name.includes('alola') || name.includes('galar') || name.includes('gmax') || name.includes('eternamax'))) {
+        available = false;
+    }
+    // galar (gen 8), gmax (gen 8), eternamax (gen 8)
+    if (genInt == 7 && (name.includes('galar') || name.includes('gmax') || name.includes('eternamax'))) {
+        available = false;
+    }
+    return available;
+}
+
 // translate version string to generation string
 function versionToGenMap(version) {
-    // fix: e.g. leafgreen not in obj -> null ref -> switch?
-
     let generation = 'nationa';
 
     switch (version) {
@@ -152,4 +179,4 @@ function versionToGenMap(version) {
     return generation;
 }
 
-export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDiv, hideDiv, genToIntTranslator, versionToGenMap };
+export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDiv, hideDiv, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap };

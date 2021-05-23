@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { setSelectedPokemonData, capitalize } from '@/components/helpers/utilities.js';
+import { setSelectedPokemonData, checkVarietyGenerationAvailability, capitalize } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Varieties',
@@ -22,7 +22,13 @@ export default {
     },
     computed: {
         varieties: function() {
-            return this.$store.getters.selectedPokemonVarieties;
+            let availableVarieties = [];
+            this.$store.getters.selectedPokemonVarieties.forEach(variety => {
+                if (checkVarietyGenerationAvailability(variety.pokemon.name, this.$store.getters.dataFilter)) {
+                    availableVarieties.push(variety);
+                }
+            });
+            return availableVarieties;
         },
     },
     methods: {

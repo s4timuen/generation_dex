@@ -71,7 +71,7 @@ export default {
     },
     watch: {
         dataFilter: function(dataFilter) {
-            showHideGenerationDivs(dataFilter);
+            showHideGenerationDivs(document, dataFilter);
         },
     },
     mounted: function() {

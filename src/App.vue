@@ -10,8 +10,6 @@
 </template>
 
 <script>
-// todo: form/mega/dmax/gdmax
-
 import Burger from '@/components/views/menu/Burger.vue';
 import Sidebar from '@/components/views/menu/Sidebar.vue';
 import Search from '@/components/views/menu/Search.vue';
@@ -37,10 +35,10 @@ export default {
         currentRoute(response) {
             switch (response) {
                 case 'Home':
-                    showDiv('search-form');
+                    showDiv(document, 'search-form');
                     break;
                 default:
-                    hideDiv('search-form');
+                    hideDiv(document, 'search-form');
                     break;
             }
         },
@@ -48,7 +46,7 @@ export default {
     mounted() {
         // hide form for direct pokemon search when loaded/reloaded on other path than /home
         if (this.$route.name != 'Home') {
-            hideDiv('search-form');
+            hideDiv(document, 'search-form');
         }
     },
 };
