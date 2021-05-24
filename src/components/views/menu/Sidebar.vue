@@ -7,7 +7,7 @@
                     <li>
                         <router-link to="/">{{ $t('link-home') }}</router-link>
                     </li>
-                    <li @click.prevent="setDataFilter('nationa')">{{ $t('sidebar-generation-national') }}</li>
+                    <li @click.prevent="setDataFilter('national')">{{ $t('sidebar-generation-national') }}</li>
                     <li @click.prevent="setDataFilter('generation-i')">{{ $t('sidebar-generation-generation-i') }}</li>
                     <li @click.prevent="setDataFilter('generation-ii')">{{ $t('sidebar-generation-generation-ii') }}</li>
                     <li @click.prevent="setDataFilter('generation-iii')">{{ $t('sidebar-generation-generation-iii') }}</li>

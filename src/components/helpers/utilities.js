@@ -36,7 +36,7 @@ function hideDiv(document, id) {
 // translate generation string to integer
 function genToIntTranslator(generationString) {
     let translatorObject = {
-        nationa: 99,
+        national: 99,
         'generation-i': 1,
         'generation-ii': 2,
         'generation-iii': 3,
@@ -79,104 +79,38 @@ function checkVarietyGenerationAvailability(name, dataFilter) {
 
 // translate version string to generation string
 function versionToGenMap(version) {
-    let generation = 'nationa';
-
-    switch (version) {
-        case 'red':
-            generation = 'generation-i';
-            break;
-        case 'blue':
-            generation = 'generation-i';
-            break;
-        case 'yellow':
-            generation = 'generation-i';
-            break;
-        case 'gold':
-            generation = 'generation-ii';
-            break;
-        case 'silver':
-            generation = 'generation-ii';
-            break;
-        case 'crystal':
-            generation = 'generation-ii';
-            break;
-        case 'ruby':
-            generation = 'generation-iii';
-            break;
-        case 'sapphire':
-            generation = 'generation-iii';
-            break;
-        case 'emerald':
-            generation = 'generation-iii';
-            break;
-        case 'firered':
-            generation = 'generation-iii';
-            break;
-        case 'leafgreen':
-            generation = 'generation-iii';
-            break;
-        case 'pearl':
-            generation = 'generation-iv';
-            break;
-        case 'diamond':
-            generation = 'generation-iv';
-            break;
-        case 'platinum':
-            generation = 'generation-iv';
-            break;
-        case 'heartgold':
-            generation = 'generation-iv';
-            break;
-        case 'soulsilver':
-            generation = 'generation-iv';
-            break;
-        case 'black':
-            generation = 'generation-v';
-            break;
-        case 'white':
-            generation = 'generation-v';
-            break;
-        case 'black-2':
-            generation = 'generation-v';
-            break;
-        case 'white-2':
-            generation = 'generation-v';
-            break;
-        case 'x':
-            generation = 'generation-vi';
-            break;
-        case 'y':
-            generation = 'generation-vi';
-            break;
-        case 'omega-ruby':
-            generation = 'generation-vi';
-            break;
-        case 'alpha-sapphire':
-            generation = 'generation-vi';
-            break;
-        case 'sun':
-            generation = 'generation-vii';
-            break;
-        case 'moon':
-            generation = 'generation-vii';
-            break;
-        case 'ultra-sun':
-            generation = 'generation-vii';
-            break;
-        case 'ultra-moon':
-            generation = 'generation-vii';
-            break;
-        case 'sword':
-            generation = 'generation-viii';
-            break;
-        case 'shield':
-            generation = 'generation-viii';
-            break;
-        default:
-            generation = 'nationa';
-            break;
-    }
-    return generation;
+    let generation = {
+        red: 'generation-i',
+        blue: 'generation-i',
+        yellow: 'generation-i',
+        gold: 'generation-ii',
+        silver: 'generation-ii',
+        crystal: 'generation-ii',
+        ruby: 'generation-iii',
+        sapphire: 'generation-iii',
+        emerald: 'generation-iii',
+        firered: 'generation-iii',
+        leafgreen: 'generation-iii',
+        pearl: 'generation-iv',
+        diamond: 'generation-iv',
+        platinum: 'generation-iv',
+        heartgold: 'generation-iv',
+        black: 'generation-v',
+        white: 'generation-v',
+        'black-2': 'generation-v',
+        'white-2': 'generation-v',
+        x: 'generation-vi',
+        y: 'generation-vi',
+        'omega-ruby': 'generation-vi',
+        'alpha-sapphire': 'generation-vi',
+        sun: 'generation-vii',
+        moon: 'generation-vii',
+        'ultra-sun': 'generation-vii',
+        'ultra-moon': 'generation-vii',
+        sword: 'generation-viii',
+        shield: 'generation-viii',
+    };
+    return generation[version];
 }
 
 export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDiv, hideDiv, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap };

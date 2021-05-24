@@ -20,7 +20,7 @@ function getGeneralProperties(pokemonData, context) {
     // generation specifics (held_item only)
     for (let i = generalProperties.held_items.length - 1; i >= 0; i--) {
         for (let j = generalProperties.held_items[i].version_details.length - 1; j >= 0; j--) {
-            if (dataFilter != 'nationa') {
+            if (dataFilter != 'national') {
                 if (versionToGenMap(generalProperties.held_items[i].version_details[j].version.name) != dataFilter) {
                     generalProperties.held_items[i].version_details.splice(j, 1);
                 }

@@ -13,11 +13,11 @@ function getEncounterLocations(pokemonData, context) {
                 let locations = [];
 
                 // national dex -> all locations
-                if (dataFilter == 'nationa') {
+                if (dataFilter == 'national') {
                     locations = response;
                 }
                 // specific generation
-                if (dataFilter != 'nationa') {
+                if (dataFilter != 'national') {
                     response.forEach(location => {
                         location.version_details.forEach(detail => {
                             if (versionToGenMap(detail.version.name) == dataFilter) {

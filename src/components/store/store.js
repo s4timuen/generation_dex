@@ -17,7 +17,7 @@ const store = new Vuex.Store({
         isOverlayOpen: false,
         pokeApiWrapper: pokeApiWrapper,
         nationalDex: {},
-        dataFilter: 'nationa',
+        dataFilter: 'national',
         selectedPokemonData: {},
         selectedPokemonVarieties: [],
     },

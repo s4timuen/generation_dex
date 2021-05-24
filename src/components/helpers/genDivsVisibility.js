@@ -3,7 +3,7 @@ import { showDiv, hideDiv } from '@/components/helpers/utilities.js';
 // filter generation divs to display
 function showHideGenerationDivs(document, dataFilter) {
     switch (dataFilter) {
-        case 'nationa':
+        case 'national':
             showDiv(document, 'generation-i');
             showDiv(document, 'generation-ii');
             showDiv(document, 'generation-iii');
