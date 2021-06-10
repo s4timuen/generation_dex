@@ -26,7 +26,7 @@
 <script>
 import { getEvolutionChain } from '@/components/helpers/evolutions.js';
 import { capitalize } from '@/components/helpers/utilities.js';
-import { hideDiv } from '@/components/helpers/utilities.js';
+import { hideDivs } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Evolutions',
@@ -56,16 +56,16 @@ export default {
                 })
                 .then(function() {
                     if (!THIS.evolutionChain.baby.length) {
-                        hideDiv(document, 'baby');
+                        hideDivs(document, ['baby']);
                     }
                     if (!THIS.evolutionChain.base.length) {
-                        hideDiv(document, 'base');
+                        hideDivs(document, ['base']);
                     }
                     if (!THIS.evolutionChain.first.length) {
-                        hideDiv(document, 'first');
+                        hideDivs(document, ['first']);
                     }
                     if (!THIS.evolutionChain.second.length) {
-                        hideDiv(document, 'second');
+                        hideDivs(document, ['second']);
                     }
                 })
                 .catch(error => {
@@ -75,7 +75,7 @@ export default {
     },
     methods: {
         capitalize,
-        hideDiv,
+        hideDivs,
     },
 };
 </script>

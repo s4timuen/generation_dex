@@ -1,18 +1,23 @@
 <template>
     <form class="form-inline my-2 my-lg-0 search-form" id="search-form">
         <input class="form-control mr-sm-2" id="search-input" type="text" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" @click.prevent="onSubmit()">
+        <button class="btn btn-outline-dark my-2 my-sm-0" id="search-button" type="submit" @click.prevent="onSubmit()">
             {{ $t('navigation-search-button') }}
         </button>
     </form>
 </template>
 
 <script>
-import { genToIntTranslator } from '@/components/helpers/utilities.js';
+import { genToIntTranslator, enableDivs, disableDivs } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Search',
     components: {},
+    data: function () {
+        return {
+            searchAvailable: false,
+        };
+    },
     methods: {
         onSubmit() {
             let input = document.getElementById('search-input').value;
@@ -24,8 +29,8 @@ export default {
                 if (input) {
                     let invalidInput = true;
 
-                    Object.entries(generationDex).forEach(generation => {
-                        generation[1].forEach(pokemon => {
+                    Object.entries(generationDex).forEach((generation) => {
+                        generation[1].forEach((pokemon) => {
                             // valid input (pokemon name)
                             if (input == pokemon.pokemon_species.name) {
                                 // pokemon in selected generation
@@ -34,10 +39,10 @@ export default {
                                     // set $store selectedPokemonData
                                     this.$store.getters.pokeApiWrapper
                                         .getPokemonByName(input)
-                                        .then(function(response) {
+                                        .then(function (response) {
                                             THIS.$store.commit('setSelectedPokemonData', response);
                                         })
-                                        .catch(error => {
+                                        .catch((error) => {
                                             throw error;
                                         });
                                     this.$store.commit('setOverlayOpen');
@@ -62,7 +67,31 @@ export default {
             }
         },
     },
+    computed: {
+        currentRoute() {
+            return this.$route.name;
+        },
+    },
+    watch: {
+        // show form for direct pokemon search only on /home view
+        currentRoute(response) {
+            switch (response) {
+                case 'Home':
+                    enableDivs(document, ['search-input', 'search-button']);
+                    break;
+                default:
+                    disableDivs(document, ['search-input', 'search-button']);
+                    break;
+            }
+        },
+    },
+    mounted() {
+        // hide form for direct pokemon search when loaded/reloaded on other path than /home
+        if (this.$route.name != 'Home') {
+            disableDivs(document, ['search-input', 'search-button']);
+        }
+    },
 };
 </script>
 
-<style lang="css"></style>
+<style scoped lang="css"></style>

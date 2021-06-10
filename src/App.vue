@@ -1,9 +1,9 @@
 <template>
     <div id="app" class="container-fluid">
         <div class="row nav">
-            <Burger class="col-1 d-flex justify-start" />
+            <Burger class="col-1 burger" />
             <Sidebar />
-            <Search id="search-form" />
+            <Search />
         </div>
         <router-view></router-view>
     </div>
@@ -13,7 +13,6 @@
 import Burger from '@/components/views/menu/Burger.vue';
 import Sidebar from '@/components/views/menu/Sidebar.vue';
 import Search from '@/components/views/menu/Search.vue';
-import { showDiv, hideDiv } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'App',
@@ -22,37 +21,10 @@ export default {
         Sidebar,
         Search,
     },
-    data: function() {
-        return {};
-    },
-    computed: {
-        currentRoute() {
-            return this.$route.name;
-        },
-    },
-    watch: {
-        // show form for direct pokemon search only on /home view
-        currentRoute(response) {
-            switch (response) {
-                case 'Home':
-                    showDiv(document, 'search-form');
-                    break;
-                default:
-                    hideDiv(document, 'search-form');
-                    break;
-            }
-        },
-    },
-    mounted() {
-        // hide form for direct pokemon search when loaded/reloaded on other path than /home
-        if (this.$route.name != 'Home') {
-            hideDiv(document, 'search-form');
-        }
-    },
 };
 </script>
 
-<style>
+<style lang="css">
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -71,6 +43,10 @@ export default {
 
 .bold {
     font-weight: bold;
+}
+
+.burger {
+    justify-self: start;
 }
 
 .search-form {

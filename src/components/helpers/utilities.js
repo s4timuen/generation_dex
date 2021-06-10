@@ -2,7 +2,7 @@
 function setSelectedPokemonData(name, context) {
     context.$store.getters.pokeApiWrapper
         .getPokemonByName(name)
-        .then(function(response) {
+        .then(function (response) {
             context.$store.commit('setSelectedPokemonData', response);
             // console.log(response);
         })
@@ -23,14 +23,33 @@ function forPairsOfTwo(array, distancePairElements, distanceStartElements, func)
     }
 }
 
-// show div
-function showDiv(document, id) {
+// show divs
+function showDivs(document, ids) {
+    ids.forEach(id => {
     document.getElementById(id).setAttribute('style', 'display: block');
+});
 }
 
-// hide div
-function hideDiv(document, id) {
+// hide divs
+function hideDivs(document, ids) {
+    ids.forEach(id => {
     document.getElementById(id).setAttribute('style', 'display: none');
+});
+}
+
+// enable divs
+function enableDivs(document, ids) {
+    ids.forEach(id => {
+        document.getElementById(id).removeAttribute("disabled");
+    });
+
+}
+
+// disable divs
+function disableDivs(document, ids) {
+    ids.forEach(id => {
+        document.getElementById(id).setAttribute("disabled", true);
+    });
 }
 
 // translate generation string to integer
@@ -113,4 +132,4 @@ function versionToGenMap(version) {
     return generation[version];
 }
 
-export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDiv, hideDiv, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap };
+export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDivs, hideDivs, enableDivs, disableDivs, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap };
