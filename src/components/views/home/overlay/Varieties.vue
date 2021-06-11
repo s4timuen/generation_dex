@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { setSelectedPokemonData, checkVarietyGenerationAvailability, capitalize, getDefaultSpriteName } from '@/components/helpers/utilities.js';
+import { setSelectedPokemonData, checkVarietyGenerationAvailability, capitalize, getDefaultFormName } from '@/components/helpers/utilities.js';
 
 export default {
     name: 'Varieties',
@@ -34,7 +34,7 @@ export default {
     methods: {
         onSubmit: function(speciesName) {
             // set $store selectedPokemonData for selected variety
-            let defaulSpriteName = getDefaultSpriteName(speciesName);
+            let defaulSpriteName = getDefaultFormName(speciesName);
             setSelectedPokemonData(defaulSpriteName, this);
         },
         capitalize,

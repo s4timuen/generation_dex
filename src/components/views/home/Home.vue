@@ -22,7 +22,7 @@
 
 <script>
 import Overlay from '@/components/views/home/overlay/Overlay.vue';
-import { setSelectedPokemonData, capitalize, getDefaultSpriteName } from '@/components/helpers/utilities.js';
+import { setSelectedPokemonData, capitalize, getDefaultFormName } from '@/components/helpers/utilities.js';
 import { showHideGenerationDivs } from '@/components/helpers/genDivsVisibility.js';
 
 export default {
@@ -40,7 +40,7 @@ export default {
         openOverlay: function (speciesName) {
             const THIS = this;
             // get default form sprite name
-            let defaulSpriteName = getDefaultSpriteName(speciesName);
+            let defaulSpriteName = getDefaultFormName(speciesName);
 
             // set $store selectedPokemonData
             setSelectedPokemonData(defaulSpriteName, this);

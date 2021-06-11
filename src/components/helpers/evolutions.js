@@ -1,6 +1,6 @@
 // get edition specific evolution chain and triggers
 import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
-import { forPairsOfTwo, genToIntTranslator, getDefaultSpriteName } from '@/components/helpers/utilities.js';
+import { forPairsOfTwo, genToIntTranslator, getDefaultFormName } from '@/components/helpers/utilities.js';
 
 function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper
@@ -108,9 +108,9 @@ async function removeUnavailablePokemon(chain, context) {
     };
     for (let stage of Object.entries(chain)) {
         for (let pokemon of stage[1]) {
-            let defaultName = getDefaultSpriteName(pokemon.name)
+            let defaulFormName = getDefaultFormName(pokemon.name)
             await context.$store.getters.pokeApiWrapper
-                .getPokemonByName(defaultName)
+                .getPokemonByName(defaulFormName)
                 .then(async function (response) {
                     await context.$store.getters.pokeApiWrapper
                         .resource(response.species.url)
@@ -220,9 +220,9 @@ function setEvolutionTrigger(data, isChainRootElement) {
 function setSpriteUrl(data, context, isChainRootElement) {
     let url = '';
     if (isChainRootElement) {
-        let defaultName = getDefaultSpriteName(data.chain.species.name)
+        let defaulFormName = getDefaultFormName(data.chain.species.name)
         url = context.$store.getters.pokeApiWrapper
-            .getPokemonByName(defaultName) 
+            .getPokemonByName(defaulFormName) 
             .then(function (response) {
                 return response.sprites.front_default;
             })
@@ -231,9 +231,9 @@ function setSpriteUrl(data, context, isChainRootElement) {
             });
     }
     if (!isChainRootElement) {
-        let defaultName = getDefaultSpriteName(data.species.name)
+        let defaulFormName = getDefaultFormName(data.species.name)
         url = context.$store.getters.pokeApiWrapper
-            .getPokemonByName(defaultName)
+            .getPokemonByName(defaulFormName)
             .then(function (response) {
                 return response.sprites.front_default;
             })
