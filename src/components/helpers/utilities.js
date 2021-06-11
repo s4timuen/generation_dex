@@ -1,10 +1,11 @@
+import defaultSpritesNames from '@/components/dataAssets/defaultSpriteNames.json';
+
 // get data for selected pokemon from API wrapper
 function setSelectedPokemonData(name, context) {
     context.$store.getters.pokeApiWrapper
         .getPokemonByName(name)
         .then(function (response) {
             context.$store.commit('setSelectedPokemonData', response);
-            // console.log(response);
         })
         .catch(error => {
             throw error;
@@ -26,15 +27,15 @@ function forPairsOfTwo(array, distancePairElements, distanceStartElements, func)
 // show divs
 function showDivs(document, ids) {
     ids.forEach(id => {
-    document.getElementById(id).setAttribute('style', 'display: block');
-});
+        document.getElementById(id).setAttribute('style', 'display: block');
+    });
 }
 
 // hide divs
 function hideDivs(document, ids) {
     ids.forEach(id => {
-    document.getElementById(id).setAttribute('style', 'display: none');
-});
+        document.getElementById(id).setAttribute('style', 'display: none');
+    });
 }
 
 // enable divs
@@ -132,4 +133,15 @@ function versionToGenMap(version) {
     return generation[version];
 }
 
-export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDivs, hideDivs, enableDivs, disableDivs, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap };
+// get default form name
+function getDefaultSpriteName(speciesName) {
+    let defaultName = speciesName;
+    defaultSpritesNames.pokemon_names.forEach((element) => {
+        if (speciesName == element.pokemon_name) {
+            defaultName = element.default_sprite_name;
+        }
+    });
+    return defaultName;
+}
+
+export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDivs, hideDivs, enableDivs, disableDivs, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap, getDefaultSpriteName };

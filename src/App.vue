@@ -1,7 +1,7 @@
 <template>
     <div id="app" class="container-fluid">
         <div class="row nav">
-            <Burger class="col-1 burger" />
+            <Burger class="col-1" />
             <Sidebar />
             <Search />
         </div>
@@ -43,14 +43,5 @@ export default {
 
 .bold {
     font-weight: bold;
-}
-
-.burger {
-    justify-self: start;
-}
-
-.search-form {
-    justify-self: end;
-    margin-right: 1%;
 }
 </style>

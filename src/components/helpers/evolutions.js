@@ -1,15 +1,15 @@
 // get edition specific evolution chain and triggers
 import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
-import { forPairsOfTwo, genToIntTranslator } from '@/components/helpers/utilities.js';
+import { forPairsOfTwo, genToIntTranslator, getDefaultSpriteName } from '@/components/helpers/utilities.js';
 
 function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper
         .resource(context.$store.getters.selectedPokemonData.species.url)
-        .then(async function(response) {
+        .then(async function (response) {
             // get first element of evolution chain
             return await context.$store.getters.pokeApiWrapper
                 .resource(response.evolution_chain.url)
-                .then(function(response) {
+                .then(function (response) {
                     let evolutionChain = {
                         baby: [],
                         base: [],
@@ -51,11 +51,11 @@ function getEvolutionChain(context) {
 
                     return evolutionChain; // base evolution chain
                 })
-                .then(function(response) {
+                .then(function (response) {
                     // adjust base chain to generation specifics pokemon
                     return removeUnavailablePokemon(response, context);
                 })
-                .then(function(response) {
+                .then(function (response) {
                     // adjust base chain to generation specific evolution triggers
                     return adjustEvolutionTriggers(response, context);
                 })
@@ -79,7 +79,7 @@ function poolRespectiveTriggers(chain) {
             stage.forEach(async pokemon => {
                 let pooledTriggers = [];
                 if (pokemon.evolution_triggers.length != 0) {
-                    await forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function(firstHalf, secondHalf) {
+                    await forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function (firstHalf, secondHalf) {
                         let triggerPool = {
                             trigger: '',
                             method: '',
@@ -108,12 +108,13 @@ async function removeUnavailablePokemon(chain, context) {
     };
     for (let stage of Object.entries(chain)) {
         for (let pokemon of stage[1]) {
+            let defaultName = getDefaultSpriteName(pokemon.name)
             await context.$store.getters.pokeApiWrapper
-                .getPokemonByName(pokemon.name)
-                .then(async function(response) {
+                .getPokemonByName(defaultName)
+                .then(async function (response) {
                     await context.$store.getters.pokeApiWrapper
                         .resource(response.species.url)
-                        .then(function(response) {
+                        .then(function (response) {
                             if (genToIntTranslator(response.generation.name) <= genToIntTranslator(context.$store.getters.dataFilter)) {
                                 newChain[stage[0]].push(pokemon);
                             }
@@ -145,7 +146,7 @@ function adjustEvolutionTriggers(chain, context) {
                                 let filteredEvolutionTriggers = [];
                                 // always [method], [trigger], [method], [trigger], ...
                                 // each method and trigger pair represents a generation
-                                forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function(method, trigger) {
+                                forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function (method, trigger) {
                                     if (
                                         generationTrigger[1][0] == trigger[1].name && // trigger
                                         Object.keys(generationTrigger[1][1])[0] == method[0] && // method
@@ -182,7 +183,7 @@ function getData(data, context, isChainRootElement) {
 
     pushObject.name = setName(data, isChainRootElement);
     pushObject.evolution_triggers = setEvolutionTrigger(data, isChainRootElement);
-    setSpriteUrl(data, context, isChainRootElement).then(function(response) {
+    setSpriteUrl(data, context, isChainRootElement).then(function (response) {
         pushObject.sprite_url = response;
     });
 
@@ -219,20 +220,22 @@ function setEvolutionTrigger(data, isChainRootElement) {
 function setSpriteUrl(data, context, isChainRootElement) {
     let url = '';
     if (isChainRootElement) {
+        let defaultName = getDefaultSpriteName(data.chain.species.name)
         url = context.$store.getters.pokeApiWrapper
-            .getPokemonByName(data.chain.species.name)
-            .then(async function(response) {
-                return await response.sprites.front_default;
+            .getPokemonByName(defaultName) 
+            .then(function (response) {
+                return response.sprites.front_default;
             })
             .catch(error => {
                 throw error;
             });
     }
     if (!isChainRootElement) {
+        let defaultName = getDefaultSpriteName(data.species.name)
         url = context.$store.getters.pokeApiWrapper
-            .getPokemonByName(data.species.name)
-            .then(async function(response) {
-                return await response.sprites.front_default;
+            .getPokemonByName(defaultName)
+            .then(function (response) {
+                return response.sprites.front_default;
             })
             .catch(error => {
                 throw error;

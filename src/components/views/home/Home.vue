@@ -22,8 +22,7 @@
 
 <script>
 import Overlay from '@/components/views/home/overlay/Overlay.vue';
-import defaultSpritesNames from '@/components/dataAssets/defaultSpriteNames.json';
-import { setSelectedPokemonData, capitalize } from '@/components/helpers/utilities.js';
+import { setSelectedPokemonData, capitalize, getDefaultSpriteName } from '@/components/helpers/utilities.js';
 import { showHideGenerationDivs } from '@/components/helpers/genDivsVisibility.js';
 
 export default {
@@ -31,50 +30,44 @@ export default {
     components: {
         Overlay,
     },
-    data: function() {
+    data: function () {
         return {};
     },
     methods: {
-        getImgUrl: function(key) {
+        getImgUrl: function (key) {
             return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + key + '.png';
         },
-        openOverlay: function(name) {
+        openOverlay: function (speciesName) {
             const THIS = this;
-
             // get default form sprite name
-            defaultSpritesNames.pokemon_names.forEach(element => {
-                if (name == element.pokemon_name) {
-                    name = element.default_sprite_name;
-                }
-            });
+            let defaulSpriteName = getDefaultSpriteName(speciesName);
 
             // set $store selectedPokemonData
-            setSelectedPokemonData(name, this);
+            setSelectedPokemonData(defaulSpriteName, this);
             // set $store selectedPokemonVarieties
             this.$store.getters.pokeApiWrapper
-                .getPokemonSpeciesByName(name)
-                .then(function(response) {
+                .getPokemonSpeciesByName(speciesName)
+                .then(function (response) {
                     THIS.$store.commit('setSelectedPokemonVarieties', response.varieties);
                 })
-                .catch(error => {
+                .catch((error) => {
                     throw error;
                 });
-
             this.$store.commit('setOverlayOpen');
         },
         capitalize,
     },
     computed: {
-        dataFilter: function() {
+        dataFilter: function () {
             return this.$store.getters.dataFilter;
         },
     },
     watch: {
-        dataFilter: function(dataFilter) {
+        dataFilter: function (dataFilter) {
             showHideGenerationDivs(document, dataFilter);
         },
     },
-    mounted: function() {
+    mounted: function () {
         // get default pokemon
         let dex = 'national';
         let nationalDex = {
@@ -90,7 +83,7 @@ export default {
 
         this.$store.getters.pokeApiWrapper
             .getPokedexByName(dex)
-            .then(function(response) {
+            .then(function (response) {
                 for (let index = 0; index < response.pokemon_entries.length; index++) {
                     // categorize pokemon in generations
                     if (index >= 0 && index < 151) {
@@ -119,7 +112,7 @@ export default {
                     }
                 }
             })
-            .catch(error => {
+            .catch((error) => {
                 throw error;
             });
 

@@ -94,4 +94,8 @@ export default {
 };
 </script>
 
-<style scoped lang="css"></style>
+<style scoped lang="css">
+.search-form {
+    justify-self: end;
+}
+</style>
