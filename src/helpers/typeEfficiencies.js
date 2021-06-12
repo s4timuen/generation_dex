@@ -1,4 +1,4 @@
-import efficencyDifferences from '@/components/dataAssets/efficiencyDifferences.json';
+import efficencyDifferences from '@/dataAssets/efficiencyDifferences.json';
 
 // calculate type efficiencies
 function typeEfficiencies(context, typeOne, typeTwo, generation) {

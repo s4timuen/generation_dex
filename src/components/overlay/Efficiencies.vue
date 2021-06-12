@@ -48,8 +48,8 @@
 
 <script>
 // 1 or 2 types per pokemon
-import { capitalize } from '@/components/helpers/utilities.js';
-import { typeEfficiencies } from '@/components/helpers/typeEfficiencies.js';
+import { capitalize } from '@/helpers/utilities.js';
+import { typeEfficiencies } from '@/helpers/typeEfficiencies.js';
 
 export default {
     name: 'Efficiencies',

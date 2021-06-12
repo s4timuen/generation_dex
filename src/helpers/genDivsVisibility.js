@@ -1,4 +1,4 @@
-import { showDivs, hideDivs } from '@/components/helpers/utilities.js';
+import { showDivs, hideDivs } from '@/helpers/utilities.js';
 
 // filter generation divs to display
 function showHideGenerationDivs(document, dataFilter) {

@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import { capitalize } from '@/components/helpers/utilities.js';
-import { getTypes } from '@/components/helpers/types.js';
+import { capitalize } from '@/helpers/utilities.js';
+import { getTypes } from '@/helpers/types.js';
 
 export default {
     name: 'Types',

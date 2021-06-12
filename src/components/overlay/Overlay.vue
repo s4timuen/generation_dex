@@ -36,18 +36,18 @@
 </template>
 
 <script>
-import Sprite from '@/components/views/home/overlay/Sprite.vue';
-import Efficiencies from '@/components/views/home/overlay/Efficiencies.vue';
-import Types from '@/components/views/home/overlay/Types.vue';
-import Abilities from '@/components/views/home/overlay/Abilities.vue';
-import Evolutions from '@/components/views/home/overlay/Evolutions.vue';
-import Moves from '@/components/views/home/overlay/Moves.vue';
-import Stats from '@/components/views/home/overlay/Stats.vue';
-import GeneralProperties from '@/components/views/home/overlay/GeneralProperties.vue';
-import EncounterLocations from '@/components/views/home/overlay/EncounterLocations.vue';
-import Varieties from '@/components/views/home/overlay/Varieties.vue';
+import Sprite from '@/components/overlay/Sprite.vue';
+import Efficiencies from '@/components/overlay/Efficiencies.vue';
+import Types from '@/components/overlay/Types.vue';
+import Abilities from '@/components/overlay/Abilities.vue';
+import Evolutions from '@/components/overlay/Evolutions.vue';
+import Moves from '@/components/overlay/Moves.vue';
+import Stats from '@/components/overlay/Stats.vue';
+import GeneralProperties from '@/components/overlay/GeneralProperties.vue';
+import EncounterLocations from '@/components/overlay/EncounterLocations.vue';
+import Varieties from '@/components/overlay/Varieties.vue';
 
-import { capitalize } from '@/components/helpers/utilities.js';
+import { capitalize } from '@/helpers/utilities.js';
 
 export default {
     name: 'Overlay',

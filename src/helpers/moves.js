@@ -1,6 +1,6 @@
-import { genToIntTranslator } from '@/components/helpers/utilities.js';
-import moveDamageClassDifferences from '@/components/dataAssets/moveDamageClassDifferences.json';
-import { versionToGenMap } from '@/components/helpers/utilities';
+import { genToIntTranslator } from '@/helpers/utilities.js';
+import moveDamageClassDifferences from '@/dataAssets/moveDamageClassDifferences.json';
+import { versionToGenMap } from '@/helpers/utilities';
 
 // get generation specific moves
 function getMoves(pokemonData, context) {

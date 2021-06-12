@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import Burger from '@/components/views/menu/Burger.vue';
-import Sidebar from '@/components/views/menu/Sidebar.vue';
-import Search from '@/components/views/menu/Search.vue';
+import Burger from '@/components/menu/Burger.vue';
+import Sidebar from '@/components/menu/Sidebar.vue';
+import Search from '@/components/menu/Search.vue';
 
 export default {
     name: 'App',

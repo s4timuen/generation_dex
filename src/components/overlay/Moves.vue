@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import { capitalize } from '@/components/helpers/utilities.js';
-import { getMoves } from '@/components/helpers/moves.js';
+import { capitalize } from '@/helpers/utilities.js';
+import { getMoves } from '@/helpers/moves.js';
 
 export default {
     name: 'Moves',

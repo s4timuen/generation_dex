@@ -1,4 +1,4 @@
-import typeDiffreneces from '@/components/dataAssets/typeDifferences.json';
+import typeDiffreneces from '@/dataAssets/typeDifferences.json';
 
 // get generation specific types
 function getTypes(pokemonData, context) {

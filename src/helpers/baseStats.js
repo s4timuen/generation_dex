@@ -1,4 +1,4 @@
-import baseStatsDifferences from '@/components/dataAssets/baseStatsDifferences.json';
+import baseStatsDifferences from '@/dataAssets/baseStatsDifferences.json';
 
 // get base stats of pokemon
 function getBaseStats(pokemon, context) {

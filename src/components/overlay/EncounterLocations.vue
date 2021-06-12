@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import { capitalize } from '@/components/helpers/utilities.js';
-import { getEncounterLocations } from '@/components/helpers/encounterLocations.js';
+import { capitalize } from '@/helpers/utilities.js';
+import { getEncounterLocations } from '@/helpers/encounterLocations.js';
 
 export default {
     name: 'EcounterLocations',

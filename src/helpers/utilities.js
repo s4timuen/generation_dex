@@ -1,4 +1,4 @@
-import defaultSpritesNames from '@/components/dataAssets/defaulFormNames.json';
+import defaultSpritesNames from '@/dataAssets/defaulFormNames.json';
 
 // get data for selected pokemon from API wrapper
 function setSelectedPokemonData(name, context) {

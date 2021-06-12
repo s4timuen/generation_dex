@@ -1,6 +1,6 @@
 // get edition specific evolution chain and triggers
-import evolutionDifferences from '@/components/dataAssets/evolutionDifferences.json';
-import { forPairsOfTwo, genToIntTranslator, getDefaultFormName } from '@/components/helpers/utilities.js';
+import evolutionDifferences from '@/dataAssets/evolutionDifferences.json';
+import { forPairsOfTwo, genToIntTranslator, getDefaultFormName } from '@/helpers/utilities.js';
 
 function getEvolutionChain(context) {
     return context.$store.getters.pokeApiWrapper

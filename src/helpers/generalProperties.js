@@ -1,4 +1,4 @@
-import { versionToGenMap } from '@/components/helpers/utilities.js';
+import { versionToGenMap } from '@/helpers/utilities.js';
 
 // get generation specific general properties
 function getGeneralProperties(pokemonData, context) {

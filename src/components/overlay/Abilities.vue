@@ -14,7 +14,7 @@
 <script>
 // 1 or 2 abilities per pokemon
 // hidden ability for every pokemon
-import { capitalize } from '@/components/helpers/utilities.js';
+import { capitalize } from '@/helpers/utilities.js';
 
 export default {
     name: 'Abilities',

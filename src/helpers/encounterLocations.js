@@ -1,5 +1,5 @@
 // get generations specific encounter locations
-import { versionToGenMap } from '@/components/helpers/utilities.js';
+import { versionToGenMap } from '@/helpers/utilities.js';
 
 function getEncounterLocations(pokemonData, context) {
     let dataFilter = context.$store.getters.dataFilter;

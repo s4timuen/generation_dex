@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { getBaseStats } from '@/components/helpers/baseStats.js';
+import { getBaseStats } from '@/helpers/baseStats.js';
 
 export default {
     name: 'Stats',

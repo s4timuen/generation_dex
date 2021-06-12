@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import { capitalize } from '@/components/helpers/utilities.js';
-import { getGeneralProperties } from '@/components/helpers/generalProperties.js';
+import { capitalize } from '@/helpers/utilities.js';
+import { getGeneralProperties } from '@/helpers/generalProperties.js';
 
 export default {
     name: 'GeneralProperties',

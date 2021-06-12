@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { genToIntTranslator, enableDivs, disableDivs } from '@/components/helpers/utilities.js';
+import { genToIntTranslator, enableDivs, disableDivs } from '@/helpers/utilities.js';
 
 export default {
     name: 'Search',
