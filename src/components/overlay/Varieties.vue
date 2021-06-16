@@ -12,7 +12,8 @@
 </template>
 
 <script>
-import { setSelectedPokemonData, checkVarietyGenerationAvailability, capitalize, getDefaultFormName } from '@/helpers/utilities.js';
+import { setSelectedPokemonData, checkVarietyGenerationAvailability, capitalize } from '@/helpers/utilities.js';
+import { getDefaultFormName } from '@/helpers/defaultFormNames.js'
 
 export default {
     name: 'Varieties',

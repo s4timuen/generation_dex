@@ -25,8 +25,7 @@
 
 <script>
 import { getEvolutionChain } from '@/helpers/evolutions.js';
-import { capitalize } from '@/helpers/utilities.js';
-import { hideDivs } from '@/helpers/utilities.js';
+import { capitalize, hideDivs } from '@/helpers/utilities.js';
 
 export default {
     name: 'Evolutions',

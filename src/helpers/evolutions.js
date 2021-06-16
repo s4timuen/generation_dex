@@ -1,8 +1,13 @@
 // get edition specific evolution chain and triggers
-import evolutionDifferences from '@/dataAssets/evolutionDifferences.json';
-import { forPairsOfTwo, genToIntTranslator, getDefaultFormName } from '@/helpers/utilities.js';
+import evolutionDifferences from '@/dataAssets/json/evolutionDifferences.json';
+import evolutionDifferencesSchema from '@/dataAssets/schemes/evolutionDifferencesSchema.json';
+import { forPairsOfTwo, genToIntTranslator, validateJson } from '@/helpers/utilities.js';
+import { getDefaultFormName } from '@/helpers/defaultFormNames.js';
 
 function getEvolutionChain(context) {
+    // json data validation
+    if (!validateJson(evolutionDifferences, evolutionDifferencesSchema)) { throw "Error: evolutionDifferences.json invalid." }
+
     return context.$store.getters.pokeApiWrapper
         .resource(context.$store.getters.selectedPokemonData.species.url)
         .then(async function (response) {

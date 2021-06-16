@@ -1,7 +1,12 @@
-import efficencyDifferences from '@/dataAssets/efficiencyDifferences.json';
+import { validateJson } from '@/helpers/utilities.js';
+import efficiencyDifferences from '@/dataAssets/json/efficiencyDifferences.json';
+import efficiencyDifferencesSchema from '@/dataAssets/schemes/efficiencyDifferencesSchema.json';
 
 // calculate type efficiencies
 function typeEfficiencies(context, typeOne, typeTwo, generation) {
+    // json data validation
+    if (!validateJson(efficiencyDifferences, efficiencyDifferencesSchema)) { throw "Error: efficiencyDifferences.json invalid." }
+
     // get type one object
     return context.$store.getters.pokeApiWrapper
         .getTypeByName(typeOne)
@@ -46,15 +51,15 @@ function getBaseEfficiencies(context, typesObject, generation) {
 
     // generation specific changes to efficiencies
 
-    Object.entries(efficencyDifferences).forEach(generationElement => {
+    Object.entries(efficiencyDifferences).forEach(generationElement => {
         if (generationElement[0] == generation) {
             if (generationElement[1].unavailable_types.length != 0) {
                 generationElement[1].unavailable_types.forEach(type => {
                     typesObject = deleteType(typesObject, type);
                 });
             }
-            if (generationElement[1].changed_types.length != 0) {
-                generationElement[1].changed_types.forEach(change => {
+            if (generationElement[1]. changed_efficiencies.length != 0) {
+                generationElement[1]. changed_efficiencies.forEach(change => {
                     typesObject = changeEfficiency(context, typesObject, change);
                 });
             }

@@ -1,8 +1,14 @@
-{
-    "azumarrill": {
+[
+    {
+        "name": "azumarrill",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -15,10 +21,15 @@
             }
         ]
     },
-    "azurill": {
+    {
+        "name": "azurill",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -31,10 +42,17 @@
             }
         ]
     },
-    "clefable": {
+    {
+        "name": "clefable",
         "differences": [
             {
-                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-i",
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -47,10 +65,17 @@
             }
         ]
     },
-    "clefairy": {
+    {
+        "name": "clefairy",
         "differences": [
             {
-                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-i",
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -63,10 +88,16 @@
             }
         ]
     },
-    "cleffa": {
+    {
+        "name": "cleffa",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -79,10 +110,13 @@
             }
         ]
     },
-    "cottonee": {
+    {
+        "name": "cottonee",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -95,10 +129,15 @@
             }
         ]
     },
-    "gardevoir": {
+    {
+        "name": "gardevoir",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -111,10 +150,16 @@
             }
         ]
     },
-    "granbull": {
+    {
+        "name": "granbull",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -127,10 +172,16 @@
             }
         ]
     },
-    "igglybuff": {
+    {
+        "name": "igglybuff",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -143,10 +194,17 @@
             }
         ]
     },
-    "jigglypuff": {
+    {
+        "name": "jigglypuff",
         "differences": [
             {
-                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-i",
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -159,10 +217,15 @@
             }
         ]
     },
-    "kirlia": {
+    {
+        "name": "kirlia",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -175,10 +238,13 @@
             }
         ]
     },
-    "magnemite": {
+    {
+        "name": "magnemite",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -191,10 +257,13 @@
             }
         ]
     },
-    "magneton": {
+    {
+        "name": "magneton",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -207,10 +276,16 @@
             }
         ]
     },
-    "marill": {
+    {
+        "name": "marill",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -223,10 +298,15 @@
             }
         ]
     },
-    "mawile": {
+    {
+        "name": "mawile",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -239,10 +319,14 @@
             }
         ]
     },
-    "mime jr.": {
+    {
+        "name": "mime jr.",
         "differences": [
             {
-                "generations": ["generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -255,10 +339,17 @@
             }
         ]
     },
-    "mr. mime": {
+    {
+        "name": "mr. mime",
         "differences": [
             {
-                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-i",
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -271,10 +362,15 @@
             }
         ]
     },
-    "ralts": {
+    {
+        "name": "ralts",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -287,10 +383,13 @@
             }
         ]
     },
-    "rotom": {
+    {
+        "name": "rotom",
         "differences": [
             {
-                "generations": ["generation-iv"],
+                "generations": [
+                    "generation-iv"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -310,10 +409,16 @@
             }
         ]
     },
-    "snubbull": {
+    {
+        "name": "snubbull",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -326,10 +431,14 @@
             }
         ]
     },
-    "togekiss": {
+    {
+        "name": "togekiss",
         "differences": [
             {
-                "generations": ["generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -341,7 +450,10 @@
                 ]
             },
             {
-                "generations": ["generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 2,
@@ -354,10 +466,16 @@
             }
         ]
     },
-    "togepi": {
+    {
+        "name": "togepi",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -370,10 +488,16 @@
             }
         ]
     },
-    "togetic": {
+    {
+        "name": "togetic",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -385,7 +509,10 @@
                 ]
             },
             {
-                "generations": ["generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 2,
@@ -398,10 +525,13 @@
             }
         ]
     },
-    "whimsicott": {
+    {
+        "name": "whimsicott",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -414,10 +544,17 @@
             }
         ]
     },
-    "wigglytuff": {
+    {
+        "name": "wigglytuff",
         "differences": [
             {
-                "generations": ["generation-i", "generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-i",
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "types": [
                     {
                         "slot": 1,
@@ -430,4 +567,4 @@
             }
         ]
     }
-}
+]

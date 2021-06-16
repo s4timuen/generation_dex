@@ -1,7 +1,12 @@
-import baseStatsDifferences from '@/dataAssets/baseStatsDifferences.json';
+import { validateJson } from '@/helpers/utilities.js';
+import baseStatsDifferences from '@/dataAssets/json/baseStatsDifferences.json';
+import baseStatsDifferencesSchema from '@/dataAssets/schemes/baseStatsDifferencesSchema.json';
 
 // get base stats of pokemon
 function getBaseStats(pokemon, context) {
+    // json data validation
+    if (!validateJson(baseStatsDifferences, baseStatsDifferencesSchema)) { throw "Error: baseStatsDifferences.json invalid." }
+
     let baseStats = {
         hp: 0,
         attack: 0,

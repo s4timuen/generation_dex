@@ -1,0 +1,106 @@
+[
+    {
+        "pokemon_name": "deoxys",
+        "default_sprite_name": "deoxys-normal"
+    },
+    {
+        "pokemon_name": "wormadam",
+        "default_sprite_name": "wormadam-plant"
+    },
+    {
+        "pokemon_name": "shaymin",
+        "default_sprite_name": "shaymin-land"
+    },
+    {
+        "pokemon_name": "giratina",
+        "default_sprite_name": "giratina-altered"
+    },
+    {
+        "pokemon_name": "darmanitan",
+        "default_sprite_name": "darmanitan-standard"
+    },
+    {
+        "pokemon_name": "basculin",
+        "default_sprite_name": "basculin-red-striped"
+    },
+    {
+        "pokemon_name": "tornadus",
+        "default_sprite_name": "tornadus-incarnate"
+    },
+    {
+        "pokemon_name": "thundurus",
+        "default_sprite_name": "thundurus-incarnate"
+    },
+    {
+        "pokemon_name": "landorus",
+        "default_sprite_name": "landorus-incarnate"
+    },
+    {
+        "pokemon_name": "keldeo",
+        "default_sprite_name": "keldeo-ordinary"
+    },
+    {
+        "pokemon_name": "meloetta",
+        "default_sprite_name": "meloetta-aria"
+    },
+    {
+        "pokemon_name": "meowstic",
+        "default_sprite_name": "meowstic-male"
+    },
+    {
+        "pokemon_name": "aegislash",
+        "default_sprite_name": "aegislash-shield"
+    },
+    {
+        "pokemon_name": "pumpkaboo",
+        "default_sprite_name": "pumpkaboo-average"
+    },
+    {
+        "pokemon_name": "gourgeist",
+        "default_sprite_name": "gourgeist-average"
+    },
+    {
+        "pokemon_name": "oricorio",
+        "default_sprite_name": "oricorio-baile"
+    },
+    {
+        "pokemon_name": "lycanroc",
+        "default_sprite_name": "lycanroc-midday"
+    },
+    {
+        "pokemon_name": "wishiwashi",
+        "default_sprite_name": "wishiwashi-solo"
+    },
+    {
+        "pokemon_name": "minior",
+        "default_sprite_name": "minior-red-meteor"
+    },
+    {
+        "pokemon_name": "mimikyu",
+        "default_sprite_name": "mimikyu-disguised"
+    },
+    {
+        "pokemon_name": "toxtricity",
+        "default_sprite_name": "toxtricity-amped"
+    },
+    {
+        "pokemon_name": "eiscue",
+        "default_sprite_name": "eiscue-ice"
+    },
+    {
+        "pokemon_name": "indeedee",
+        "default_sprite_name": "indeedee-male"
+    },
+    {
+        "pokemon_name": "zacian",
+        "default_sprite_name": "zacian-hero"
+    },
+    {
+        "pokemon_name": "zamazenta",
+        "default_sprite_name": "zamazenta-hero"
+    },
+    {
+        "pokemon_name": "urshifu",
+        "default_sprite_name": "urshifu-single-strike"
+    }
+]

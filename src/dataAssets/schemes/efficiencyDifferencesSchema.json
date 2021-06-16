@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "generation": {
+            "type": "string"
+        },
+        "unavailable_types": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "changed_efficiencies": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "attack_type": {
+                        "type": "string"
+                    },
+                    "defense_type": {
+                        "type": "string"
+                    },
+                    "new_value": {
+                        "type": "number"
+                    }
+                },
+                "minProperties": 3,
+                "maxProperties": 3,
+                "required": [
+                    "attack_type",
+                    "defense_type",
+                    "new_value"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "minProperties": 3,
+    "maxProperties": 3,
+    "required": [
+        "generation",
+        "unavailable_types",
+        "changed_efficiencies"
+    ],
+    "additionalProperties": false
+}

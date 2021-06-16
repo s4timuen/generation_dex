@@ -1,7 +1,12 @@
-{
-    "generation-i": {
-        "unavailable_types": ["steel", "dark", "fairy"],
-        "changed_types": [
+[
+    {
+        "generation": "generation-i",
+        "unavailable_types": [
+            "steel",
+            "dark",
+            "fairy"
+        ],
+        "changed_efficiencies": [
             {
                 "attack_type": "poison",
                 "defense_type": "bug",
@@ -34,9 +39,12 @@
             }
         ]
     },
-    "generation-ii": {
-        "unavailable_types": ["fairy"],
-        "changed_types": [
+    {
+        "generation": "generation-ii",
+        "unavailable_types": [
+            "fairy"
+        ],
+        "changed_efficiencies": [
             {
                 "attack_type": "ghost",
                 "defense_type": "steel",
@@ -49,9 +57,12 @@
             }
         ]
     },
-    "generation-iii": {
-        "unavailable_types": ["fairy"],
-        "changed_types": [
+    {
+        "generation": "generation-iii",
+        "unavailable_types": [
+            "fairy"
+        ],
+        "changed_efficiencies": [
             {
                 "attack_type": "ghost",
                 "defense_type": "steel",
@@ -64,9 +75,12 @@
             }
         ]
     },
-    "generation-iv": {
-        "unavailable_types": ["fairy"],
-        "changed_types": [
+    {
+        "generation": "generation-iv",
+        "unavailable_types": [
+            "fairy"
+        ],
+        "changed_efficiencies": [
             {
                 "attack_type": "ghost",
                 "defense_type": "steel",
@@ -79,9 +93,12 @@
             }
         ]
     },
-    "generation-v": {
-        "unavailable_types": ["fairy"],
-        "changed_types": [
+    {
+        "generation": "generation-v",
+        "unavailable_types": [
+            "fairy"
+        ],
+        "changed_efficiencies": [
             {
                 "attack_type": "ghost",
                 "defense_type": "steel",
@@ -94,7 +111,19 @@
             }
         ]
     },
-    "generation-vi": { "unavailable_types": [], "changed_types": [] },
-    "generation-vii": { "unavailable_types": [], "changed_types": [] },
-    "generation-viii": { "unavailable_types": [], "changed_types": [] }
-}
+    {
+        "generation": "generation-vi",
+        "unavailable_types": [],
+        "changed_efficiencies": []
+    },
+    {
+        "generation": "generation-vii",
+        "unavailable_types": [],
+        "changed_efficiencies": []
+    },
+    {
+        "generation": "generation-viii",
+        "unavailable_types": [],
+        "changed_efficiencies": []
+    }
+]

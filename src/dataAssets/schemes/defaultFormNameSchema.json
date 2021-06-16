@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "properties": {
+        "pokemon_name": {
+            "type": "string"
+        },
+        "default_sprite_name": {
+
+            "type": "string"
+        }
+    },
+    "minProperties": 2,
+    "maxProperties": 2,
+    "required": [
+        "pokemon_name",
+        "default_sprite_name"
+    ],
+    "additionalProperties": false
+}

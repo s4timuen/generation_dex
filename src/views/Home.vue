@@ -22,7 +22,8 @@
 
 <script>
 import Overlay from '@/components/overlay/Overlay.vue';
-import { setSelectedPokemonData, capitalize, getDefaultFormName } from '@/helpers/utilities.js';
+import { setSelectedPokemonData, capitalize } from '@/helpers/utilities.js';
+import { getDefaultFormName } from '@/helpers/defaultFormNames.js'
 import { showHideGenerationDivs } from '@/helpers/genDivsVisibility.js';
 
 export default {

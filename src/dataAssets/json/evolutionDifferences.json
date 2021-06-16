@@ -1,0 +1,211 @@
+[
+    {
+        "name": "milotic",
+        "generations": [
+            {
+                "generation": "generation-iii",
+                "trigger": "level_up",
+                "method": "min_beauty",
+                "requirement": "171"
+            },
+            {
+                "generation": "generation-iv",
+                "trigger": "level_up",
+                "method": "min_beauty",
+                "requirement": "171"
+            },
+            {
+                "generation": "generation-v",
+                "trigger": "trade",
+                "method": "held_item",
+                "requirement": "prism_scale"
+            },
+            {
+                "generation": "generation-vi",
+                "trigger": "trade",
+                "method": "held_item",
+                "requirement": "prism_scale"
+            },
+            {
+                "generation": "generation-vii",
+                "trigger": "trade",
+                "method": "held_item",
+                "requirement": "prism_scale"
+            },
+            {
+                "generation": "generation-viii",
+                "trigger": "trade",
+                "method": "held_item",
+                "requirement": "prism_scale"
+            }
+        ]
+    },
+    {
+        "name": "glaceon",
+        "generations": [
+            {
+                "generation": "generation-v",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "twist_mountain"
+            },
+            {
+                "generation": "generation-vi",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "frost_cavern"
+            },
+            {
+                "generation": "generation-vii",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "mount_lanakila"
+            },
+            {
+                "generation": "generation-viii",
+                "trigger": "use_item",
+                "method": "item",
+                "requirement": "ice_stone"
+            }
+        ]
+    },
+    {
+        "name": "leafeon",
+        "generations": [
+            {
+                "generation": "generation-iv",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "eterna_forest"
+            },
+            {
+                "generation": "generation-v",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "pinwheel_forest"
+            },
+            {
+                "generation": "generation-vi",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "generation-vi_route_20"
+            },
+            {
+                "generation": "generation-vii",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "lush_jungle"
+            },
+            {
+                "generation": "generation-viii",
+                "trigger": "use_item",
+                "method": "item",
+                "requirement": "leaf_stone"
+            }
+        ]
+    },
+    {
+        "name": "magnezone",
+        "generations": [
+            {
+                "generation": "generation-iv",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "mt_coronet"
+            },
+            {
+                "generation": "generation-v",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "chargestone_cave"
+            },
+            {
+                "generation": "generation-vi",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "generation-vi_route_13"
+            },
+            {
+                "generation": "generation-vii",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "vast_poni_canyon"
+            },
+            {
+                "generation": "generation-viii",
+                "trigger": "use_item",
+                "method": "item",
+                "requirement": "thunder_stone"
+            }
+        ]
+    },
+    {
+        "name": "probopass",
+        "generations": [
+            {
+                "generation": "generation-iv",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "mt_coronet"
+            },
+            {
+                "generation": "generation-v",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "chargestone_cave"
+            },
+            {
+                "generation": "generation-vi",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "generation-vi_route_13"
+            },
+            {
+                "generation": "generation-vii",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "vast_poni_canyon"
+            },
+            {
+                "generation": "generation-viii",
+                "trigger": "use_item",
+                "method": "item",
+                "requirement": "thunder_stone"
+            }
+        ]
+    },
+    {
+        "name": "vikavolt",
+        "generations": [
+            {
+                "generation": "generation-vii",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "vast_poni_canyon"
+            },
+            {
+                "generation": "generation-viii",
+                "trigger": "use_item",
+                "method": "item",
+                "requirement": "thunder_stone"
+            }
+        ]
+    },
+    {
+        "name": "crabominable",
+        "generations": [
+            {
+                "generation": "generation-vii",
+                "trigger": "level_up",
+                "method": "location",
+                "requirement": "mount_lanakila"
+            },
+            {
+                "generation": "generation-viii",
+                "trigger": "use_item",
+                "method": "item",
+                "requirement": "ice_stone"
+            }
+        ]
+    }
+]

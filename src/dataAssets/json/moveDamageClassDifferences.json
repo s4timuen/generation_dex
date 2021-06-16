@@ -1,362 +1,482 @@
-{
-    "fire-punch": {
+[
+    {
+        "name": "fire-punch",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "ice-punch": {
+    {
+        "name": "ice-punch",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "thunder-punch": {
+    {
+        "name": "thunder-punch",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "razor-wind": {
+    {
+        "name": "razor-wind",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "gust": {
+    {
+        "name": "gust",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "vine-whip": {
+    {
+        "name": "vine-whip",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "bite": {
+    {
+        "name": "bite",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "sonic-boom": {
+    {
+        "name": "sonic-boom",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "acid": {
+    {
+        "name": "acid",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "razor-leaf": {
+    {
+        "name": "razor-leaf",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "night-shade": {
+    {
+        "name": "night-shade",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "smog": {
+    {
+        "name": "smog",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "sludge": {
+    {
+        "name": "sludge",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "waterfall": {
+    {
+        "name": "waterfall",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "clamp": {
+    {
+        "name": "clamp",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "swift": {
+    {
+        "name": "swift",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "crabhammer": {
+    {
+        "name": "crabhammer",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "tri-attack": {
+    {
+        "name": "tri-attack",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "thief": {
+    {
+        "name": "thief",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "flame-wheel": {
+    {
+        "name": "flame-wheel",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "snore": {
+    {
+        "name": "snore",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "aeroblast": {
+    {
+        "name": "aeroblast",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "feint-attack": {
+    {
+        "name": "feint-attack",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "sludge-bomb": {
+    {
+        "name": "sludge-bomb",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "mud-slap": {
+    {
+        "name": "mud-slap",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "outrage": {
+    {
+        "name": "outrage",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "spark": {
+    {
+        "name": "spark",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "sacred-fire": {
+    {
+        "name": "sacred-fire",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "persuit": {
+    {
+        "name": "persuit",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "hidden-power": {
+    {
+        "name": "hidden-power",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "varies",
                 "url": ""
             }
         ]
     },
-    "air-cutter": {
+    {
+        "name": "air-cutter",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "silver-wind": {
+    {
+        "name": "silver-wind",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "signal-beam": {
+    {
+        "name": "signal-beam",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "bullet-seed": {
+    {
+        "name": "bullet-seed",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "icicle-spear": {
+    {
+        "name": "icicle-spear",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "dragon-claw": {
+    {
+        "name": "dragon-claw",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "mud-shot": {
+    {
+        "name": "mud-shot",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "volt-tackle": {
+    {
+        "name": "volt-tackle",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "special",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/3/"
             }
         ]
     },
-    "doom-desire": {
+    {
+        "name": "doom-desire",
         "differences": [
             {
-                "generation": ["generation-iv"],
+                "generation": [
+                    "generation-iv"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     },
-    "water-shuriken": {
+    {
+        "name": "water-shuriken",
         "differences": [
             {
-                "generation": ["generation-vii"],
+                "generation": [
+                    "generation-vii"
+                ],
                 "name": "physical",
                 "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
             }
         ]
     }
-}
+]

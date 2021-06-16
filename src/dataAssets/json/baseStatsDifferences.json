@@ -1,1684 +1,2281 @@
-{
-    "bulbasaur": {
+[
+    {
+        "name": "bulbasaur",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "ivysaur": {
+    {
+        "name": "ivysaur",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             }
         ]
     },
-    "venusaur": {
+    {
+        "name": "venusaur",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "charmander": {
+    {
+        "name": "charmander",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "charmeleon": {
+    {
+        "name": "charmeleon",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "charizard": {
+    {
+        "name": "charizard",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "squirtle": {
+    {
+        "name": "squirtle",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "wartortle": {
+    {
+        "name": "wartortle",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "blastoise": {
+    {
+        "name": "blastoise",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "caterpie": {
+    {
+        "name": "caterpie",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 20
                 }
             }
         ]
     },
-    "metapod": {
+    {
+        "name": "metapod",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 25
                 }
             }
         ]
     },
-    "butterfree": {
+    {
+        "name": "butterfree",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_attack": 80
                 }
             }
         ]
     },
-    "weedle": {
+    {
+        "name": "weedle",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 20
                 }
             }
         ]
     },
-    "kakuna": {
+    {
+        "name": "kakuna",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 25
                 }
             }
         ]
     },
-    "beedrill": {
+    {
+        "name": "beedrill",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 45
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 80
                 }
             }
         ]
     },
-    "pidgey": {
+    {
+        "name": "pidgey",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 35
                 }
             }
         ]
     },
-    "pidgeotto": {
+    {
+        "name": "pidgeotto",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "pidgeot": {
+    {
+        "name": "pidgeot",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "speed": 91
                 }
             }
         ]
     },
-    "rattata": {
+    {
+        "name": "rattata",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 25
                 }
             }
         ]
     },
-    "raticate": {
+    {
+        "name": "raticate",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "spearow": {
+    {
+        "name": "spearow",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 31
                 }
             }
         ]
     },
-    "fearow": {
+    {
+        "name": "fearow",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 61
                 }
             }
         ]
     },
-    "ekans": {
+    {
+        "name": "ekans",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "arbok": {
+    {
+        "name": "arbok",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "pikachu": {
+    {
+        "name": "pikachu",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "defense": 30
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_defense": 40
                 }
             }
         ]
     },
-    "raichu": {
+    {
+        "name": "raichu",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 90
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "speed": 100
                 }
             }
         ]
     },
-    "sandshrew": {
+    {
+        "name": "sandshrew",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 30
                 }
             }
         ]
     },
-    "sandslash": {
+    {
+        "name": "sandslash",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 55
                 }
             }
         ]
     },
-    "nidoran_f": {
+    {
+        "name": "nidoran_f",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "nidorina": {
+    {
+        "name": "nidorina",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 55
                 }
             }
         ]
     },
-    "nidoqueen": {
+    {
+        "name": "nidoqueen",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 75
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 100
                 }
             }
         ]
     },
-    "nidoran_m": {
+    {
+        "name": "nidoran_m",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "nidorino": {
+    {
+        "name": "nidorino",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 55
                 }
             }
         ]
     },
-    "nidoking": {
+    {
+        "name": "nidoking",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 75
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 92
                 }
             }
         ]
     },
-    "clefairy": {
+    {
+        "name": "clefairy",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 60
                 }
             }
         ]
     },
-    "clefable": {
+    {
+        "name": "clefable",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_attack": 85
                 }
             }
         ]
     },
-    "vulpix": {
+    {
+        "name": "vulpix",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "ninetails": {
+    {
+        "name": "ninetails",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "jigglypuff": {
+    {
+        "name": "jigglypuff",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 25
                 }
             }
         ]
     },
-    "wigglytuff": {
+    {
+        "name": "wigglytuff",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_attack": 75
                 }
             }
         ]
     },
-    "zubat": {
+    {
+        "name": "zubat",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "golbat": {
+    {
+        "name": "golbat",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 75
                 }
             }
         ]
     },
-    "oddish": {
+    {
+        "name": "oddish",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 75
                 }
             }
         ]
     },
-    "gloom": {
+    {
+        "name": "gloom",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "vileplume": {
+    {
+        "name": "vileplume",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_attack": 100
                 }
             }
         ]
     },
-    "paras": {
+    {
+        "name": "paras",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 55
                 }
             }
         ]
     },
-    "parasec": {
+    {
+        "name": "parasec",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             }
         ]
     },
-    "venonat": {
+    {
+        "name": "venonat",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "venomoth": {
+    {
+        "name": "venomoth",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 90
                 }
             }
         ]
     },
-    "diglett": {
+    {
+        "name": "diglett",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 45
                 }
             }
         ]
     },
-    "dugtrio": {
+    {
+        "name": "dugtrio",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "attack": 80
                 }
             }
         ]
     },
-    "meowth": {
+    {
+        "name": "meowth",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "persian": {
+    {
+        "name": "persian",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "psyduck": {
+    {
+        "name": "psyduck",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "golduck": {
+    {
+        "name": "golduck",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             }
         ]
     },
-    "mankey": {
+    {
+        "name": "mankey",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 35
                 }
             }
         ]
     },
-    "primeape": {
+    {
+        "name": "primeape",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 60
                 }
             }
         ]
     },
-    "growlithe": {
+    {
+        "name": "growlithe",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "arcanine": {
+    {
+        "name": "arcanine",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             }
         ]
     },
-    "poliwag": {
+    {
+        "name": "poliwag",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "poliwhirl": {
+    {
+        "name": "poliwhirl",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "poliwrath": {
+    {
+        "name": "poliwrath",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 75
                 }
             }
         ]
     },
-    "abra": {
+    {
+        "name": "abra",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 105
                 }
             }
         ]
     },
-    "kadabra": {
+    {
+        "name": "kadabra",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 120
                 }
             }
         ]
     },
-    "alakazam": {
+    {
+        "name": "alakazam",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 135
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_defense": 85
                 }
             }
         ]
     },
-    "machop": {
+    {
+        "name": "machop",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 35
                 }
             }
         ]
     },
-    "machoke": {
+    {
+        "name": "machoke",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "machamp": {
+    {
+        "name": "machamp",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "bellsprout": {
+    {
+        "name": "bellsprout",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             }
         ]
     },
-    "weepinbell": {
+    {
+        "name": "weepinbell",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "victreebel": {
+    {
+        "name": "victreebel",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_defense": 60
                 }
             }
         ]
     },
-    "tentacool": {
+    {
+        "name": "tentacool",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "tentacrruel": {
+    {
+        "name": "tentacrruel",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 120
                 }
             }
         ]
     },
-    "geodude": {
+    {
+        "name": "geodude",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 30
                 }
             }
         ]
     },
-    "graveler": {
+    {
+        "name": "graveler",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 45
                 }
             }
         ]
     },
-    "golem": {
+    {
+        "name": "golem",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 55
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 110
                 }
             }
         ]
     },
-    "ponyta": {
+    {
+        "name": "ponyta",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "rapidash": {
+    {
+        "name": "rapidash",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             }
         ]
     },
-    "slowpoke": {
+    {
+        "name": "slowpoke",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "slowbro": {
+    {
+        "name": "slowbro",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             }
         ]
     },
-    "magnemite": {
+    {
+        "name": "magnemite",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 95
                 }
             }
         ]
     },
-    "magneton": {
+    {
+        "name": "magneton",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 120
                 }
             }
         ]
     },
-    "farfetch'd": {
+    {
+        "name": "farfetch'd",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 58
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "attack": 65
                 }
             }
         ]
     },
-    "doduo": {
+    {
+        "name": "doduo",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 35
                 }
             }
         ]
     },
-    "dodrio": {
+    {
+        "name": "dodrio",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 60
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "speed": 100
                 }
             }
         ]
     },
-    "seel": {
+    {
+        "name": "seel",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             }
         ]
     },
-    "dewgong": {
+    {
+        "name": "dewgong",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 95
                 }
             }
         ]
     },
-    "grimer": {
+    {
+        "name": "grimer",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "muk": {
+    {
+        "name": "muk",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "shellder": {
+    {
+        "name": "shellder",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 45
                 }
             }
         ]
     },
-    "cloyster": {
+    {
+        "name": "cloyster",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "gastly": {
+    {
+        "name": "gastly",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "haunter": {
+    {
+        "name": "haunter",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 115
                 }
             }
         ]
     },
-    "gengar": {
+    {
+        "name": "gengar",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 130
                 }
             }
         ]
     },
-    "onix": {
+    {
+        "name": "onix",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 30
                 }
             }
         ]
     },
-    "drowzee": {
+    {
+        "name": "drowzee",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 90
                 }
             }
         ]
     },
-    "hypno": {
+    {
+        "name": "hypno",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 115
                 }
             }
         ]
     },
-    "krabby": {
+    {
+        "name": "krabby",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 25
                 }
             }
         ]
     },
-    "kingler": {
+    {
+        "name": "kingler",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "voltorb": {
+    {
+        "name": "voltorb",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 55
                 }
             }
         ]
     },
-    "electrode": {
+    {
+        "name": "electrode",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "speed": 140
                 }
             }
         ]
     },
-    "exeggcute": {
+    {
+        "name": "exeggcute",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 60
                 }
             }
         ]
     },
-    "exeggutor": {
+    {
+        "name": "exeggutor",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 125
                 }
             },
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "special_defense": 65
                 }
             }
         ]
     },
-    "cubone": {
+    {
+        "name": "cubone",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "marowak": {
+    {
+        "name": "marowak",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "hitmonlee": {
+    {
+        "name": "hitmonlee",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 35
                 }
             }
         ]
     },
-    "hitmonchan": {
+    {
+        "name": "hitmonchan",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 35
                 }
             }
         ]
     },
-    "likitung": {
+    {
+        "name": "likitung",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 60
                 }
             }
         ]
     },
-    "koffing": {
+    {
+        "name": "koffing",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 60
                 }
             }
         ]
     },
-    "weezing": {
+    {
+        "name": "weezing",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "rhyhorn": {
+    {
+        "name": "rhyhorn",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 30
                 }
             }
         ]
     },
-    "rhydon": {
+    {
+        "name": "rhydon",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 45
                 }
             }
         ]
     },
-    "chansey": {
+    {
+        "name": "chansey",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 105
                 }
             }
         ]
     },
-    "tangela": {
+    {
+        "name": "tangela",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "kangaskhan": {
+    {
+        "name": "kangaskhan",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 40
                 }
             }
         ]
     },
-    "horsea": {
+    {
+        "name": "horsea",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             }
         ]
     },
-    "seadra": {
+    {
+        "name": "seadra",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 95
                 }
             }
         ]
     },
-    "goldeen": {
+    {
+        "name": "goldeen",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "seaking": {
+    {
+        "name": "seaking",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 80
                 }
             }
         ]
     },
-    "staryu": {
+    {
+        "name": "staryu",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             }
         ]
     },
-    "starmie": {
+    {
+        "name": "starmie",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "mr. mime": {
+    {
+        "name": "mr. mime",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "scyther": {
+    {
+        "name": "scyther",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 55
                 }
             }
         ]
     },
-    "jynx": {
+    {
+        "name": "jynx",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 95
                 }
             }
         ]
     },
-    "electabuzz": {
+    {
+        "name": "electabuzz",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "magmar": {
+    {
+        "name": "magmar",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 85
                 }
             }
         ]
     },
-    "pinsir": {
+    {
+        "name": "pinsir",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 55
                 }
             }
         ]
     },
-    "tauros": {
+    {
+        "name": "tauros",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             }
         ]
     },
-    "magikarp": {
+    {
+        "name": "magikarp",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 20
                 }
             }
         ]
     },
-    "gyarados": {
+    {
+        "name": "gyarados",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "lapras": {
+    {
+        "name": "lapras",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 95
                 }
             }
         ]
     },
-    "ditto": {
+    {
+        "name": "ditto",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 48
                 }
             }
         ]
     },
-    "eevee": {
+    {
+        "name": "eevee",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "vaporeon": {
+    {
+        "name": "vaporeon",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 110
                 }
             }
         ]
     },
-    "jolteon": {
+    {
+        "name": "jolteon",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 110
                 }
             }
         ]
     },
-    "flaeron": {
+    {
+        "name": "flaeron",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 110
                 }
             }
         ]
     },
-    "porygon": {
+    {
+        "name": "porygon",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 75
                 }
             }
         ]
     },
-    "omanyte": {
+    {
+        "name": "omanyte",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 90
                 }
             }
         ]
     },
-    "omastar": {
+    {
+        "name": "omastar",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 115
                 }
             }
         ]
     },
-    "kabuto": {
+    {
+        "name": "kabuto",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 45
                 }
             }
         ]
     },
-    "kabutops": {
+    {
+        "name": "kabutops",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             }
         ]
     },
-    "aerodactyl": {
+    {
+        "name": "aerodactyl",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 60
                 }
             }
         ]
     },
-    "snorlax": {
+    {
+        "name": "snorlax",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 65
                 }
             }
         ]
     },
-    "articuno": {
+    {
+        "name": "articuno",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 125
                 }
             }
         ]
     },
-    "zapdos": {
+    {
+        "name": "zapdos",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 125
                 }
             }
         ]
     },
-    "moltres": {
+    {
+        "name": "moltres",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 125
                 }
             }
         ]
     },
-    "dratini": {
+    {
+        "name": "dratini",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 50
                 }
             }
         ]
     },
-    "dragonair": {
+    {
+        "name": "dragonair",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 70
                 }
             }
         ]
     },
-    "dragonite": {
+    {
+        "name": "dragonite",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "mweto": {
+    {
+        "name": "mewto",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 154
                 }
             }
         ]
     },
-    "mew": {
+    {
+        "name": "mew",
         "differences": [
             {
-                "generations": ["generation-i"],
+                "generations": [
+                    "generation-i"
+                ],
                 "affected_stats": {
                     "special": 100
                 }
             }
         ]
     },
-    "noctowl": {
+    {
+        "name": "noctowl",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "special_attack": 76
                 }
             }
         ]
     },
-    "ariados": {
+    {
+        "name": "ariados",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "speed": 60
                 }
             }
         ]
     },
-    "qwilfish": {
+    {
+        "name": "qwilfish",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "defense": 75
                 }
             }
         ]
     },
-    "ampharos": {
+    {
+        "name": "ampharos",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "defense": 75
                 }
             }
         ]
     },
-    "magcargo": {
+    {
+        "name": "magcargo",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "hp": 50,
                     "special_attack": 80
@@ -1686,10 +2283,17 @@
             }
         ]
     },
-    "corsola": {
+    {
+        "name": "corsola",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "hp": 55,
                     "defense": 85,
@@ -1698,40 +2302,65 @@
             }
         ]
     },
-    "mantine": {
+    {
+        "name": "mantine",
         "differences": [
             {
-                "generations": ["generation-ii", "generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-ii",
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "hp": 65
                 }
             }
         ]
     },
-    "swellow": {
+    {
+        "name": "swellow",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "special_attack": 50
                 }
             }
         ]
     },
-    "pelipper": {
+    {
+        "name": "pelipper",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "special_attack": 85
                 }
             }
         ]
     },
-    "masquerain": {
+    {
+        "name": "masquerain",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "special_attack": 80,
                     "speed": 60
@@ -1739,10 +2368,16 @@
             }
         ]
     },
-    "delcatty": {
+    {
+        "name": "delcatty",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "special_attack": 80,
                     "speed": 70
@@ -1750,10 +2385,16 @@
             }
         ]
     },
-    "volbeat": {
+    {
+        "name": "volbeat",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "defense": 55,
                     "special_defense": 75
@@ -1761,41 +2402,65 @@
             }
         ]
     },
-    "illumise": {
+    {
+        "name": "illumise",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "defense": 55,
-                    "speciaö_defense": 75
+                    "special_defense": 75
                 }
             }
         ]
     },
-    "lunatone": {
+    {
+        "name": "lunatone",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "attack": 70
                 }
             }
         ]
     },
-    "solrock": {
+    {
+        "name": "solrock",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "hp": 70
                 }
             }
         ]
     },
-    "chimecho": {
+    {
+        "name": "chimecho",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "univa", "generation-vi"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "hp": 65,
                     "defense": 70,
@@ -1804,40 +2469,56 @@
             }
         ]
     },
-    "woobat": {
+    {
+        "name": "woobat",
         "differences": [
             {
-                "generations": ["univa", "generation-vi"],
+                "generations": [
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "hp": 55
                 }
             }
         ]
     },
-    "crustile": {
+    {
+        "name": "crustile",
         "differences": [
             {
-                "generations": ["univa", "generation-vi"],
+                "generations": [
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "attack": 95
                 }
             }
         ]
     },
-    "beartic": {
+    {
+        "name": "beartic",
         "differences": [
             {
-                "generations": ["univa", "generation-vi"],
+                "generations": [
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "attack": 110
                 }
             }
         ]
     },
-    "cryogonal": {
+    {
+        "name": "cryogonal",
         "differences": [
             {
-                "generations": ["univa", "generation-vi"],
+                "generations": [
+                    "generation-v",
+                    "generation-vi"
+                ],
                 "affected_stats": {
                     "hp": 70,
                     "defense": 30
@@ -1845,144 +2526,198 @@
             }
         ]
     },
-    "bellossom": {
+    {
+        "name": "bellossom",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_attack": 50
                 }
             }
         ]
     },
-    "azumarill": {
+    {
+        "name": "azumarill",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "defense": 75
                 }
             }
         ]
     },
-    "jumpluff": {
+    {
+        "name": "jumpluff",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_defense": 85
                 }
             }
         ]
     },
-    "beaitifly": {
+    {
+        "name": "beaitifly",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_attack": 90
                 }
             }
         ]
     },
-    "exploud": {
+    {
+        "name": "exploud",
         "differences": [
             {
-                "generations": ["generation-iii", "generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iii",
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_defense": 63
                 }
             }
         ]
     },
-    "staraptor": {
+    {
+        "name": "staraptor",
         "differences": [
             {
-                "generations": ["generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_defense": 50
                 }
             }
         ]
     },
-    "roserade": {
+    {
+        "name": "roserade",
         "differences": [
             {
-                "generations": ["generation-iv", "generation-v"],
+                "generations": [
+                    "generation-iv",
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "defense": 55
                 }
             }
         ]
     },
-    "stoutland": {
+    {
+        "name": "stoutland",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 100
                 }
             }
         ]
     },
-    "unfezant": {
+    {
+        "name": "unfezant",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 105
                 }
             }
         ]
     },
-    "gigalith": {
+    {
+        "name": "gigalith",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_defense": 70
                 }
             }
         ]
     },
-    "seismitoad": {
+    {
+        "name": "seismitoad",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 70
                 }
             }
         ]
     },
-    "leavanny": {
+    {
+        "name": "leavanny",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "special_defense": 70
                 }
             }
         ]
     },
-    "scolipede": {
+    {
+        "name": "scolipede",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "attack": 90
                 }
             }
         ]
     },
-    "krookodile": {
+    {
+        "name": "krookodile",
         "differences": [
             {
-                "generations": ["generation-v"],
+                "generations": [
+                    "generation-v"
+                ],
                 "affected_stats": {
                     "defense": 70
                 }
             }
         ]
     }
-}
+]

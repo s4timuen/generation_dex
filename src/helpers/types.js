@@ -1,7 +1,12 @@
-import typeDiffreneces from '@/dataAssets/typeDifferences.json';
+import typeDiffreneces from '@/dataAssets/json/typeDifferences.json';
+import typeDifferencesSchema from '@/dataAssets/schemes/typeDifferencesSchema.json';
+import { validateJson } from '@/helpers/utilities.js'
 
 // get generation specific types
 function getTypes(pokemonData, context) {
+    // json data validation
+    if (!validateJson(typeDiffreneces, typeDifferencesSchema)) { throw "Error: typeDiffreneces.json invalid." }
+
     let types = [];
     let dataFilter = context.$store.getters.dataFilter;
 

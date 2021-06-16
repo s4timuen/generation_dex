@@ -1,4 +1,5 @@
-import defaultSpritesNames from '@/dataAssets/defaulFormNames.json';
+import Ajv from "ajv";
+const ajv = new Ajv();
 
 // get data for selected pokemon from API wrapper
 function setSelectedPokemonData(name, context) {
@@ -133,15 +134,17 @@ function versionToGenMap(version) {
     return generation[version];
 }
 
-// get default sprite name
-function getDefaultFormName(speciesName) {
-    let defaulFormName = speciesName;
-    defaultSpritesNames.pokemon_names.forEach((element) => {
-        if (speciesName == element.pokemon_name) {
-            defaulFormName = element.default_sprite_name;
-        }
+// validate json using json-schema
+function validateJson(json, schema) {
+    const validate = ajv.compile(schema);
+    let valid = json.every(obj => {
+        return validate(obj) == true;
     });
-    return defaulFormName;
+    if (valid) {
+        return true;
+    } if (!valid) {
+        return false;
+    }
 }
 
-export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDivs, hideDivs, enableDivs, disableDivs, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap, getDefaultFormName };
+export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDivs, hideDivs, enableDivs, disableDivs, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap, validateJson }

@@ -1,9 +1,12 @@
-import { genToIntTranslator } from '@/helpers/utilities.js';
-import moveDamageClassDifferences from '@/dataAssets/moveDamageClassDifferences.json';
-import { versionToGenMap } from '@/helpers/utilities';
+import { genToIntTranslator, versionToGenMap, validateJson } from '@/helpers/utilities.js';
+import moveDamageClassDifferences from '@/dataAssets/json/moveDamageClassDifferences.json';
+import moveDamageClassDifferencesSchema from '@/dataAssets/schemes/moveDamageClassDifferencesSchema.json';
 
 // get generation specific moves
 function getMoves(pokemonData, context) {
+    // json data validation
+    if (!validateJson(moveDamageClassDifferences, moveDamageClassDifferencesSchema)) { throw "Error: moveDamageClassDifferences.json invalid." }
+
     let dataFilter = context.$store.getters.dataFilter;
     let moves = [];
 
@@ -11,7 +14,7 @@ function getMoves(pokemonData, context) {
         context.$store.getters.pokeApiWrapper
             .getMoveByName(element.move.name)
             // delete move if not available in selected generation
-            .then(function(response) {
+            .then(function (response) {
                 let moveGen = response.generation.name;
 
                 switch (dataFilter) {
@@ -61,7 +64,7 @@ function getMoves(pokemonData, context) {
                 return response;
             })
             // cut unecessary info from move
-            .then(function(response) {
+            .then(function (response) {
                 if (response != null) {
                     delete response.contest_combos;
                     delete response.contest_effect;
@@ -78,7 +81,7 @@ function getMoves(pokemonData, context) {
                 return response;
             })
             // change generation specific stats and type from response.past_values
-            .then(function(response) {
+            .then(function (response) {
                 if (response != null) {
                     if (response.past_values.length != 0) {
                         response.past_values.forEach(change => {
@@ -108,7 +111,7 @@ function getMoves(pokemonData, context) {
                 return response;
             })
             // change generation specific damage class from type or moveDamageClassDifferences.json
-            .then(function(response) {
+            .then(function (response) {
                 if (response != null) {
                     // generation i, ii and iii -> damage class change by type
                     if (dataFilter == 'generation-i' || dataFilter == 'generation-ii' || dataFilter == 'generation-iii') {
@@ -144,7 +147,7 @@ function getMoves(pokemonData, context) {
                 return response;
             })
             // add to moves list
-            .then(function(response) {
+            .then(function (response) {
                 if (response != null) {
                     moves.push(response);
                 }
