@@ -137,14 +137,9 @@ function versionToGenMap(version) {
 // validate json using json-schema
 function validateJson(json, schema) {
     const validate = ajv.compile(schema);
-    let valid = json.every(obj => {
+    return json.every(obj => {
         return validate(obj) == true;
     });
-    if (valid) {
-        return true;
-    } if (!valid) {
-        return false;
-    }
 }
 
 export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDivs, hideDivs, enableDivs, disableDivs, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap, validateJson }

@@ -13,7 +13,7 @@
                     <div class="col-12" v-for="(trigger, key) in evolution.evolution_triggers" :key="key">
                         <div class="row">
                             <div class="col-12">{{ $t('evolution-trigger') + trigger.method }}</div>
-                            <div class="col-12">{{ $t('evolution-requirement') + trigger.requirement }}</div>
+                            <div class="col-12">{{ $t('evolution-requirement') + resolveRequirement(trigger.requirement) }}</div>
                             <div class="col-12">{{ $t('evolution-method') + trigger.trigger }}</div>
                         </div>
                     </div>
@@ -41,19 +41,19 @@ export default {
         };
     },
     computed: {
-        data: function() {
+        data: function () {
             return this.$store.getters.selectedPokemonData;
         },
     },
     watch: {
-        data: function() {
+        data: function () {
             const THIS = this;
 
             getEvolutionChain(this)
-                .then(function(response) {
+                .then(function (response) {
                     THIS.evolutionChain = response;
                 })
-                .then(function() {
+                .then(function () {
                     if (!THIS.evolutionChain.baby.length) {
                         hideDivs(document, ['baby']);
                     }
@@ -67,7 +67,7 @@ export default {
                         hideDivs(document, ['second']);
                     }
                 })
-                .catch(error => {
+                .catch((error) => {
                     throw error;
                 });
         },
@@ -75,6 +75,14 @@ export default {
     methods: {
         capitalize,
         hideDivs,
+        // resolve requirement name, if requirement is an object
+        resolveRequirement: function (requirement) {
+            if (requirement instanceof Object) {
+                return requirement.name;
+            } else {
+                return requirement;
+            }
+        },
     },
 };
 </script>
