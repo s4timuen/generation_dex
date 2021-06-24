@@ -1,7 +1,7 @@
 // get edition specific evolution chain and triggers
 import evolutionDifferences from '@/dataAssets/json/evolutionDifferences.json';
 import evolutionDifferencesSchema from '@/dataAssets/schemes/evolutionDifferencesSchema.json';
-import { forPairsOfTwo, genToIntTranslator, validateJson } from '@/helpers/utilities.js';
+import { forPairsOfTwo, checkArrayEvenLength, genToIntTranslator, validateJson } from '@/helpers/utilities.js';
 import { getDefaultFormName } from '@/helpers/defaultFormNames.js';
 
 function getEvolutionChain(context) {
@@ -84,6 +84,7 @@ function poolRespectiveTriggers(chain) {
             stage.forEach(async pokemon => {
                 let pooledTriggers = [];
                 if (pokemon.evolution_triggers.length != 0) {
+                    await checkArrayEvenLength(pokemon.evolution_triggers,pokemon.evolution_triggers.length - 2, [" - ", " - "])
                     await forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function (firstHalf, secondHalf) {
                         let triggerPool = {
                             trigger: '',
@@ -146,12 +147,13 @@ function adjustEvolutionTriggers(chain, context) {
             stage.forEach(pokemon => {
                 Object.entries(evolutionDifferences).forEach(pokemonEntry => {
                     if (pokemonEntry[0] == pokemon.name) {
-                        Object.entries(pokemonEntry[1]).forEach(generationTrigger => {
+                        Object.entries(pokemonEntry[1]).forEach(async generationTrigger => {
                             if (generation == generationTrigger[0]) {
                                 let filteredEvolutionTriggers = [];
                                 // always [method], [trigger], [method], [trigger], ...
                                 // each method and trigger pair represents a generation
-                                forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function (method, trigger) {
+                                await checkArrayEvenLength(pokemon.evolution_triggers,pokemon.evolution_triggers.length - 2, [" - ", " - "])
+                                await forPairsOfTwo(pokemon.evolution_triggers, 1, 2, function (method, trigger) {
                                     if (
                                         generationTrigger[1][0] == trigger[1].name && // trigger
                                         Object.keys(generationTrigger[1][1])[0] == method[0] && // method

@@ -20,9 +20,22 @@ function capitalize(name) {
 
 // "forEach" for pairs of two
 function forPairsOfTwo(array, distancePairElements, distanceStartElements, func) {
-    for (let index = 0; index < array.length - distancePairElements; index += distanceStartElements) {
-        func(array[index], array[index + distancePairElements]);
+    if (array.length % 2 == 0) {
+        for (let index = 0; index < array.length - distancePairElements; index += distanceStartElements) {
+            func(array[index], array[index + distancePairElements]);
+        }
     }
+    if (array.length % 2 != 0) {
+        throw "Length of array is odd, must be even."
+    }
+}
+
+// if array.length is not even append array
+function checkArrayEvenLength(array, index, append) { 
+    if (array.length % 2 != 0) {
+        array.splice(index, 0, append);
+    }
+    return array;
 }
 
 // show divs
@@ -142,4 +155,4 @@ function validateJson(json, schema) {
     });
 }
 
-export { setSelectedPokemonData, capitalize, forPairsOfTwo, showDivs, hideDivs, enableDivs, disableDivs, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap, validateJson }
+export { setSelectedPokemonData, capitalize, forPairsOfTwo, checkArrayEvenLength, showDivs, hideDivs, enableDivs, disableDivs, genToIntTranslator, checkVarietyGenerationAvailability, versionToGenMap, validateJson }
