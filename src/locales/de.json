@@ -1,32 +1,28 @@
 {
     "link-home": "Home",
     "link-about": "About",
-
+    "link-catch-rates": "Fangraten",
+    "add-button": "hinzufügen",
     "navigation-search-button": "Suchen",
     "navigation-search-pokemon-not-available": "Das Pokemon ist in der gewählten Generation nicht verfügbar!",
     "navigation-search-invalid-pokemon-name": "Bitte die Schreibweise prüfen!",
     "navigation-search-empty-input": "Bitte einen Pokemon Namen eingeben!",
     "navigation-search-no-data": "Keine Daten verfügbar!",
-
-    "sidebar-generation-national": "National",
-    "sidebar-generation-generation-i": "Kanto",
-    "sidebar-generation-generation-ii": "Johto",
-    "sidebar-generation-generation-iii": "Hoenn",
-    "sidebar-generation-generation-iv": "Sinnoh",
-    "sidebar-generation-generation-v": "Einall",
-    "sidebar-generation-generation-vi": "Kalos",
-    "sidebar-generation-generation-vii": "Alola",
-    "sidebar-generation-generation-viii": "Galar",
-
+    "generation-national": "National",
+    "generation-i": "Kanto",
+    "generation-ii": "Johto",
+    "generation-iii": "Hoenn",
+    "generation-iv": "Sinnoh",
+    "generation-v": "Einall",
+    "generation-vi": "Kalos",
+    "generation-vii": "Alola",
+    "generation-viii": "Galar",
     "sprites-title": "Sprites: ",
-
     "varieties-title": "Variationen: ",
-
     "evolutions-title": "Evolutionen: ",
     "evolution-trigger": "Auslöser: ",
     "evolution-method": "Methode: ",
     "evolution-requirement": "Voraussetzung: ",
-
     "efficiencies-defense": "Verteidiger Effektivitäten: ",
     "efficioncies-multiplier-zero": "x0",
     "efficioncies-multiplier-quarter": "x0,25",
@@ -34,14 +30,11 @@
     "efficioncies-multiplier-one": "x1",
     "efficioncies-multiplier-double": "x2",
     "efficioncies-multiplier-four": "x4",
-
     "types": "Typ(en): ",
-
     "abilities-title": "Fähigkeiten: ",
     "abilities-one": "Fähigkeit 1: ",
     "abilities-two": "Fähigkeit 2: ",
     "abilities-hidden": "Versteckte Fähigkeit: ",
-
     "base-stats-title": "Basis Werte: ",
     "base-stats-hp": "KP",
     "base-stats-attack": "Angriff",
@@ -50,13 +43,11 @@
     "base-stats-special-attack": "Spezial Angriff",
     "base-stats-special-defense": "Spezial Verteidigung",
     "base-stats-speed": "Initiative",
-
     "general-properties-title": "Generelle Eigenschaften: ",
     "general-properties-base-experience": "Basis-Erfahrung: ",
     "general-properties-height": "Größe: ",
     "general-properties-weight": "Gewicht: ",
     "general-properties-held-items": "Items: ",
-
     "moves": "Attacken: ",
     "move-name": "Name",
     "move-accuracy": "Genauigkeit",
@@ -65,10 +56,9 @@
     "move-priority": "Prioritytät",
     "move-damage-class": "Schadensklasse",
     "move-type": "Typ",
-
     "encounter-locations-title": "Fundorte: ",
     "encounter-location-name": "Fundort",
-
+    "catch-rates-title": "Fangraten",
     "about-title": "About",
     "about-text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 }

@@ -13,7 +13,7 @@
 
 <script>
 import { setSelectedPokemonData, checkVarietyGenerationAvailability, capitalize } from '@/helpers/utilities.js';
-import { getDefaultFormName } from '@/helpers/defaultFormNames.js'
+import { getDefaultFormName } from '@/helpers/defaultFormNames.js';
 
 export default {
     name: 'Varieties',
@@ -43,4 +43,4 @@ export default {
 };
 </script>
 
-<style lang="css"></style>
+<style scoped lang="css"></style>

@@ -7,15 +7,15 @@
                     <li>
                         <router-link to="/">{{ $t('link-home') }}</router-link>
                     </li>
-                    <li @click.prevent="setDataFilter('national')">{{ $t('sidebar-generation-national') }}</li>
-                    <li @click.prevent="setDataFilter('generation-i')">{{ $t('sidebar-generation-generation-i') }}</li>
-                    <li @click.prevent="setDataFilter('generation-ii')">{{ $t('sidebar-generation-generation-ii') }}</li>
-                    <li @click.prevent="setDataFilter('generation-iii')">{{ $t('sidebar-generation-generation-iii') }}</li>
-                    <li @click.prevent="setDataFilter('generation-iv')">{{ $t('sidebar-generation-generation-iv') }}</li>
-                    <li @click.prevent="setDataFilter('generation-v')">{{ $t('sidebar-generation-generation-v') }}</li>
-                    <li @click.prevent="setDataFilter('generation-vi')">{{ $t('sidebar-generation-generation-vi') }}</li>
-                    <li @click.prevent="setDataFilter('generation-vii')">{{ $t('sidebar-generation-generation-vii') }}</li>
-                    <li @click.prevent="setDataFilter('generation-viii')">{{ $t('sidebar-generation-generation-viii') }}</li>
+                    <li @click.prevent="setDataFilter('national')">{{ $t('generation-national') }}</li>
+                    <li @click.prevent="setDataFilter('generation-i')">{{ $t('generation-i') }}</li>
+                    <li @click.prevent="setDataFilter('generation-ii')">{{ $t('generation-ii') }}</li>
+                    <li @click.prevent="setDataFilter('generation-iii')">{{ $t('generation-iii') }}</li>
+                    <li @click.prevent="setDataFilter('generation-iv')">{{ $t('generation-iv') }}</li>
+                    <li @click.prevent="setDataFilter('generation-v')">{{ $t('generation-v') }}</li>
+                    <li @click.prevent="setDataFilter('generation-vi')">{{ $t('generation-vi') }}</li>
+                    <li @click.prevent="setDataFilter('generation-vii')">{{ $t('generation-vii') }}</li>
+                    <li @click.prevent="setDataFilter('generation-viii')">{{ $t('generation-viii') }}</li>
                     <li>
                         <router-link to="/about">{{ $t('link-about') }}</router-link>
                     </li>
@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style scoped lang="css">
 .slide-enter-active,
 .slide-leave-active {
     transition: transform 0.2s ease;

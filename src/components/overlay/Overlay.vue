@@ -89,7 +89,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style scoped lang="css">
 .overlay-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;

@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style scoped lang="css">
 .about {
     background-color: #d8973c;
 }

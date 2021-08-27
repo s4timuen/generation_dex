@@ -1,32 +1,28 @@
 {
     "link-home": "Home",
     "link-about": "About",
-
+    "link-catch-rates": "Catch Rates",
+    "add-button": "add",
     "navigation-search-button": "Search",
     "navigation-search-pokemon-not-available": "Pokemon not available in selected generation!",
     "navigation-search-invalid-pokemon-name": "Please check your spelling!",
     "navigation-search-empty-input": "Please enter the name of a pokemon!",
     "navigation-search-no-data": "No data available!",
-
-    "sidebar-generation-national": "National",
-    "sidebar-generation-generation-i": "Kanto",
-    "sidebar-generation-generation-ii": "Johto",
-    "sidebar-generation-generation-iii": "Hoenn",
-    "sidebar-generation-generation-iv": "Sinnoh",
-    "sidebar-generation-generation-v": "Unova",
-    "sidebar-generation-generation-vi": "Kalos",
-    "sidebar-generation-generation-vii": "Alola",
-    "sidebar-generation-generation-viii": "Galar",
-
+    "generation-national": "National",
+    "generation-i": "Kanto",
+    "generation-ii": "Johto",
+    "generation-iii": "Hoenn",
+    "generation-iv": "Sinnoh",
+    "generation-v": "Unova",
+    "generation-vi": "Kalos",
+    "generation-vii": "Alola",
+    "generation-viii": "Galar",
     "sprites-title": "Sprites: ",
-
     "varieties-title": "Varieties: ",
-
     "evolutions-title": "Evolutions: ",
     "evolution-trigger": "Trigger: ",
     "evolution-method": "Method: ",
     "evolution-requirement": "Requirement: ",
-
     "efficiencies-defense": "Defender efficiencies: ",
     "efficioncies-multiplier-zero": "x0",
     "efficioncies-multiplier-quarter": "x0.25",
@@ -34,14 +30,11 @@
     "efficioncies-multiplier-one": "x1",
     "efficioncies-multiplier-double": "x2",
     "efficioncies-multiplier-four": "x4",
-
     "types": "Type(s): ",
-
     "abilities-title": "Abilities: ",
     "abilities-one": "Ability 1: ",
     "abilities-two": "Ability 2: ",
     "abilities-hidden": "Hidden ability: ",
-
     "base-stats-title": "Base stats: ",
     "base-stats-hp": "HP",
     "base-stats-attack": "Attack",
@@ -50,13 +43,11 @@
     "base-stats-special-attack": "Special attack",
     "base-stats-special-defense": "Special defense",
     "base-stats-speed": "Speed",
-
     "general-properties-title": "General properties: ",
     "general-properties-base-experience": "Base Experience: ",
     "general-properties-height": "Height: ",
     "general-properties-weight": "Weight: ",
     "general-properties-held-items": "Held items: ",
-
     "moves": "Moves: ",
     "move-name": "Name",
     "move-accuracy": "Accurycy",
@@ -65,10 +56,9 @@
     "move-priority": "Priority",
     "move-damage-class": "Damage class",
     "move-type": "Type",
-
     "encounter-locations-title": "Encounter locations: ",
     "encounter-location-name": "Location",
-
+    "catch-rates-title": "Catch Rates",
     "about-title": "About",
     "about-text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 }

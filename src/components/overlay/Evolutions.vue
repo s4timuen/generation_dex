@@ -41,19 +41,19 @@ export default {
         };
     },
     computed: {
-        data: function () {
+        data: function() {
             return this.$store.getters.selectedPokemonData;
         },
     },
     watch: {
-        data: function () {
+        data: function() {
             const THIS = this;
 
             getEvolutionChain(this)
-                .then(function (response) {
+                .then(function(response) {
                     THIS.evolutionChain = response;
                 })
-                .then(function () {
+                .then(function() {
                     if (!THIS.evolutionChain.baby.length) {
                         hideDivs(document, ['baby']);
                     }
@@ -67,7 +67,7 @@ export default {
                         hideDivs(document, ['second']);
                     }
                 })
-                .catch((error) => {
+                .catch(error => {
                     throw error;
                 });
         },
@@ -76,7 +76,7 @@ export default {
         capitalize,
         hideDivs,
         // resolve requirement name, if requirement is an object
-        resolveRequirement: function (requirement) {
+        resolveRequirement: function(requirement) {
             if (requirement instanceof Object) {
                 return requirement.name;
             } else {
@@ -87,4 +87,4 @@ export default {
 };
 </script>
 
-<style lang="css"></style>
+<style scoped lang="css"></style>

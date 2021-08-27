@@ -65,4 +65,4 @@ export default {
 };
 </script>
 
-<style lang="css"></style>
+<style scoped lang="css"></style>
